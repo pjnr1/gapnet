@@ -5,7 +5,7 @@ Repo to contain full source code
 
 ## Master thesis
 
-The project originates from the master thesis titled [Simulating perceptual tasks with deep neural networks to improve diagnostics of hearing impairment](https://fulltext-gateway.cvt.dk/oafilestore?oid=624d7509610dfe20b13a2b14&targetid=624d75094aace9106e2219a5).
+The project originates from the master thesis [Simulating perceptual tasks with deep neural networks to improve diagnostics of hearing impairment](https://fulltext-gateway.cvt.dk/oafilestore?oid=624d7509610dfe20b13a2b14&targetid=624d75094aace9106e2219a5).
 
 ### Abstract:
 
