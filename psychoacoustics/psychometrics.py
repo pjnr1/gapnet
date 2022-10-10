@@ -10,10 +10,46 @@ from scipy.optimize import fsolve, curve_fit
 
 
 def psychometric_func(x, a, b, scale=1., loc=0):
+    """
+    Computes the value of the psychometric function at x with parameters a (position) and b (width) with scaling factor
+    and location/offset
+
+    @arg x:
+        position to compute
+    @arg a:
+        position-parameter of the psychometric function
+    @arg b:
+        width-parameter of the psychometric function
+    @arg scale:
+        scale (default is 1)
+    @arg loc:
+        location (default is 0)
+    @return:
+        the value of the psychometric function at x
+    """
     return loc + scale * (1. / (1. + np.exp(-(x - a) / b)))
 
 
-def get_psychometric_point(p, a, b, x0=None, method='analytical'):
+def get_psychometric_point(p: float, a: float, b: float, x0: float = None, method: str = 'analytical') -> float:
+    """
+    Return the point p, e.g. 50%/0.5 point or similar for the psychometric function centered in a with width b.
+    This can be computed either analytically or solved using scipy.optimize.fsolve.
+
+    Scale and location are not used in this calculation
+
+    @arg p:
+        point to retrieve
+    @arg a:
+        position-parameter of the psychometric function
+    @arg b:
+        width-parameter of the psychometric function
+    @arg x0:
+        if using fsolve, x0 is used as starting point
+    @arg method:
+        method used for retrieving x
+    @return:
+        the position for which the psychometric function equals p
+    """
     if x0 is None:
         x0 = a
 
@@ -34,7 +70,7 @@ def fit_psychometric_func(xdata,
                           scale_p0=1.,
                           loc_p0=1.):
     """
-    ´fit_psychometric_func´
+    Find the optimal fit of the psychometric function to the given data scipy.optimize.curve_fit
 
     @arg xdata:
     @arg ydata:
