@@ -7,9 +7,33 @@ from fastai.callback.tracker import TrackerCallback
 
 
 class SaveStatedictCallback(TrackerCallback):
-    _only_train_loop, order = True, TrackerCallback.order + 1
+    """
+    Callback used with fastai when training the neural-network models for saving the statedict of the model after each
+    epoch, given the model improved over the best model so far.
+    """
+    _only_train_loop = True
+    order = TrackerCallback.order + 1
 
     def __init__(self, path='', monitor='valid_loss', comp=None, min_delta=0., fname='model', reset_on_fit=True):
+        """
+        Creates a SaveStatedictCallback object.
+
+        Output path is::
+            os.path.join(path, fname + '.statedict')
+
+        @arg path:
+            Folder to save the statedict in
+        @arg monitor:
+            What parameter to monitor
+        @arg comp:
+            See fastai.callback.tracker.TrackerCallback for details
+        @arg min_delta:
+            See fastai.callback.tracker.TrackerCallback for details
+        @arg fname:
+            Filename to use
+        @arg reset_on_fit:
+            See fastai.callback.tracker.TrackerCallback for details
+        """
         super().__init__(monitor=monitor, comp=comp, min_delta=min_delta, reset_on_fit=reset_on_fit)
         self.fname = fname
         self.path = path
@@ -22,9 +46,26 @@ class SaveStatedictCallback(TrackerCallback):
 
 
 class SaveStatedictEveryNEpochCallback(Callback):
-    _only_train_loop, order = True, TrackerCallback.order + 1
+    """
+    Callback that saves the models statedict at each Nth epoch.
+    """
+    _only_train_loop = True
+    order = TrackerCallback.order + 1
 
     def __init__(self, n_to_save=1, path='', fname='model'):
+        """
+        Creates a SaveStatedictEveryNEpochCallback object.
+
+        Output path is::
+            os.path.join(path, f'{fname}-{epoch}.statedict')
+
+        @arg n_to_save:
+            When to save
+        @arg path:
+            Folder to save the statedict in
+        @arg fname:
+            Filename to use
+        """
         super().__init__()
         self.fname = fname
         self.path = path

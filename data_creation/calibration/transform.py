@@ -1,7 +1,7 @@
 import numpy as np
 
-import constants
-from hearinglevel import get_hearinglevel_interp
+from data_creation.calibration.constants import SPL_REFERENCE_PRESSURE
+from data_creation.calibration.hearinglevel import get_hearinglevel_interp
 
 
 def spl2a(spl):
@@ -11,7 +11,7 @@ def spl2a(spl):
     @arg spl:
     @return:
     """
-    return constants.SPL_REFERENCE_PRESSURE * np.power(10, spl / 20)
+    return SPL_REFERENCE_PRESSURE * np.power(10, spl / 20)
 
 
 def a2spl(a):
@@ -21,7 +21,7 @@ def a2spl(a):
     @arg a:
     @return:
     """
-    return 20 * np.log10(a / constants.SPL_REFERENCE_PRESSURE)
+    return 20 * np.log10(a / SPL_REFERENCE_PRESSURE)
 
 
 def hl2spl(frequencies, levels, hl_ref=None):

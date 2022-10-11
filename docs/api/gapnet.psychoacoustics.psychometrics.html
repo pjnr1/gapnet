@@ -297,17 +297,17 @@
     
     <td>Function</td>
     <td><code><a href="#fit_psychometric_func" class="internal-link" title="gapnet.psychoacoustics.psychometrics.fit_psychometric_func">fit<wbr></wbr>_psychometric<wbr></wbr>_func</a></code></td>
-    <td>´fit_psychometric_func´</td>
+    <td>Find the optimal fit of the psychometric function to the given data scipy.optimize.curve_fit</td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><code><a href="#get_psychometric_point" class="internal-link" title="gapnet.psychoacoustics.psychometrics.get_psychometric_point">get<wbr></wbr>_psychometric<wbr></wbr>_point</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Return the point p, e.g. 50%/0.5 point or similar for the psychometric function centered in a with width b. This can be computed either analytically or solved using scipy.optimize.fsolve.</td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><code><a href="#psychometric_func" class="internal-link" title="gapnet.psychoacoustics.psychometrics.psychometric_func">psychometric<wbr></wbr>_func</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Computes the value of the psychometric function at x with parameters a (position) and b (width) with scaling factor and location/offset</td>
   </tr>
 </table>
           
@@ -337,7 +337,7 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p>´fit_psychometric_func´</p>
+    <div><p>Find the optimal fit of the psychometric function to the given data scipy.optimize.curve_fit</p>
 <table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">xdata</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ydata</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">with<wbr></wbr>_scale</span></td><td class="fieldArgDesc">enable fitting with a scaling parameter</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">with<wbr></wbr>_loc</span></td><td class="fieldArgDesc">enable fitting with an offset parameter</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">scale<wbr></wbr>_bounds</span></td><td class="fieldArgDesc">boundary conditions for the scaling parameter</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">loc<wbr></wbr>_bounds</span></td><td class="fieldArgDesc">boundary conditions for the location parameter</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">scale<wbr></wbr>_p0</span></td><td class="fieldArgDesc">initial point for the scaling parameter</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">loc<wbr></wbr>_p0</span></td><td class="fieldArgDesc">initial point for the location parameter</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">List of optimal parameters for the psychometric-function on the input data</td></tr></table></div>
   </div>
 </div><div class="basefunction">
@@ -361,7 +361,9 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Return the point p, e.g. 50%/0.5 point or similar for the psychometric function centered in a with width b. This can be computed either analytically or solved using scipy.optimize.fsolve.</p>
+<p>Scale and location are not used in this calculation</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">p:</span><code>float</code></td><td class="fieldArgDesc">point to retrieve</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">a:</span><code>float</code></td><td class="fieldArgDesc">position-parameter of the psychometric function</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">b:</span><code>float</code></td><td class="fieldArgDesc">width-parameter of the psychometric function</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">x0:</span><code>float</code></td><td class="fieldArgDesc">if using fsolve, x0 is used as starting point</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">method:</span><code>str</code></td><td class="fieldArgDesc">method used for retrieving x</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>float</code></td><td class="fieldArgDesc">the position for which the psychometric function equals p</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -384,7 +386,8 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Computes the value of the psychometric function at x with parameters a (position) and b (width) with scaling factor and location/offset</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">x</span></td><td class="fieldArgDesc">position to compute</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">a</span></td><td class="fieldArgDesc">position-parameter of the psychometric function</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">b</span></td><td class="fieldArgDesc">width-parameter of the psychometric function</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">scale</span></td><td class="fieldArgDesc">scale (default is 1)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">loc</span></td><td class="fieldArgDesc">location (default is 0)</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">the value of the psychometric function at x</td></tr></table></div>
   </div>
 </div>
         </div>
@@ -398,7 +401,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for gapnet,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-10 11:37:17.
+    22.9.1 at 2022-10-11 14:03:39.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
