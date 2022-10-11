@@ -10,9 +10,13 @@ class SaveStatedictCallback(TrackerCallback):
     """
     Callback used with fastai when training the neural-network models for saving the statedict of the model after each
     epoch, given the model improved over the best model so far.
+
     """
     _only_train_loop = True
     order = TrackerCallback.order + 1
+    """
+    Internal Callback ordering. See U{fastai.callback, <https://docs.fast.ai/callback.core.html>} for details
+    """
 
     def __init__(self, path='', monitor='valid_loss', comp=None, min_delta=0., fname='model', reset_on_fit=True):
         """
@@ -26,19 +30,31 @@ class SaveStatedictCallback(TrackerCallback):
         @arg monitor:
             What parameter to monitor
         @arg comp:
-            See fastai.callback.tracker.TrackerCallback for details
+            See U{fastai.callback.tracker.TrackerCallback <https://docs.fast.ai/callback.tracker.html#trackercallback>}
+            for details
         @arg min_delta:
-            See fastai.callback.tracker.TrackerCallback for details
+            See U{fastai.callback.tracker.TrackerCallback <https://docs.fast.ai/callback.tracker.html#trackercallback>}
+            for details
         @arg fname:
             Filename to use
         @arg reset_on_fit:
-            See fastai.callback.tracker.TrackerCallback for details
+            See U{fastai.callback.tracker.TrackerCallback <https://docs.fast.ai/callback.tracker.html#trackercallback>}
+            for details
         """
         super().__init__(monitor=monitor, comp=comp, min_delta=min_delta, reset_on_fit=reset_on_fit)
         self.fname = fname
+        """
+        Filename for the saved statedict. Filetype is '.statedict'
+        """
         self.path = path
+        """
+        Folder to save the statedict in
+        """
 
     def after_epoch(self):
+        """
+        Function called after each epoch
+        """
         super().after_epoch()
         if self.new_best:
             print(f'Better model found at epoch {self.epoch} with {self.monitor} value: {self.best}.')
@@ -51,6 +67,9 @@ class SaveStatedictEveryNEpochCallback(Callback):
     """
     _only_train_loop = True
     order = TrackerCallback.order + 1
+    """
+    Internal Callback ordering. See fastai.callback for details
+    """
 
     def __init__(self, n_to_save=1, path='', fname='model'):
         """
@@ -68,10 +87,22 @@ class SaveStatedictEveryNEpochCallback(Callback):
         """
         super().__init__()
         self.fname = fname
+        """
+        Filename for the saved statedict. Epoch number is appended and filetype is '.statedict'
+        """
         self.path = path
+        """
+        Folder to save the statedict in
+        """
         self.n_to_save = n_to_save
+        """
+        After what recurring count of epochs should the callback save the statedict
+        """
 
     def after_epoch(self):
+        """
+        Function called after each epoch
+        """
         if self.epoch % self.n_to_save == 0:
             print(f'Saving at epoch {self.epoch}')
             torch.save(self.learn.model.state_dict(), os.path.join(self.path, f'{self.fname}-{self.epoch}.statedict'))

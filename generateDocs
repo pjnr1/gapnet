@@ -1,0 +1,7 @@
+pydoctor \
+    --project-name=GapNet \
+    --project-url=https://github.com/pjnr1/gapnet/ \
+    --html-viewsource-base=https://github.com/pjnr1/gapnet/tree/main \
+    --make-html \
+    --html-output=docs/api \
+    .

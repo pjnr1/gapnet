@@ -31,7 +31,7 @@
       
       <div class="navlinks">
         <span class="navbar-brand">
-          gapnet <a href="index.html">API Documentation</a>
+          <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a> <a href="index.html">API Documentation</a>
         </span>
 
         <a href="moduleIndex.html">
@@ -324,7 +324,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p><code><span class="py-keyword">class</span> <span class="py-defname">SaveStatedictEveryNEpochCallback</span>(Callback):</code></p>
+          <p><code><span class="py-keyword">class</span> <span class="py-defname">SaveStatedictEveryNEpochCallback</span>(Callback): <a href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L64" class="sourceLink">(source)</a></code></p>
           <p><a href="classIndex.html#gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback">View In Hierarchy</a></p>
         </div>
 
@@ -346,27 +346,27 @@
     
     <td>Method</td>
     <td><code><a href="#after_epoch" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.after_epoch">after<wbr></wbr>_epoch</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Function called after each epoch</td>
   </tr><tr class="classvariable">
     
     <td>Class Variable</td>
     <td><code><a href="#order" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.order">order</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Internal Callback ordering. See fastai.callback for details</td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
     <td><code><a href="#fname" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.fname">fname</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Filename for the saved statedict. Epoch number is appended and filetype is '.statedict'</td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
     <td><code><a href="#n_to_save" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.n_to_save">n<wbr></wbr>_to<wbr></wbr>_save</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>After what recurring count of epochs should the callback save the statedict</td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
     <td><code><a href="#path" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.path">path</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Folder to save the statedict in</td>
   </tr><tr class="classvariable private">
     
     <td>Class Variable</td>
@@ -392,7 +392,10 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, n_to_save=1, path=<span class="rst-variable-quote">'</span><span class="rst-variable-string"></span><span class="rst-variable-quote">'</span>, fname=<span class="rst-variable-quote">'</span><span class="rst-variable-string">model</span><span class="rst-variable-quote">'</span>):
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L74">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#__init__" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.__init__">
       
       
@@ -420,7 +423,10 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">after_epoch</span>(self):
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L102">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#after_epoch" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.after_epoch">
       
       
@@ -429,7 +435,8 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Function called after each epoch</p>
+</div>
   </div>
 </div><div class="baseclassvariable">
   
@@ -443,7 +450,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">order</span> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L69">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#order" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.order">
       
       
@@ -452,7 +462,8 @@
   </div>
   <div class="functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Internal Callback ordering. See fastai.callback for details</p>
+</div>
     
   </div>
 </div><div class="baseinstancevariable">
@@ -467,7 +478,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">fname</span> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L89">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#fname" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.fname">
       
       
@@ -476,7 +490,8 @@
   </div>
   <div class="functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Filename for the saved statedict. Epoch number is appended and filetype is '.statedict'</p>
+</div>
     
   </div>
 </div><div class="baseinstancevariable">
@@ -491,7 +506,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">n_to_save</span> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L97">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#n_to_save" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.n_to_save">
       
       
@@ -500,7 +518,8 @@
   </div>
   <div class="functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>After what recurring count of epochs should the callback save the statedict</p>
+</div>
     
   </div>
 </div><div class="baseinstancevariable">
@@ -515,7 +534,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">path</span> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L93">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#path" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback.path">
       
       
@@ -524,7 +546,8 @@
   </div>
   <div class="functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Folder to save the statedict in</p>
+</div>
     
   </div>
 </div><div class="baseclassvariable private">
@@ -539,7 +562,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">_only_train_loop</span>: <code>bool</code> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L68">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#_only_train_loop" title="gapnet.dnn_modelling.callbacks.SaveStatedictEveryNEpochCallback._only_train_loop">
       
       
@@ -561,9 +587,9 @@
 
   
   <div class="container">
-    <a href="index.html">API Documentation</a> for gapnet,
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-11 14:03:39.
+    22.9.1 at 2022-10-11 14:17:01.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

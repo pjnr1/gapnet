@@ -31,7 +31,7 @@
       
       <div class="navlinks">
         <span class="navbar-brand">
-          gapnet <a href="index.html">API Documentation</a>
+          <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a> <a href="index.html">API Documentation</a>
         </span>
 
         <a href="moduleIndex.html">
@@ -314,7 +314,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <p><code><span class="py-keyword">class</span> <span class="py-defname">SaveStatedictCallback</span>(TrackerCallback):</code></p>
+          <p><code><span class="py-keyword">class</span> <span class="py-defname">SaveStatedictCallback</span>(TrackerCallback): <a href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L9" class="sourceLink">(source)</a></code></p>
           <p><a href="classIndex.html#gapnet.dnn_modelling.callbacks.SaveStatedictCallback">View In Hierarchy</a></p>
         </div>
 
@@ -336,22 +336,22 @@
     
     <td>Method</td>
     <td><code><a href="#after_epoch" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.after_epoch">after<wbr></wbr>_epoch</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Function called after each epoch</td>
   </tr><tr class="classvariable">
     
     <td>Class Variable</td>
     <td><code><a href="#order" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.order">order</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Internal Callback ordering. See <a class="rst-reference external" href="https://docs.fast.ai/callback.core.html" target="_top">fastai.callback,</a> for details</td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
     <td><code><a href="#fname" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.fname">fname</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Filename for the saved statedict. Filetype is '.statedict'</td>
   </tr><tr class="instancevariable">
     
     <td>Instance Variable</td>
     <td><code><a href="#path" class="internal-link" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.path">path</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Folder to save the statedict in</td>
   </tr><tr class="classvariable private">
     
     <td>Class Variable</td>
@@ -377,7 +377,10 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">__init__</span>(self, path=<span class="rst-variable-quote">'</span><span class="rst-variable-string"></span><span class="rst-variable-quote">'</span>, monitor=<span class="rst-variable-quote">'</span><span class="rst-variable-string">valid_loss</span><span class="rst-variable-quote">'</span>, comp=None, min_delta=0.0, fname=<span class="rst-variable-quote">'</span><span class="rst-variable-string">model</span><span class="rst-variable-quote">'</span>, reset_on_fit=True):
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L21">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#__init__" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.__init__">
       
       
@@ -391,7 +394,7 @@
 <pre class="rst-literal-block">
     os.path.join(path, fname + '.statedict')
 </pre>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">path</span></td><td class="fieldArgDesc">Folder to save the statedict in</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">monitor</span></td><td class="fieldArgDesc">What parameter to monitor</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">comp</span></td><td class="fieldArgDesc">See fastai.callback.tracker.TrackerCallback for details</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">min<wbr></wbr>_delta</span></td><td class="fieldArgDesc">See fastai.callback.tracker.TrackerCallback for details</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fname</span></td><td class="fieldArgDesc">Filename to use</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">reset<wbr></wbr>_on<wbr></wbr>_fit</span></td><td class="fieldArgDesc">See fastai.callback.tracker.TrackerCallback for details</td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">path</span></td><td class="fieldArgDesc">Folder to save the statedict in</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">monitor</span></td><td class="fieldArgDesc">What parameter to monitor</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">comp</span></td><td class="fieldArgDesc">See <a class="rst-reference external" href="https://docs.fast.ai/callback.tracker.html#trackercallback" target="_top">fastai.callback.tracker.TrackerCallback</a> for details</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">min<wbr></wbr>_delta</span></td><td class="fieldArgDesc">See <a class="rst-reference external" href="https://docs.fast.ai/callback.tracker.html#trackercallback" target="_top">fastai.callback.tracker.TrackerCallback</a> for details</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fname</span></td><td class="fieldArgDesc">Filename to use</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">reset<wbr></wbr>_on<wbr></wbr>_fit</span></td><td class="fieldArgDesc">See <a class="rst-reference external" href="https://docs.fast.ai/callback.tracker.html#trackercallback" target="_top">fastai.callback.tracker.TrackerCallback</a> for details</td></tr></table></div>
   </div>
 </div><div class="basemethod">
   
@@ -405,7 +408,10 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">after_epoch</span>(self):
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L54">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#after_epoch" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.after_epoch">
       
       
@@ -414,7 +420,8 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Function called after each epoch</p>
+</div>
   </div>
 </div><div class="baseclassvariable">
   
@@ -428,7 +435,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">order</span> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L16">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#order" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.order">
       
       
@@ -437,7 +447,8 @@
   </div>
   <div class="functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Internal Callback ordering. See <a class="rst-reference external" href="https://docs.fast.ai/callback.core.html" target="_top">fastai.callback,</a> for details</p>
+</div>
     
   </div>
 </div><div class="baseinstancevariable">
@@ -452,7 +463,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">fname</span> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L45">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#fname" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.fname">
       
       
@@ -461,7 +475,8 @@
   </div>
   <div class="functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Filename for the saved statedict. Filetype is '.statedict'</p>
+</div>
     
   </div>
 </div><div class="baseinstancevariable">
@@ -476,7 +491,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">path</span> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L49">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#path" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback.path">
       
       
@@ -485,7 +503,8 @@
   </div>
   <div class="functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><p>Folder to save the statedict in</p>
+</div>
     
   </div>
 </div><div class="baseclassvariable private">
@@ -500,7 +519,10 @@
   <div class="functionHeader">
     
     <span class="py-defname">_only_train_loop</span>: <code>bool</code> =
-    
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/callbacks.py#L15">
+      
+      (source)
+    </a>
     <a class="headerLink" href="#_only_train_loop" title="gapnet.dnn_modelling.callbacks.SaveStatedictCallback._only_train_loop">
       
       
@@ -522,9 +544,9 @@
 
   
   <div class="container">
-    <a href="index.html">API Documentation</a> for gapnet,
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-11 14:03:39.
+    22.9.1 at 2022-10-11 14:17:01.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
