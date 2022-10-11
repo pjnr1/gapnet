@@ -154,14 +154,50 @@
         
         
 
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
         
-         
+        
+        
+
+        
+            <div class="itemName"><code><a href="#generate_stimulus" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.generate_stimulus">generate<wbr></wbr>_stimulus</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
 
         
          
 
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
         
-         
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">SIGNAL<wbr></wbr>_FREQUENCIES</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SIGNAL_LEVELS" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_LEVELS">SIGNAL<wbr></wbr>_LEVELS</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
 
         
          
@@ -263,18 +299,123 @@
         </div>
 
         <div class="moduleDocstring">
-          <div><p class="undocumented">Undocumented</p></div>
+          <div><p>Gap detection experiment by Moore et al., 1993 <a class="rst-reference external" href="https://asa.scitation.org/doi/10.1121/1.406815" target="_top">DOI: 10.1121/1.406815</a></p>
+<p>Stimulus used is puretone with background masker</p>
+<p>They used the Khron-Hite 3550 filter for lowpassing the noise, which has a <strong>24 dB/Octave</strong> slope <a class="rst-reference external" href="https://www.valuetronics.com/product/3550-krohn-hite-filter-used" target="_top">source</a>.</p>
+<p>Signal was ramped with cosine squared ramp with 50ms rise/fall</p>
+</div>
         </div>
 
         <div id="splitTables">
-          
+          <table class="children sortable" id="id13">
+  
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#generate_stimulus" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.generate_stimulus">generate<wbr></wbr>_stimulus</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">SIGNAL<wbr></wbr>_FREQUENCIES</a></code></td>
+    <td>Frequencies of the sinusoid used in the original paper</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SIGNAL_LEVELS" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_LEVELS">SIGNAL<wbr></wbr>_LEVELS</a></code></td>
+    <td>Levels of the sinusoid used in the original paper</td>
+  </tr>
+</table>
           
 
             
         </div>
 
         <div id="childList">
-          
+          <div class="basefunction">
+  
+  
+  <a name="gapnet.data_creation.experiments.moore_et_al_1993.generate_stimulus">
+    
+  </a>
+  <a name="generate_stimulus">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">generate_stimulus</span>(t, sinusoid_frequency=<a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">SIGNAL_FREQUENCIES</a>[<wbr></wbr>0], sinusoid_level=<a href="#SIGNAL_LEVELS" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_LEVELS">SIGNAL_LEVELS</a>[<wbr></wbr>0], gap_length=0, signal_start=0.1, signal_length=0.4, snr=40):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L33">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#generate_stimulus" title="gapnet.data_creation.experiments.moore_et_al_1993.generate_stimulus">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sinusoid<wbr></wbr>_frequency:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sinusoid<wbr></wbr>_level:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">gap<wbr></wbr>_length:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">signal<wbr></wbr>_start:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">signal<wbr></wbr>_length:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">snr:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">
+    
+  </a>
+  <a name="SIGNAL_FREQUENCIES">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SIGNAL_FREQUENCIES</span>: <code>list[<wbr></wbr>int]</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L27">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SIGNAL_FREQUENCIES" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Frequencies of the sinusoid used in the original paper</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>[<wbr></wbr>100, <wbr></wbr>200, <wbr></wbr>400, <wbr></wbr>800, <wbr></wbr>1000, <wbr></wbr>2000]</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_LEVELS">
+    
+  </a>
+  <a name="SIGNAL_LEVELS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SIGNAL_LEVELS</span>: <code>list[<wbr></wbr>int]</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L22">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SIGNAL_LEVELS" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_LEVELS">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Levels of the sinusoid used in the original paper</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>[<wbr></wbr>25, <wbr></wbr>40, <wbr></wbr>55, <wbr></wbr>70, <wbr></wbr>85]</code></pre></td></tr></table>
+  </div>
+</div>
         </div>
       
       </div>
@@ -286,7 +427,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-11 16:02:32.
+    22.9.1 at 2022-10-11 16:32:26.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
