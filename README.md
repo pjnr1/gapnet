@@ -17,7 +17,7 @@ However, electro-physiological measurements require long recording times and the
 The need for a behavioural test is therefore of high interest. Such tests have been suggested based on a heuristic interpretation of the effect of HHL on perception.
 The search for a behavioural test sensitive to HHL might lead to a non-optimal trial-and-error strategy.
 Using a state-of-art model of the auditory nerve (AN) paired with a deep neural network (DNN) model, we investigated whether a gap detection task could be used as a method for detecting cochlear synaptopathy (CS) in humans.
-Furthermore, we suggested this approach as a general framework for investigating behavioural tests before conducting expensive and time consuming human experiments.
+Furthermore, we suggested this approach as a general framework for investigating behavioural tests before conducting expensive and time-consuming human experiments.
 We trained the DNN model on natural speech data and simulated a broadband-noise gap detection task.
 The trained model was sensitive to CS and hearing threshold shifts induced by inner hair cell (IHC) dysfunction.
 In contrast, the DNN model achieved lower gap detection thresholds with induced outer hair cell (OHC) dysfunction.
@@ -28,6 +28,8 @@ We concluded that a gap detection task may be a behavioural test sensitive to CS
 
 ## Documentation
 
-All documentation are written in epytext markdown and can be generated using `pydoctor`. A precompiled version is available
-[here](docs/api)
+All documentation are written in epytext markdown and can be generated using `generateDocs`.
+
+A precompiled version is available [here](docs/api), and hosted [here](https://pjnr1.github.io/gapnet/api/index.html).
+
 

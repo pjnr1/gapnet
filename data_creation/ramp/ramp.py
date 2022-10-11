@@ -1,3 +1,6 @@
+"""
+Ramp interface functions
+"""
 from functools import partial
 import numpy as np
 import operator
@@ -38,13 +41,20 @@ def ramp(t: np.ndarray,
      (t < (gamma_t + width / 2)) & (t >= (gamma_t - width / 2))
 
 
-    @arg t: time vector
-    @arg gamma_t: center position of the ramp (in the same unit as the time vector)
-    @arg width: width of the ramp (in same unit as the time vector)
-    @arg ramp_function: the function to create the ramp
-    @arg invert: whether to invert the output (ramp on or ramp off)
-    @arg dtype: data type of output vector, defaults to the datatype of t
-    @return: vector of the same shape as t
+    @arg t:
+        time vector
+    @arg gamma_t:
+        center position of the ramp (in the same unit as the time vector)
+    @arg width:
+        width of the ramp (in same unit as the time vector)
+    @arg ramp_function:
+        the function to create the ramp
+    @arg invert:
+        whether to invert the output (ramp on or ramp off)
+    @arg dtype:
+        data type of output vector, defaults to the datatype of t
+    @return:
+        vector of the same shape as t
 
     """
 
@@ -80,13 +90,20 @@ def ramp_onoff(t: np.ndarray,
     Takes two time points (gamma_t) and generates an onset+offset-ramp, by generating two ramps over the time-vector
     (see ramp) and combining by multiplying (ramp1(t) * ramp2(t)) or addition, when invert=True (ramp1(t)+ramp2(t))
 
-    @arg t: time vector
-    @arg gamma_t: center positions of the onset/offset-ramps (in the same unit as the time vector)
-    @arg width: width of the ramp (in same unit as the time vector)
-    @arg ramp_function: the function to create the ramp
-    @arg invert: whether to invert the output
-    @arg dtype: data type of output vector, defaults to the datatype of t
-    @return: vector of the same shape as t
+    @arg t:
+        time vector
+    @arg gamma_t:
+        center positions of the onset/offset-ramps (in the same unit as the time vector)
+    @arg width:
+        width of the ramp (in same unit as the time vector)
+    @arg ramp_function:
+        the function to create the ramp
+    @arg invert:
+        whether to invert the output
+    @arg dtype:
+        data type of output vector, defaults to the datatype of t
+    @return:
+        vector of the same shape as t
 
     """
     if gamma_t is None:
@@ -118,11 +135,17 @@ def ramp_onoff_with_gap(t,
     Combines two instances of ramp_onoff to create a "gate" for some signal with onset and offset- and a gap in between.
 
     @arg t:
-    @arg gap_gamma_t   : center positions of the onset/offset-ramps of the gap (in the same unit as the time vector)
-    @arg stim_gamma_t  : center positions of the onset/offset-ramps of the signal (in the same unit as the time vector)
-    @arg width         : width of the ramp (in same unit as the time vector)
-    @arg ramp_function : the function to create the ramp
-    @arg dtype         : data type of output vector, defaults to the datatype of t
+        time vector
+    @arg gap_gamma_t   :
+        center positions of the onset/offset-ramps of the gap (in the same unit as the time vector)
+    @arg stim_gamma_t  :
+        center positions of the onset/offset-ramps of the signal (in the same unit as the time vector)
+    @arg width         :
+        width of the ramp (in same unit as the time vector)
+    @arg ramp_function :
+        the function to create the ramp
+    @arg dtype         :
+        data type of output vector, defaults to the datatype of t
     @return:
     """
     if stim_gamma_t is None:

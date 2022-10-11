@@ -1,6 +1,6 @@
 import numpy as np
 
-from ..stimulus.puretone import generate_gaussian_gate_length
+from data_creation.stimulus.puretone import generate_gaussian_gate_length
 
 
 def generate_stimulus(t,

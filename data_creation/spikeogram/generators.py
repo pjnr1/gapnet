@@ -1,3 +1,6 @@
+"""
+Spikeogram generator functions
+"""
 from typing import List
 
 import h5py
@@ -13,6 +16,20 @@ def spikeogram_2D(data: h5py.File,
                   data_field: str = 'an_out_sum',
                   bin_width: float = 1e-3,
                   dtype='float32') -> torch.Tensor:
+    """
+    Generates a 2D spikeogram from the .mat-file.
+
+    @arg data:
+        the open .mat-file object
+    @arg data_field:
+        the datafield to use, e.g. 'an_out_sum'
+    @arg bin_width:
+        binwidth for downsampling, 1e-3 (1 ms)
+    @arg dtype:
+        datatype, default is 'float32'
+    @return:
+        tensor with 2 dimensions, i.e. [frequency, time]
+    """
     x = data.get(data_field, default=None)
     if x is None:
         raise ValueError(f'Field {data_field} not found in {data.filename}')
@@ -24,7 +41,22 @@ def spikeogram_2D(data: h5py.File,
 def spikeogram_3D(data: h5py.File,
                   data_fields: List[str] = None,
                   bin_width: float = 1e-3,
-                  dtype='float32'):
+                  dtype='float32') -> torch.Tensor:
+    """
+    Generates a 3D spikeogram from the .mat-file.
+
+    @arg data:
+        the open .mat-file object
+    @arg data_fields:
+        the datafields to use, e.g. ['an_out_hs', 'an_out_ms', 'an_out_ls']
+    @arg bin_width:
+        binwidth for downsampling, 1e-3 (1 ms)
+    @arg dtype:
+        datatype, default is 'float32'
+    @return:
+        tensor with 3 dimensions, i.e. [channels, frequency, time]
+
+    """
     if data_fields is None:
         data_fields = ['an_out_hs', 'an_out_ms', 'an_out_ls']
     data_list = list()
@@ -36,6 +68,7 @@ def spikeogram_3D(data: h5py.File,
             data_list.append(get_tensor_from_h5py_numpy(x, dtype))
     fs = get_sampling_frequency(data)
 
+    # Preallocate output array
     mat = torch.zeros(3, data_list[0].shape[0], data_list[0].shape[1])
     for i in range(3):
         mat[i, :, :] = data_list[i]

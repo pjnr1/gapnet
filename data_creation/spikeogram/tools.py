@@ -1,12 +1,13 @@
+"""
+Various tools for interfacing with the AN-simulations and more
+"""
 import h5py
 
 import numpy as np
 
 import torch
 import torch.nn.functional as F
-"""
-Various tools for interfacing with the AN-simulations and more
-"""
+
 
 def as_torch_type(type_string: str) -> torch.dtype:
     """
@@ -38,6 +39,15 @@ def open_an_simulation_data(fp, mode='r') -> h5py.File:
 
 
 def get_tensor_from_h5py_numpy(x, dtype) -> torch.Tensor:
+    """
+    Get torch.Tensor from h5py data array
+
+    @arg x:
+        input data
+    @arg dtype:
+        target datatype
+    @return:
+    """
     return torch.from_numpy(np.array(x).astype(dtype)).T
 
 
@@ -65,10 +75,13 @@ def historize(data: torch.Tensor, bin_width: int = 1) -> torch.Tensor:
     If the tensor is 2D, the dimensions should be [frequency, time]
     If the tensor is 3D, the dimensions should be [channels, frequency, time]
 
-    @arg data: input data
-    @arg bin_width: bin width in samples
+    @arg data:
+        input data
+    @arg bin_width:
+        bin width in samples
 
-    @return: torch.Tensor
+    @return:
+        torch.Tensor
     """
     channels = 1
     if len(data.shape) == 3:

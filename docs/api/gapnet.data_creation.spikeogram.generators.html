@@ -276,7 +276,8 @@
         </div>
 
         <div class="moduleDocstring">
-          <div><p class="undocumented">Undocumented</p></div>
+          <div><p>Spikeogram generator functions</p>
+</div>
         </div>
 
         <div id="splitTables">
@@ -287,12 +288,12 @@
     
     <td>Function</td>
     <td><code><a href="#spikeogram_2D" class="internal-link" title="gapnet.data_creation.spikeogram.generators.spikeogram_2D">spikeogram_2<wbr></wbr>D</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Generates a 2D spikeogram from the .mat-file.</td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><code><a href="#spikeogram_3D" class="internal-link" title="gapnet.data_creation.spikeogram.generators.spikeogram_3D">spikeogram_3<wbr></wbr>D</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Generates a 3D spikeogram from the .mat-file.</td>
   </tr>
 </table>
           
@@ -313,7 +314,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">spikeogram_2D</span>(data, data_field=<span class="rst-variable-quote">'</span><span class="rst-variable-string">an_out_sum</span><span class="rst-variable-quote">'</span>, bin_width=0.001, dtype=<span class="rst-variable-quote">'</span><span class="rst-variable-string">float32</span><span class="rst-variable-quote">'</span>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/spikeogram/generators.py#L12">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/spikeogram/generators.py#L15">
       
       (source)
     </a>
@@ -325,7 +326,8 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data:</span><code>h5py.File</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_field:</span><code>str</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>torch.Tensor</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+    <div><p>Generates a 2D spikeogram from the .mat-file.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data:</span><code>h5py.File</code></td><td class="fieldArgDesc">the open .mat-file object</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_field:</span><code>str</code></td><td class="fieldArgDesc">the datafield to use, e.g. 'an_out_sum'</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width:</span><code>float</code></td><td class="fieldArgDesc">binwidth for downsampling, 1e-3 (1 ms)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype</span></td><td class="fieldArgDesc">datatype, default is 'float32'</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>torch.Tensor</code></td><td class="fieldArgDesc">tensor with 2 dimensions, i.e. [frequency, time]</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -339,7 +341,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">spikeogram_3D</span>(data, data_fields=None, bin_width=0.001, dtype=<span class="rst-variable-quote">'</span><span class="rst-variable-string">float32</span><span class="rst-variable-quote">'</span>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/spikeogram/generators.py#L24">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/spikeogram/generators.py#L41">
       
       (source)
     </a>
@@ -351,7 +353,8 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data:</span><code>h5py.File</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_fields:</span><code>List[<wbr></wbr>str]</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+    <div><p>Generates a 3D spikeogram from the .mat-file.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data:</span><code>h5py.File</code></td><td class="fieldArgDesc">the open .mat-file object</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_fields:</span><code>List[<wbr></wbr>str]</code></td><td class="fieldArgDesc">the datafields to use, e.g. ['an_out_hs', 'an_out_ms', 'an_out_ls']</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width:</span><code>float</code></td><td class="fieldArgDesc">binwidth for downsampling, 1e-3 (1 ms)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype</span></td><td class="fieldArgDesc">datatype, default is 'float32'</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>torch.Tensor</code></td><td class="fieldArgDesc">tensor with 3 dimensions, i.e. [channels, frequency, time]</td></tr></table></div>
   </div>
 </div>
         </div>
@@ -365,7 +368,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-11 14:50:36.
+    22.9.1 at 2022-10-11 16:02:32.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

@@ -33,7 +33,9 @@ def cosine_squared_ramp_func(t: np.ndarray,
                              gamma_t: float,
                              width: float) -> np.ndarray:
     """
-    Creates a cosine squared ramp centered in gamma_t with defined width, relative to the time-vector t
+    Creates a cosine squared ramp centered in gamma_t with defined width, relative to the time-vector t:
+
+    M{ramp = (cos(S{pi} * (t - (gamma_t - width / 2) + width) / (2 * width))^2}
 
     @arg t:
         time vector

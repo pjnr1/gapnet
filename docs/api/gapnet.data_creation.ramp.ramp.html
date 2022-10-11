@@ -312,7 +312,8 @@
         </div>
 
         <div class="moduleDocstring">
-          <div><p class="undocumented">Undocumented</p></div>
+          <div><p>Ramp interface functions</p>
+</div>
         </div>
 
         <div id="splitTables">
@@ -364,7 +365,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">ramp</span>(t, gamma_t=0.0, width=0.0025, ramp_function=<a href="gapnet.data_creation.ramp.functions.html#linear_ramp_func" class="internal-link" title="gapnet.data_creation.ramp.functions.linear_ramp_func">linear_ramp_func</a>, invert=False, dtype=None):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/ramp/ramp.py#L21">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/ramp/ramp.py#L24">
       
       (source)
     </a>
@@ -401,7 +402,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">ramp_onoff</span>(t, gamma_t=None, width=0.0025, ramp_function=<a href="gapnet.data_creation.ramp.functions.html#linear_ramp_func" class="internal-link" title="gapnet.data_creation.ramp.functions.linear_ramp_func">linear_ramp_func</a>, invert=False, dtype=None):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/ramp/ramp.py#L73">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/ramp/ramp.py#L83">
       
       (source)
     </a>
@@ -428,7 +429,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">ramp_onoff_with_gap</span>(t, stim_gamma_t=None, gap_gamma_t=None, width=0.0025, ramp_function=<a href="gapnet.data_creation.ramp.functions.html#linear_ramp_func" class="internal-link" title="gapnet.data_creation.ramp.functions.linear_ramp_func">linear_ramp_func</a>, dtype=None):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/ramp/ramp.py#L111">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/ramp/ramp.py#L128">
       
       (source)
     </a>
@@ -441,7 +442,7 @@
   <div class="docstring functionBody">
     
     <div><p>Combines two instances of ramp_onoff to create a "gate" for some signal with onset and offset- and a gap in between.</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">stim<wbr></wbr>_gamma<wbr></wbr>_t:</span><code><a href="#GammaTPair" class="internal-link" title="gapnet.data_creation.ramp.ramp.GammaTPair">GammaTPair</a></code></td><td class="fieldArgDesc">center positions of the onset/offset-ramps of the signal (in the same unit as the time vector)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">gap<wbr></wbr>_gamma<wbr></wbr>_t:</span><code><a href="#GammaTPair" class="internal-link" title="gapnet.data_creation.ramp.ramp.GammaTPair">GammaTPair</a></code></td><td class="fieldArgDesc">center positions of the onset/offset-ramps of the gap (in the same unit as the time vector)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">width:</span><code>float</code></td><td class="fieldArgDesc">width of the ramp (in same unit as the time vector)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ramp<wbr></wbr>_function:</span><code><a href="gapnet.data_creation.ramp.ramp.RampFunction.html" class="internal-link" title="gapnet.data_creation.ramp.ramp.RampFunction">RampFunction</a></code></td><td class="fieldArgDesc">the function to create the ramp</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype:</span><code>np.dtype</code></td><td class="fieldArgDesc">data type of output vector, defaults to the datatype of t</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t</span></td><td class="fieldArgDesc">time vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">stim<wbr></wbr>_gamma<wbr></wbr>_t:</span><code><a href="#GammaTPair" class="internal-link" title="gapnet.data_creation.ramp.ramp.GammaTPair">GammaTPair</a></code></td><td class="fieldArgDesc">center positions of the onset/offset-ramps of the signal (in the same unit as the time vector)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">gap<wbr></wbr>_gamma<wbr></wbr>_t:</span><code><a href="#GammaTPair" class="internal-link" title="gapnet.data_creation.ramp.ramp.GammaTPair">GammaTPair</a></code></td><td class="fieldArgDesc">center positions of the onset/offset-ramps of the gap (in the same unit as the time vector)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">width:</span><code>float</code></td><td class="fieldArgDesc">width of the ramp (in same unit as the time vector)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ramp<wbr></wbr>_function:</span><code><a href="gapnet.data_creation.ramp.ramp.RampFunction.html" class="internal-link" title="gapnet.data_creation.ramp.ramp.RampFunction">RampFunction</a></code></td><td class="fieldArgDesc">the function to create the ramp</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype:</span><code>np.dtype</code></td><td class="fieldArgDesc">data type of output vector, defaults to the datatype of t</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
   </div>
 </div><div class="basevariable">
   
@@ -455,7 +456,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">GammaTPair</span> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/ramp/ramp.py#L8">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/ramp/ramp.py#L11">
       
       (source)
     </a>
@@ -483,7 +484,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-11 14:50:36.
+    22.9.1 at 2022-10-11 16:02:32.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

@@ -7,7 +7,7 @@ Stimulus used is broadband noise
 from ..ramp.ramp import ramp_onoff_with_gap
 from ..ramp.ramp import RampFunction
 from ..time.time import start_and_duration_to_gamma_t, get_sampling_frequency
-from ..stimulus.noise import white_noise, WhiteNoiseFunction, uniform_white_noise
+from ..stimulus.noise import white_noise_n, WhiteNoiseFunction, uniform_white_noise_generator
 from ..filters.filters import linear_bandpass_filter
 
 
@@ -20,7 +20,7 @@ def generate_stimulus(t,
                       noise_duration=0.5,
                       fs=None,
                       ramp_function: RampFunction = linear_bandpass_filter,
-                      noise_function: WhiteNoiseFunction = uniform_white_noise):
+                      noise_function: WhiteNoiseFunction = uniform_white_noise_generator):
     if noise_bandwidth is None:
         noise_bandwidth = [20, 16e3]
     if gap_start is None and gap_duration is not None:
@@ -28,7 +28,7 @@ def generate_stimulus(t,
     fs = get_sampling_frequency(fs, t)
 
     # Generate noise
-    signal = white_noise(t=t, generator=noise_function)
+    signal = white_noise_n(n=t.shape[0], generator=noise_function)
 
     # Create stimulus ramps / gate
     signal *= ramp_onoff_with_gap(t,

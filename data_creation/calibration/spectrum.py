@@ -1,3 +1,7 @@
+"""
+Functions for calibration using spectrum
+
+"""
 from typing import Tuple, Union, Annotated
 
 import numpy as np
@@ -49,6 +53,7 @@ def spectrum_level(f: np.ndarray,
                    X: np.ndarray,
                    fr: Union[None, Annotated[list[float], 2]]) -> Union[float, np.ndarray]:
     """
+    Computes the spectrum level within a given frequency range
 
     @arg f:
         frequency vector
