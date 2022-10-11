@@ -196,7 +196,7 @@
         
 
         
-            <div class="itemName"><code><a href="#normal_distributed_white_noise" class="internal-link" title="gapnet.data_creation.stimulus.noise.normal_distributed_white_noise">normal<wbr></wbr>_distributed<wbr></wbr>_white<wbr></wbr>_noise</a></code>
+            <div class="itemName"><code><a href="#normal_distributed_white_noise_generator" class="internal-link" title="gapnet.data_creation.stimulus.noise.normal_distributed_white_noise_generator">normal<wbr></wbr>_distributed<wbr></wbr>_white<wbr></wbr>_noise<wbr></wbr>_generator</a></code>
             </div>
         
 
@@ -206,7 +206,7 @@
         
 
         
-            <div class="itemName"><code><a href="#uniform_white_noise" class="internal-link" title="gapnet.data_creation.stimulus.noise.uniform_white_noise">uniform<wbr></wbr>_white<wbr></wbr>_noise</a></code>
+            <div class="itemName"><code><a href="#uniform_white_noise_generator" class="internal-link" title="gapnet.data_creation.stimulus.noise.uniform_white_noise_generator">uniform<wbr></wbr>_white<wbr></wbr>_noise<wbr></wbr>_generator</a></code>
             </div>
         
 
@@ -353,7 +353,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id29">
+          <table class="children sortable" id="id30">
   
   
   <tr class="class">
@@ -365,7 +365,7 @@
     
     <td>Function</td>
     <td><code><a href="#broadband_noise" class="internal-link" title="gapnet.data_creation.stimulus.noise.broadband_noise">broadband<wbr></wbr>_noise</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span class="undocumented">No summary</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -374,18 +374,18 @@
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#normal_distributed_white_noise" class="internal-link" title="gapnet.data_creation.stimulus.noise.normal_distributed_white_noise">normal<wbr></wbr>_distributed<wbr></wbr>_white<wbr></wbr>_noise</a></code></td>
+    <td><code><a href="#normal_distributed_white_noise_generator" class="internal-link" title="gapnet.data_creation.stimulus.noise.normal_distributed_white_noise_generator">normal<wbr></wbr>_distributed<wbr></wbr>_white<wbr></wbr>_noise<wbr></wbr>_generator</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#uniform_white_noise" class="internal-link" title="gapnet.data_creation.stimulus.noise.uniform_white_noise">uniform<wbr></wbr>_white<wbr></wbr>_noise</a></code></td>
+    <td><code><a href="#uniform_white_noise_generator" class="internal-link" title="gapnet.data_creation.stimulus.noise.uniform_white_noise_generator">uniform<wbr></wbr>_white<wbr></wbr>_noise<wbr></wbr>_generator</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
     <td><code><a href="#white_noise" class="internal-link" title="gapnet.data_creation.stimulus.noise.white_noise">white<wbr></wbr>_noise</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td>Generate white noise of the length of the time vector</td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -411,7 +411,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">broadband_noise</span>(t, amp=0.1, freq_range=None, dtype=float):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L37">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L66">
       
       (source)
     </a>
@@ -423,7 +423,7 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">amp:</span><code>float</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">freq<wbr></wbr>_range:</span><code>Annotated[<wbr></wbr>List[<wbr></wbr>float], <wbr></wbr>2]</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype:</span><code>type</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+    <div><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>np.ndarray</code></td><td class="fieldArgDesc">time vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">amp:</span><code>float</code></td><td class="fieldArgDesc">amplitude</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">freq<wbr></wbr>_range:</span><code>Annotated[<wbr></wbr>List[<wbr></wbr>float], <wbr></wbr>2]</code></td><td class="fieldArgDesc">desired frequency range</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype:</span><code>type</code></td><td class="fieldArgDesc">desired datatype</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc">noise signal</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -437,7 +437,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">broadband_noise_n</span>(fs=1000000.0, amp=0.1, duration=1.0, freq_range=None, dtype=float):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L28">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L57">
       
       (source)
     </a>
@@ -454,20 +454,20 @@
 </div><div class="basefunction">
   
   
-  <a name="gapnet.data_creation.stimulus.noise.normal_distributed_white_noise">
+  <a name="gapnet.data_creation.stimulus.noise.normal_distributed_white_noise_generator">
     
   </a>
-  <a name="normal_distributed_white_noise">
+  <a name="normal_distributed_white_noise_generator">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">normal_distributed_white_noise</span>(n):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L16">
+    <span class="py-keyword">def</span> <span class="py-defname">normal_distributed_white_noise_generator</span>(n):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L18">
       
       (source)
     </a>
-    <a class="headerLink" href="#normal_distributed_white_noise" title="gapnet.data_creation.stimulus.noise.normal_distributed_white_noise">
+    <a class="headerLink" href="#normal_distributed_white_noise_generator" title="gapnet.data_creation.stimulus.noise.normal_distributed_white_noise_generator">
       
       
       ¶
@@ -480,20 +480,20 @@
 </div><div class="basefunction">
   
   
-  <a name="gapnet.data_creation.stimulus.noise.uniform_white_noise">
+  <a name="gapnet.data_creation.stimulus.noise.uniform_white_noise_generator">
     
   </a>
-  <a name="uniform_white_noise">
+  <a name="uniform_white_noise_generator">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">uniform_white_noise</span>(n):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L12">
+    <span class="py-keyword">def</span> <span class="py-defname">uniform_white_noise_generator</span>(n):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L14">
       
       (source)
     </a>
-    <a class="headerLink" href="#uniform_white_noise" title="gapnet.data_creation.stimulus.noise.uniform_white_noise">
+    <a class="headerLink" href="#uniform_white_noise_generator" title="gapnet.data_creation.stimulus.noise.uniform_white_noise_generator">
       
       
       ¶
@@ -514,8 +514,8 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">white_noise</span>(t, generator=<a href="#uniform_white_noise" class="internal-link" title="gapnet.data_creation.stimulus.noise.uniform_white_noise">uniform_white_noise</a>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L24">
+    <span class="py-keyword">def</span> <span class="py-defname">white_noise</span>(t, amp=0.1, generator=<a href="#uniform_white_noise_generator" class="internal-link" title="gapnet.data_creation.stimulus.noise.uniform_white_noise_generator">uniform_white_noise_generator</a>, dtype=float):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L28">
       
       (source)
     </a>
@@ -527,7 +527,14 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t</span></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">generator:</span><code><a href="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction.html" class="internal-link" title="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction">WhiteNoiseFunction</a></code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+    <div><p>Generate white noise of the length of the time vector</p>
+<p>Example:</p>
+<pre class="rst-literal-block">
+    &gt;&gt;&gt; from data_creation.time.time import generate_time_vector
+    &gt;&gt;&gt; t = generate_time_vector(0.0, 1.0, 1000)
+    &gt;&gt;&gt; x = white_noise(t, 0.5)
+</pre>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>np.ndarray</code></td><td class="fieldArgDesc">time vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">amp:</span><code>float</code></td><td class="fieldArgDesc">amplitude</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">generator:</span><code><a href="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction.html" class="internal-link" title="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction">WhiteNoiseFunction</a></code></td><td class="fieldArgDesc">generator function (most fulfill the <code><a href="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction.html" class="internal-link" title="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction">WhiteNoiseFunction</a></code>.protocol)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype:</span><code>type</code></td><td class="fieldArgDesc">datatype</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc">noise signal</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -540,8 +547,8 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">white_noise_n</span>(n, generator=<a href="#uniform_white_noise" class="internal-link" title="gapnet.data_creation.stimulus.noise.uniform_white_noise">uniform_white_noise</a>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L20">
+    <span class="py-keyword">def</span> <span class="py-defname">white_noise_n</span>(n, generator=<a href="#uniform_white_noise_generator" class="internal-link" title="gapnet.data_creation.stimulus.noise.uniform_white_noise_generator">uniform_white_noise_generator</a>, dtype=float):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/noise.py#L22">
       
       (source)
     </a>
@@ -553,7 +560,7 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">n:</span><code>int</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">generator:</span><code><a href="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction.html" class="internal-link" title="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction">WhiteNoiseFunction</a></code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">n:</span><code>int</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">generator:</span><code><a href="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction.html" class="internal-link" title="gapnet.data_creation.stimulus.noise.WhiteNoiseFunction">WhiteNoiseFunction</a></code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype:</span><code>type</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
   </div>
 </div>
         </div>
@@ -567,7 +574,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-11 14:17:01.
+    22.9.1 at 2022-10-11 14:50:36.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

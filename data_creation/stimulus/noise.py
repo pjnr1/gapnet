@@ -2,6 +2,8 @@ from typing import Protocol, List, Annotated, Union
 
 import numpy as np
 
+from data_creation.calibration.transform import a2spl
+from data_creation.calibration.spectrum import normalise_by_spectrum_level
 from data_creation.time.time import get_sampling_frequency
 
 
@@ -9,20 +11,47 @@ class WhiteNoiseFunction(Protocol):
     def __call__(self, t: int) -> np.ndarray: ...
 
 
-def uniform_white_noise(n: int) -> np.ndarray:
+def uniform_white_noise_generator(n: int) -> np.ndarray:
     return np.random.random(n) - 0.5
 
 
-def normal_distributed_white_noise(n: int) -> np.ndarray:
+def normal_distributed_white_noise_generator(n: int) -> np.ndarray:
     return np.random.randn(n)
 
 
-def white_noise_n(n: int, generator: WhiteNoiseFunction = uniform_white_noise) -> np.ndarray:
-    return generator(n)
+def white_noise_n(n: int,
+                  generator: WhiteNoiseFunction = uniform_white_noise_generator,
+                  dtype: type = float) -> np.ndarray:
+    return generator(n).astype(dtype=dtype)
 
 
-def white_noise(t, generator: WhiteNoiseFunction = uniform_white_noise) -> np.ndarray:
-    return white_noise_n(t.shape[0], generator)
+def white_noise(t: np.ndarray,
+                amp: float = 0.1,
+                generator: WhiteNoiseFunction = uniform_white_noise_generator,
+                dtype: type = float) -> np.ndarray:
+    """
+    Generate white noise of the length of the time vector
+
+    Example::
+
+        >>> from data_creation.time.time import generate_time_vector
+        >>> t = generate_time_vector(0.0, 1.0, 1000)
+        >>> x = white_noise(t, 0.5)
+
+    @arg t:
+        time vector
+    @arg amp:
+        amplitude
+    @arg generator:
+        generator function (most fulfill the L{WhiteNoiseFunction}.protocol)
+    @arg dtype:
+        datatype
+    @return:
+        noise signal
+    """
+    x = white_noise_n(t.shape[0], generator, dtype=dtype)
+    x = normalise_by_spectrum_level(t, x, a2spl(amp), None)
+    return x
 
 
 def broadband_noise_n(fs: Union[float, int] = 1e6,
@@ -38,10 +67,23 @@ def broadband_noise(t: np.ndarray,
                     amp: float = 0.1,
                     freq_range: Annotated[List[float], 2] = None,
                     dtype: type = float) -> np.ndarray:
+    """
+
+    @arg t:
+        time vector
+    @arg amp:
+        amplitude
+    @arg freq_range:
+        desired frequency range
+    @arg dtype:
+        desired datatype
+    @return:
+        noise signal
+    """
     n_t = t.shape[0]
     fs = get_sampling_frequency(None, t)
     if freq_range is None:
-        freq_range = np.array([1/8, 3/8]) * fs
+        freq_range = np.array([1 / 8, 3 / 8]) * fs
     if dtype is None:
         dtype = t.dtype
 
@@ -62,6 +104,5 @@ def broadband_noise(t: np.ndarray,
         signal += np.sin(f[i] * t + phase[i])
 
     signal *= amp
-    # signal /= np.max(np.abs(signal)) + eps
 
     return signal

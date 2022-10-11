@@ -6,7 +6,7 @@
 
   <head>
     
-    <title>gapnet.data_creation.calibration.transform</title>
+    <title>gapnet.data_creation.calibration.spectrum</title>
     <meta name="generator" content="pydoctor 22.9.1"> 
         
     </meta>
@@ -142,7 +142,7 @@
 
       <div class="thingTitle">
         <span>Module</span>
-        <code class="thisobject"><a href="gapnet.data_creation.calibration.transform.html" class="internal-link" title="This module">transform</a></code> 
+        <code class="thisobject"><a href="gapnet.data_creation.calibration.spectrum.html" class="internal-link" title="This module">spectrum</a></code> 
       </div>
       
       <div>
@@ -163,7 +163,7 @@
         
 
         
-            <div class="itemName"><code><a href="#a2spl" class="internal-link" title="gapnet.data_creation.calibration.transform.a2spl">a2spl</a></code>
+            <div class="itemName"><code><a href="#get_spectrum" class="internal-link" title="gapnet.data_creation.calibration.spectrum.get_spectrum">get<wbr></wbr>_spectrum</a></code>
             </div>
         
 
@@ -173,7 +173,7 @@
         
 
         
-            <div class="itemName"><code><a href="#hl2spl" class="internal-link" title="gapnet.data_creation.calibration.transform.hl2spl">hl2spl</a></code>
+            <div class="itemName"><code><a href="#get_spectrum_n" class="internal-link" title="gapnet.data_creation.calibration.spectrum.get_spectrum_n">get<wbr></wbr>_spectrum<wbr></wbr>_n</a></code>
             </div>
         
 
@@ -183,7 +183,7 @@
         
 
         
-            <div class="itemName"><code><a href="#spl2a" class="internal-link" title="gapnet.data_creation.calibration.transform.spl2a">spl2a</a></code>
+            <div class="itemName"><code><a href="#normalise_by_spectrum_level" class="internal-link" title="gapnet.data_creation.calibration.spectrum.normalise_by_spectrum_level">normalise<wbr></wbr>_by<wbr></wbr>_spectrum<wbr></wbr>_level</a></code>
             </div>
         
 
@@ -193,7 +193,7 @@
         
 
         
-            <div class="itemName"><code><a href="#spl2hl" class="internal-link" title="gapnet.data_creation.calibration.transform.spl2hl">spl2hl</a></code>
+            <div class="itemName"><code><a href="#spectrum_level" class="internal-link" title="gapnet.data_creation.calibration.spectrum.spectrum_level">spectrum<wbr></wbr>_level</a></code>
             </div>
         
 
@@ -253,7 +253,7 @@
             </div>
         
 
-    </li><li class="">
+    </li><li class=" thisobject">
         
         
         
@@ -263,7 +263,7 @@
             </div>
         
 
-    </li><li class=" thisobject">
+    </li><li class="">
         
         
         
@@ -310,7 +310,7 @@
         
 
         <div class="page-header">
-          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.html" class="internal-link" title="gapnet.data_creation">data_creation</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.calibration.html" class="internal-link" title="gapnet.data_creation.calibration">calibration</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.calibration.transform.html" class="internal-link" title="gapnet.data_creation.calibration.transform">transform</a></code></code></h1>
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.html" class="internal-link" title="gapnet.data_creation">data_creation</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.calibration.html" class="internal-link" title="gapnet.data_creation.calibration">calibration</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.calibration.spectrum.html" class="internal-link" title="gapnet.data_creation.calibration.spectrum">spectrum</a></code></code></h1>
           <div id="showPrivate">
             <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
           </div>
@@ -321,7 +321,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <a href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/transform.py" class="sourceLink">(source)</a>
+          <a href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/spectrum.py" class="sourceLink">(source)</a>
           <p></p>
         </div>
 
@@ -330,29 +330,29 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id11">
+          <table class="children sortable" id="id10">
   
   
   <tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#a2spl" class="internal-link" title="gapnet.data_creation.calibration.transform.a2spl">a2spl</a></code></td>
-    <td>Convert amplitude to SPL dB</td>
+    <td><code><a href="#get_spectrum" class="internal-link" title="gapnet.data_creation.calibration.spectrum.get_spectrum">get<wbr></wbr>_spectrum</a></code></td>
+    <td>Compute spectrum and show positive frequency space in SPL</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#hl2spl" class="internal-link" title="gapnet.data_creation.calibration.transform.hl2spl">hl2spl</a></code></td>
-    <td>Convert dB hearing level (HL) to dB sound pressure level (SPL)</td>
+    <td><code><a href="#get_spectrum_n" class="internal-link" title="gapnet.data_creation.calibration.spectrum.get_spectrum_n">get<wbr></wbr>_spectrum<wbr></wbr>_n</a></code></td>
+    <td>Compute spectrum and show positive frequency space in SPL</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#spl2a" class="internal-link" title="gapnet.data_creation.calibration.transform.spl2a">spl2a</a></code></td>
-    <td>Convert SPL dB to amplitude</td>
+    <td><code><a href="#normalise_by_spectrum_level" class="internal-link" title="gapnet.data_creation.calibration.spectrum.normalise_by_spectrum_level">normalise<wbr></wbr>_by<wbr></wbr>_spectrum<wbr></wbr>_level</a></code></td>
+    <td>Normalises a given signal by its spectrum level within a defined frequency range. If</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#spl2hl" class="internal-link" title="gapnet.data_creation.calibration.transform.spl2hl">spl2hl</a></code></td>
-    <td>Convert dB sound pressure level (SPL) to dB hearing level (HL)</td>
+    <td><code><a href="#spectrum_level" class="internal-link" title="gapnet.data_creation.calibration.spectrum.spectrum_level">spectrum<wbr></wbr>_level</a></code></td>
+    <td><span class="undocumented">No summary</span></td>
   </tr>
 </table>
           
@@ -364,20 +364,20 @@
           <div class="basefunction">
   
   
-  <a name="gapnet.data_creation.calibration.transform.a2spl">
+  <a name="gapnet.data_creation.calibration.spectrum.get_spectrum">
     
   </a>
-  <a name="a2spl">
+  <a name="get_spectrum">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">a2spl</span>(a):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/transform.py#L17">
+    <span class="py-keyword">def</span> <span class="py-defname">get_spectrum</span>(t, x):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/spectrum.py#L9">
       
       (source)
     </a>
-    <a class="headerLink" href="#a2spl" title="gapnet.data_creation.calibration.transform.a2spl">
+    <a class="headerLink" href="#get_spectrum" title="gapnet.data_creation.calibration.spectrum.get_spectrum">
       
       
       ¶
@@ -385,26 +385,26 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Convert amplitude to SPL dB</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">a</span></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+    <div><p>Compute spectrum and show positive frequency space in SPL</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>np.ndarray</code></td><td class="fieldArgDesc">time vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">x:</span><code>np.ndarray</code></td><td class="fieldArgDesc">signal</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Tuple[<wbr></wbr>np.ndarray, <wbr></wbr>np.ndarray]</code></td><td class="fieldArgDesc">Tuple(frequency vector, spectrum)</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
   
-  <a name="gapnet.data_creation.calibration.transform.hl2spl">
+  <a name="gapnet.data_creation.calibration.spectrum.get_spectrum_n">
     
   </a>
-  <a name="hl2spl">
+  <a name="get_spectrum_n">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">hl2spl</span>(frequencies, levels, hl_ref=None):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/transform.py#L27">
+    <span class="py-keyword">def</span> <span class="py-defname">get_spectrum_n</span>(n, x, fs):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/spectrum.py#L24">
       
       (source)
     </a>
-    <a class="headerLink" href="#hl2spl" title="gapnet.data_creation.calibration.transform.hl2spl">
+    <a class="headerLink" href="#get_spectrum_n" title="gapnet.data_creation.calibration.spectrum.get_spectrum_n">
       
       
       ¶
@@ -412,26 +412,26 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Convert dB hearing level (HL) to dB sound pressure level (SPL)</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">frequencies</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">levels</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">hl<wbr></wbr>_ref</span></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+    <div><p>Compute spectrum and show positive frequency space in SPL</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">n:</span><code>Union[<wbr></wbr>float, <wbr></wbr>int]</code></td><td class="fieldArgDesc">length in samples</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">x:</span><code>np.ndarray</code></td><td class="fieldArgDesc">signal</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>Union[<wbr></wbr>float, <wbr></wbr>int]</code></td><td class="fieldArgDesc">sampling frequency (only used for frequency vector)</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Tuple[<wbr></wbr>np.ndarray, <wbr></wbr>np.ndarray]</code></td><td class="fieldArgDesc">Tuple(frequency vector, spectrum)</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
   
-  <a name="gapnet.data_creation.calibration.transform.spl2a">
+  <a name="gapnet.data_creation.calibration.spectrum.normalise_by_spectrum_level">
     
   </a>
-  <a name="spl2a">
+  <a name="normalise_by_spectrum_level">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">spl2a</span>(spl):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/transform.py#L7">
+    <span class="py-keyword">def</span> <span class="py-defname">normalise_by_spectrum_level</span>(t, x, target_level, frequency_range=None):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/spectrum.py#L67">
       
       (source)
     </a>
-    <a class="headerLink" href="#spl2a" title="gapnet.data_creation.calibration.transform.spl2a">
+    <a class="headerLink" href="#normalise_by_spectrum_level" title="gapnet.data_creation.calibration.spectrum.normalise_by_spectrum_level">
       
       
       ¶
@@ -439,26 +439,26 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Convert SPL dB to amplitude</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">spl</span></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+    <div><p>Normalises a given signal by its spectrum level within a defined frequency range. If</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>np.ndarray</code></td><td class="fieldArgDesc">time vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">x:</span><code>np.ndarray</code></td><td class="fieldArgDesc">signal</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">target<wbr></wbr>_level:</span><code>float</code></td><td class="fieldArgDesc">target spectrum level in dB SPL</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">frequency<wbr></wbr>_range</span></td><td class="fieldArgDesc">frequency range for spectrum level calculation</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc">normalised signal</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
   
-  <a name="gapnet.data_creation.calibration.transform.spl2hl">
+  <a name="gapnet.data_creation.calibration.spectrum.spectrum_level">
     
   </a>
-  <a name="spl2hl">
+  <a name="spectrum_level">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">spl2hl</span>(frequencies, levels, hl_ref=None):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/transform.py#L40">
+    <span class="py-keyword">def</span> <span class="py-defname">spectrum_level</span>(f, X, fr):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/calibration/spectrum.py#L48">
       
       (source)
     </a>
-    <a class="headerLink" href="#spl2hl" title="gapnet.data_creation.calibration.transform.spl2hl">
+    <a class="headerLink" href="#spectrum_level" title="gapnet.data_creation.calibration.spectrum.spectrum_level">
       
       
       ¶
@@ -466,8 +466,7 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Convert dB sound pressure level (SPL) to dB hearing level (HL)</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">frequencies</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">levels</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">hl<wbr></wbr>_ref</span></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+    <div><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">f:</span><code>np.ndarray</code></td><td class="fieldArgDesc">frequency vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">X:</span><code>np.ndarray</code></td><td class="fieldArgDesc">spectrum vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fr:</span><code>Union[<wbr></wbr>None, <wbr></wbr>Annotated[<wbr></wbr>list[<wbr></wbr>float], <wbr></wbr>2]]</code></td><td class="fieldArgDesc">frequency range to compute, if None, the full spectrum is used</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Union[<wbr></wbr>float, <wbr></wbr>np.ndarray]</code></td><td class="fieldArgDesc"></td></tr></table></div>
   </div>
 </div>
         </div>

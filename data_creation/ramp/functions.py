@@ -17,9 +17,12 @@ def linear_ramp_func(t: np.ndarray,
 
     Note that this ramp function ignores gamma_t and width
 
-    @arg t: time vector
-    @arg gamma_t: _unused_
-    @arg width: _unused_
+    @arg t:
+        time vector
+    @arg gamma_t:
+        _unused_
+    @arg width:
+        _unused_
 
     @return:
     """
@@ -32,9 +35,12 @@ def cosine_squared_ramp_func(t: np.ndarray,
     """
     Creates a cosine squared ramp centered in gamma_t with defined width, relative to the time-vector t
 
-    @arg t: time vector
-    @arg gamma_t: center of ramp
-    @arg width: width of ramp
+    @arg t:
+        time vector
+    @arg gamma_t:
+        center of ramp
+    @arg width:
+        width of ramp
 
     @return:
     """
@@ -49,10 +55,18 @@ def _cosine_sum(t: np.ndarray,
     """
     Private helper used for cosine-sum ramps, i.e. Hann and Hamming
 
-    @arg t: time vector
-    @arg gamma_t: center of ramp
-    @arg width: width of ramp
+    Computed from:
+
+      - a0 - (1 - a0)cos(S{pi} * x / width)
+
+    @arg t:
+        time vector
+    @arg gamma_t:
+        center of ramp
+    @arg width:
+        width of ramp
     @arg a0:
+        Offset parameter, see function description for details
     @return:
     """
     x = t - (gamma_t - width / 2)
@@ -65,9 +79,12 @@ def hann_ramp_func(t: np.ndarray,
     """
     Ramp based on the Hann window function
 
-    @arg t: time vector
-    @arg gamma_t: center of ramp
-    @arg width: width of ramp
+    @arg t:
+        time vector
+    @arg gamma_t:
+        center of ramp
+    @arg width:
+        width of ramp
     @return:
     """
     return _cosine_sum(t=t, gamma_t=gamma_t, width=width, a0=0.5)
@@ -79,9 +96,12 @@ def hamming_ramp_func(t: np.ndarray,
     """
     Ramp based on the Hamming window function
 
-    @arg t: time vector
-    @arg gamma_t: center of ramp
-    @arg width: width of ramp
+    @arg t:
+        time vector
+    @arg gamma_t:
+        center of ramp
+    @arg width:
+        width of ramp
     @return:
     """
     return _cosine_sum(t=t, gamma_t=gamma_t, width=width, a0=25.0 / 46.0)
@@ -94,9 +114,12 @@ def gaussian_ramp_func(t: np.ndarray,
     Ramp function based on the gaussian gate used by
     U{Schneider and Hamstra, 1999 <https://asa.scitation.org/doi/10.1121/1.427062>}
 
-    @arg t: time vector
-    @arg gamma_t: center of ramp
-    @arg width: width of ramp
+    @arg t:
+        time vector
+    @arg gamma_t:
+        center of ramp
+    @arg width:
+        width of ramp
     @return:
     """
     gamma_t += width / 2
