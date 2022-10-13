@@ -183,6 +183,16 @@
         
 
         
+            <div class="itemName"><code><a href="#position_and_length_to_gamma_t" class="internal-link" title="gapnet.data_creation.time.time.position_and_length_to_gamma_t">position<wbr></wbr>_and<wbr></wbr>_length<wbr></wbr>_to<wbr></wbr>_gamma<wbr></wbr>_t</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#start_and_duration_to_gamma_t" class="internal-link" title="gapnet.data_creation.time.time.start_and_duration_to_gamma_t">start<wbr></wbr>_and<wbr></wbr>_duration<wbr></wbr>_to<wbr></wbr>_gamma<wbr></wbr>_t</a></code>
             </div>
         
@@ -280,7 +290,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id35">
+          <table class="children sortable" id="id36">
   
   
   <tr class="function">
@@ -293,6 +303,11 @@
     <td>Function</td>
     <td><code><a href="#get_sampling_frequency" class="internal-link" title="gapnet.data_creation.time.time.get_sampling_frequency">get<wbr></wbr>_sampling<wbr></wbr>_frequency</a></code></td>
     <td>Compute sampling frequency from t when fs is None, else simply returns fs</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#position_and_length_to_gamma_t" class="internal-link" title="gapnet.data_creation.time.time.position_and_length_to_gamma_t">position<wbr></wbr>_and<wbr></wbr>_length<wbr></wbr>_to<wbr></wbr>_gamma<wbr></wbr>_t</a></code></td>
+    <td>Small helper to get start- and end-time from start and duration</td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -345,7 +360,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">get_sampling_frequency</span>(fs, t):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L33">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L45">
       
       (source)
     </a>
@@ -359,6 +374,33 @@
     
     <div><p>Compute sampling frequency from t when fs is None, else simply returns fs</p>
 <table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>Union[<wbr></wbr>int, <wbr></wbr>None]</code></td><td class="fieldArgDesc">sampling frequency</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>Union[<wbr></wbr>np.ndarray, <wbr></wbr>List[<wbr></wbr>float]]</code></td><td class="fieldArgDesc">time vector</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>int</code></td><td class="fieldArgDesc"></td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.data_creation.time.time.position_and_length_to_gamma_t">
+    
+  </a>
+  <a name="position_and_length_to_gamma_t">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">position_and_length_to_gamma_t</span>(position, length):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L33">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#position_and_length_to_gamma_t" title="gapnet.data_creation.time.time.position_and_length_to_gamma_t">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Small helper to get start- and end-time from start and duration</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">position:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">length:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Annotated[<wbr></wbr>List[<wbr></wbr>float], <wbr></wbr>2]</code></td><td class="fieldArgDesc">list with two indices; start and end</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -385,7 +427,7 @@
   <div class="docstring functionBody">
     
     <div><p>Small helper to get start- and end-time from start and duration</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">start:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">duration:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>List[<wbr></wbr>float]</code></td><td class="fieldArgDesc">list with two indices; start and end</td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">start:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">duration:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Annotated[<wbr></wbr>List[<wbr></wbr>float], <wbr></wbr>2]</code></td><td class="fieldArgDesc">list with two indices; start and end</td></tr></table></div>
   </div>
 </div>
         </div>
@@ -399,7 +441,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-11 16:32:26.
+    22.9.1 at 2022-10-13 11:53:11.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

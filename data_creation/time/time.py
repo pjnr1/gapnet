@@ -1,5 +1,5 @@
 import numpy as np
-from typing import List, Union
+from typing import Annotated, List, Union
 
 
 def generate_time_vector(start: float, end: float, fs: int) -> np.ndarray:
@@ -18,7 +18,7 @@ def generate_time_vector(start: float, end: float, fs: int) -> np.ndarray:
     return np.arange(fs * start, fs * end) / fs
 
 
-def start_and_duration_to_gamma_t(start: float, duration: float) -> List[float]:
+def start_and_duration_to_gamma_t(start: float, duration: float) -> Annotated[List[float], 2]:
     """
     Small helper to get start- and end-time from start and duration
 
@@ -28,6 +28,18 @@ def start_and_duration_to_gamma_t(start: float, duration: float) -> List[float]:
         list with two indices; start and end
     """
     return [start, start + duration]
+
+
+def position_and_length_to_gamma_t(position: float, length: float) -> Annotated[List[float], 2]:
+    """
+    Small helper to get start- and end-time from start and duration
+
+    @arg position:
+    @arg length:
+    @return:
+        list with two indices; start and end
+    """
+    return [position - (length / 2), position + (length / 2)]
 
 
 def get_sampling_frequency(fs: Union[int, None], t: Union[np.ndarray, List[float]]) -> int:

@@ -167,6 +167,26 @@
             </div>
         
 
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#generate_babble" class="internal-link" title="gapnet.data_creation.stimulus.babble.generate_babble">generate<wbr></wbr>_babble</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_n_sound_files" class="internal-link" title="gapnet.data_creation.stimulus.babble.get_n_sound_files">get<wbr></wbr>_n<wbr></wbr>_sound<wbr></wbr>_files</a></code>
+            </div>
+        
+
     </li>
 </ul> 
 
@@ -290,14 +310,24 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id28">
+          <table class="children sortable" id="id29">
   
   
   <tr class="function">
     
     <td>Function</td>
     <td><code><a href="#combine_audio_files" class="internal-link" title="gapnet.data_creation.stimulus.babble.combine_audio_files">combine<wbr></wbr>_audio<wbr></wbr>_files</a></code></td>
+    <td>Combines the audio-files and resamples to a desired sampling frequency. If fs is None, then the sampling frequency will be of the first loaded audio-file.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#generate_babble" class="internal-link" title="gapnet.data_creation.stimulus.babble.generate_babble">generate<wbr></wbr>_babble</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_n_sound_files" class="internal-link" title="gapnet.data_creation.stimulus.babble.get_n_sound_files">get<wbr></wbr>_n<wbr></wbr>_sound<wbr></wbr>_files</a></code></td>
+    <td>:param data_folder: :param n_talkers: :return:</td>
   </tr>
 </table>
           
@@ -318,7 +348,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">combine_audio_files</span>(audio_files, fs):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/babble.py#L9">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/babble.py#L34">
       
       (source)
     </a>
@@ -330,7 +360,61 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">audio<wbr></wbr>_files:</span><code>List[<wbr></wbr>str]</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>int</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+    <div><p>Combines the audio-files and resamples to a desired sampling frequency. If fs is None, then the sampling frequency will be of the first loaded audio-file.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">audio<wbr></wbr>_files:</span><code>List[<wbr></wbr>str]</code></td><td class="fieldArgDesc">list of audio-files to combine</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>int</code></td><td class="fieldArgDesc">sampling frequency, if None, sampling frequency will be the same as the first audio-file in audio_files</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>(<wbr></wbr>int, <wbr></wbr>np.ndarray)</code></td><td class="fieldArgDesc">the sampling frequency and the combined sound in a numpy array normalised by the max-value of the array</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.data_creation.stimulus.babble.generate_babble">
+    
+  </a>
+  <a name="generate_babble">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">generate_babble</span>(data_folder, n_talkers, fs=None):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/babble.py#L28">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#generate_babble" title="gapnet.data_creation.stimulus.babble.generate_babble">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_folder:</span><code>str</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">n<wbr></wbr>_talkers:</span><code>int</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>int</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>(<wbr></wbr>int, <wbr></wbr>np.ndarray)</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.data_creation.stimulus.babble.get_n_sound_files">
+    
+  </a>
+  <a name="get_n_sound_files">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_n_sound_files</span>(data_folder, n_talkers):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/stimulus/babble.py#L11">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_n_sound_files" title="gapnet.data_creation.stimulus.babble.get_n_sound_files">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>:param data_folder: :param n_talkers: :return:</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_folder:</span><code>str</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">n<wbr></wbr>_talkers:</span><code>int</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>List[<wbr></wbr>str]</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>When n_talkers is larger than the count of files in data_folder</td></tr></table></div>
   </div>
 </div>
         </div>
@@ -344,7 +428,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-11 16:32:26.
+    22.9.1 at 2022-10-13 11:53:11.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
