@@ -1,17 +1,29 @@
 import os
+import requests
+from tqdm import tqdm
 
 
-def get_next_non_existent(filepath: str) -> str:
+def download(url: str, fname: str, chunk_size=1024):
     """
-    Generate a new filename if path exists, e.g.:
+    Copied from U{yangd0 <https://gist.github.com/yanqd0/c13ed29e29432e3cf3e7c38467f42f51>}
 
-    When 'test.txt' exists, the function will check 'test-{n=1}.txt' and increment `n`
-    until the filename doesn't exist.
+    @arg url:
+        remote path to download
+    @arg fname:
+        local path to save to
+    @arg chunk_size:
+        size of chunks to get
     """
-    fn_new = filepath
-    root, ext = os.path.splitext(filepath)
-    i = 0
-    while os.path.exists(fn_new):
-        i += 1
-        fn_new = '{}-{}{}'.format(root, str(i), ext)
-    return fn_new
+    resp = requests.get(url, stream=True)
+    total = int(resp.headers.get('content-length', 0))
+    with open(fname, 'wb') as file, tqdm(
+            desc=fname,
+            total=total,
+            unit='iB',
+            unit_scale=True,
+            unit_divisor=1024,
+    ) as bar:
+        for data in resp.iter_content(chunk_size=chunk_size):
+            size = file.write(data)
+            bar.update(size)
+
