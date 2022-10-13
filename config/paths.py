@@ -4,6 +4,9 @@ import glob
 
 
 class LocationNames(Enum):
+    """
+    Enum for locations
+    """
     DTU_HPC_JL = 1
     LOCAL_JL_1 = 2
 
