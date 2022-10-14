@@ -9,7 +9,7 @@ from scipy.stats import norm
 
 def norminv(p, mu=0., std=1.0):
     """
-    Replica of the Matlab function S{norminv} (Normal inverse cumulative distribution function)
+    Replica of the Matlab function C{norminv} (Normal inverse cumulative distribution function)
 
     @arg p:
         Probability values at which to evaluate the inverse of the cdf (icdf), specified as a scalar value or an array
