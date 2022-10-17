@@ -47,9 +47,9 @@ def ranged_type(value_type: type,
         except ValueError:
             raise argparse.ArgumentTypeError(f'must be a valid {value_type}')
         if min_value is not None and min_operator(x, min_value):
-            raise argparse.ArgumentTypeError(f'must be within [{min_value},{min_value}]')
+            raise argparse.ArgumentTypeError(f'must be within [{min_value},{max_value}]')
         if max_value is not None and max_operator(x, max_value):
-            raise argparse.ArgumentTypeError(f'must be within [{min_value},{min_value}]')
+            raise argparse.ArgumentTypeError(f'must be within [{min_value},{max_value}]')
         return x
 
     # Return function handle to checking function

@@ -163,16 +163,6 @@
         
 
         
-            <div class="itemName"><code><a href="#get_condition_folders" class="internal-link" title="gapnet.scripts.spikeogramorator.get_condition_folders">get<wbr></wbr>_condition<wbr></wbr>_folders</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
             <div class="itemName"><code><a href="#get_destination_path" class="internal-link" title="gapnet.scripts.spikeogramorator.get_destination_path">get<wbr></wbr>_destination<wbr></wbr>_path</a></code>
             </div>
         
@@ -213,6 +203,16 @@
 
         
             <div class="itemName"><code><a href="#condition_folders" class="internal-link" title="gapnet.scripts.spikeogramorator.condition_folders">condition<wbr></wbr>_folders</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#generator" class="internal-link" title="gapnet.scripts.spikeogramorator.generator">generator</a></code>
             </div>
         
 
@@ -339,7 +339,12 @@
         </div>
 
         <div class="moduleDocstring">
-          <div><p class="undocumented">Undocumented</p></div>
+          <div><p>Command line script for generating spikeograms of ANF simulations</p>
+<p>Usage:</p>
+<pre class="rst-literal-block">
+    python scripts/spikeogramorator.py --help
+</pre>
+</div>
         </div>
 
         <div id="splitTables">
@@ -347,11 +352,6 @@
   
   
   <tr class="function">
-    
-    <td>Function</td>
-    <td><code><a href="#get_condition_folders" class="internal-link" title="gapnet.scripts.spikeogramorator.get_condition_folders">get<wbr></wbr>_condition<wbr></wbr>_folders</a></code></td>
-    <td><span class="undocumented">No summary</span></td>
-  </tr><tr class="function">
     
     <td>Function</td>
     <td><code><a href="#get_destination_path" class="internal-link" title="gapnet.scripts.spikeogramorator.get_destination_path">get<wbr></wbr>_destination<wbr></wbr>_path</a></code></td>
@@ -370,6 +370,11 @@
     
     <td>Variable</td>
     <td><code><a href="#condition_folders" class="internal-link" title="gapnet.scripts.spikeogramorator.condition_folders">condition<wbr></wbr>_folders</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#generator" class="internal-link" title="gapnet.scripts.spikeogramorator.generator">generator</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="variable">
     
@@ -402,32 +407,6 @@
           <div class="basefunction">
   
   
-  <a name="gapnet.scripts.spikeogramorator.get_condition_folders">
-    
-  </a>
-  <a name="get_condition_folders">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-keyword">def</span> <span class="py-defname">get_condition_folders</span>(mode, bin_width):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L19">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#get_condition_folders" title="gapnet.scripts.spikeogramorator.get_condition_folders">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="docstring functionBody">
-    
-    <div><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">mode</span></td><td class="fieldArgDesc">specify whether to use summed ANF or individual channels (defined</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width</span></td><td class="fieldArgDesc">specify width of the bins used to down-sample</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
-  </div>
-</div><div class="basefunction">
-  
-  
   <a name="gapnet.scripts.spikeogramorator.get_destination_path">
     
   </a>
@@ -437,7 +416,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">get_destination_path</span>(mat_file, input_folder):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L107">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L110">
       
       (source)
     </a>
@@ -467,7 +446,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">process_simulation</span>(mat_file, input_folder):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L121">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L124">
       
       (source)
     </a>
@@ -493,7 +472,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">args</span> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L88">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L94">
       
       (source)
     </a>
@@ -520,11 +499,38 @@
   <div class="functionHeader">
     
     <span class="py-defname">condition_folders</span> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L89">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L95">
       
       (source)
     </a>
     <a class="headerLink" href="#condition_folders" title="gapnet.scripts.spikeogramorator.condition_folders">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.spikeogramorator.generator">
+    
+  </a>
+  <a name="generator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">generator</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L96">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#generator" title="gapnet.scripts.spikeogramorator.generator">
       
       
       ¶
@@ -547,7 +553,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">generator_dict</span> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L13">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L26">
       
       (source)
     </a>
@@ -574,7 +580,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">mat_files</span> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L142">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L145">
       
       (source)
     </a>
@@ -601,7 +607,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">parser</span> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L34">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L31">
       
       (source)
     </a>
@@ -628,7 +634,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">path_string</span> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L144">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/spikeogramorator.py#L147">
       
       (source)
     </a>
@@ -655,7 +661,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-17 13:18:33.
+    22.9.1 at 2022-10-17 13:53:47.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

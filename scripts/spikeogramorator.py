@@ -1,11 +1,24 @@
+"""
+Command line script for generating spikeograms of ANF simulations
+
+Usage::
+    > python scripts/spikeogramorator.py --help
+
+"""
 import argparse
 import glob
-import os.path
+import os
 
 from joblib import Parallel, delayed
 
 import torch
 
+# Make imports work, even though script is in sub-folder "scripts"
+import sys
+sys.path.insert(0, os.getcwd())
+
+# Import local packages
+from data_creation.files.naming import get_condition_folders
 from data_creation.spikeogram.generators import spikeogram_2D, spikeogram_3D
 from data_creation.spikeogram.tools import open_an_simulation_data
 from typing_tools.argparsers import ranged_type, string_from_valid_list_type
@@ -15,27 +28,19 @@ generator_dict = {
     '3d': spikeogram_3D,
 }
 
-
-def get_condition_folders(mode, bin_width):
-    """
-
-    @param mode:
-        specify whether to use summed ANF or individual channels (defined
-    @param bin_width:
-        specify width of the bins used to down-sample
-    @return:
-    """
-    return ['mode_' + mode, 'bw_' + str(bin_width)]
-
-
-"""
-TODO Description here
-"""
-parser = argparse.ArgumentParser(prog='spikeogramorator')
+parser = argparse.ArgumentParser(prog='spikeogramorator',
+                                 description="""
+                                 Tool for generating spikeograms prior to presenting the ANF stimulation to a model.
+                                 """,
+                                 epilog="""
+                                 Part of GapNet package. Visit https://github.com/pjnr1/gapnet for more information.
+                                 """,
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 parser.add_argument('--regexp',
                     dest='file_regexp',
-                    type=str, default='*.mat',
+                    type=str,
+                    default='*.mat',
                     help='Specify the regexp pattern to match files with')
 parser.add_argument('-w', '--binwidth',
                     dest='binwidth',
@@ -77,6 +82,7 @@ parser.add_argument('-i', '--input',
                     dest='input_folders',
                     type=str,
                     nargs='+',
+                    required=True,
                     help='list of folders to include in generation')
 parser.add_argument('-o', '--output',
                     dest='output_folder',
@@ -87,10 +93,7 @@ parser.add_argument('-o', '--output',
 # Parse arguments
 args = parser.parse_args()
 condition_folders = get_condition_folders(args.mode, args.binwidth)
-
-# Check arguments (raise errors)
-if args.input_folders is None:
-    raise ValueError("You need to set an input folder")
+generator = generator_dict[args.mode]
 
 print('Starting generation for the following input folders:')
 for i, folder in enumerate(args.input_folders):
@@ -127,8 +130,8 @@ def process_simulation(mat_file, input_folder):
     os.makedirs(filepath_folder, exist_ok=True)
     print('Reading:', mat_file)
     try:
-        output = generator_dict[args.mode](open_an_simulation_data(mat_file),
-                                           bin_width=args.binwidth)
+        output = generator(open_an_simulation_data(mat_file),
+                           bin_width=args.binwidth)
 
         print('Saving: ', filepath, end=' ')
         torch.save(output, filepath)

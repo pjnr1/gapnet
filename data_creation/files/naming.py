@@ -66,3 +66,15 @@ def get_next_non_existent(filepath: str) -> str:
         i += 1
         fn_new = '{}-{}{}'.format(root, str(i), ext)
     return fn_new
+
+
+def get_condition_folders(mode, bin_width):
+    """
+
+    @param mode:
+        specify whether to use summed ANF or individual channels (defined
+    @param bin_width:
+        specify width of the bins used to down-sample
+    @return:
+    """
+    return ['mode_' + mode, 'bw_' + str(bin_width)]
