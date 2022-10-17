@@ -6,6 +6,7 @@ import glob
 class LocationNames(Enum):
     """
     Enum for locations
+
     """
     DTU_HPC_JL = 1
     LOCAL_JL_1 = 2
@@ -25,6 +26,10 @@ location = home_to_location[os.getenv('HOME')]
 
 
 def get_thesis_folder():
+    """
+
+    @return:
+    """
     return thesis_folder_locations[location]
 
 
