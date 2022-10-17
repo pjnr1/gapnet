@@ -50,11 +50,11 @@ def get_anf_folder(lvl,
     """
     Returns the path containing the ANF simulations for the given arguments
 
-    @arg lvl:
+    @param lvl:
         presentation level
-    @arg impairment:
+    @param impairment:
         type of impairment as a string
-    @arg simulation_group:
+    @param simulation_group:
 
     @return:
         path to ANF simulations
@@ -80,15 +80,15 @@ def get_spikeogram_folder(lvl,
     """
     Returns the path containing spikeograms for the given arguments
 
-    @arg lvl:
+    @param lvl:
         presentation level
-    @arg mode:
+    @param mode:
         2d or 3d, i.e. all ANFs bundled or separate channels, LSR-, MSR- and HSR-fibers
-    @arg bin_width:
+    @param bin_width:
         define the resolution; e.g. bin_width of 1ms results in 1kHz sampling rate
-    @arg impairment:
+    @param impairment:
         any impairment, default to 'none' or None
-    @arg simulation_group:
+    @param simulation_group:
 
     @return:
         path to spikeograms
@@ -113,15 +113,15 @@ def get_spikeograms_from_folder(lvl,
     """
     Returns spikeograms for the given arguments
 
-    @arg lvl:
+    @param lvl:
         presentation level
-    @arg mode:
+    @param mode:
         2d or 3d, i.e. all ANFs bundled or separate channels, LSR-, MSR- and HSR-fibers
-    @arg bin_width:
+    @param bin_width:
         define the resolution; e.g. bin_width of 1ms results in 1kHz sampling rate
-    @arg impairment:
+    @param impairment:
         any impairment, default to 'none' or None
-    @arg simulation_group:
+    @param simulation_group:
 
     @return:
         list of spikeogram files

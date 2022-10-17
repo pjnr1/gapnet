@@ -38,13 +38,13 @@ def white_noise(t: np.ndarray,
         >>> t = generate_time_vector(0.0, 1.0, 1000)
         >>> x = white_noise(t, 0.5)
 
-    @arg t:
+    @param t:
         time vector
-    @arg amp:
+    @param amp:
         amplitude
-    @arg generator:
+    @param generator:
         generator function (most fulfill the L{WhiteNoiseFunction}.protocol)
-    @arg dtype:
+    @param dtype:
         datatype
     @return:
         noise signal
@@ -69,13 +69,13 @@ def broadband_noise(t: np.ndarray,
                     dtype: type = float) -> np.ndarray:
     """
 
-    @arg t:
+    @param t:
         time vector
-    @arg amp:
+    @param amp:
         amplitude
-    @arg freq_range:
+    @param freq_range:
         desired frequency range
-    @arg dtype:
+    @param dtype:
         desired datatype
     @return:
         noise signal

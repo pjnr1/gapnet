@@ -8,7 +8,7 @@ def spl2a(spl):
     """
     Convert SPL dB to amplitude
 
-    @arg spl:
+    @param spl:
     @return:
     """
     return SPL_REFERENCE_PRESSURE * np.power(10, spl / 20)
@@ -18,7 +18,7 @@ def a2spl(a):
     """
     Convert amplitude to SPL dB
 
-    @arg a:
+    @param a:
     @return:
     """
     return 20 * np.log10(a / SPL_REFERENCE_PRESSURE)
@@ -28,9 +28,9 @@ def hl2spl(frequencies, levels, hl_ref=None):
     """
     Convert dB hearing level (HL) to dB sound pressure level (SPL)
 
-    @arg frequencies:
-    @arg levels:
-    @arg hl_ref:
+    @param frequencies:
+    @param levels:
+    @param hl_ref:
 
     @return:
     """
@@ -41,9 +41,9 @@ def spl2hl(frequencies, levels, hl_ref=None):
     """
     Convert dB sound pressure level (SPL) to dB hearing level (HL)
 
-    @arg frequencies:
-    @arg levels:
-    @arg hl_ref:
+    @param frequencies:
+    @param levels:
+    @param hl_ref:
 
     @return:
     """

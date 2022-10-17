@@ -13,11 +13,11 @@ class UpDownDetector:
     def __init__(self, entry: int = 2, correct=1, wrong=0):
         """
 
-        @arg entry:
+        @param entry:
             refers to the "Entry" column in Table 1 of Levitt 1971 (default: 2)
-        @arg correct:
+        @param correct:
             response that represents a correct answer
-        @arg wrong:
+        @param wrong:
             response that represents an incorrect answer
         """
         self.correct = correct
@@ -63,9 +63,9 @@ class UpDownDetector:
         Takes the answer, can be anything, but should be either equal to `correct` or `wrong`,
         provided in `__init__` (default is int(1) for correct and int(0) for wrong).
 
-        @arg answer:
+        @param answer:
             Any type, but must be compatible with `answer == self.correct` and `answer == self.correct`
-        @arg parameter_value:
+        @param parameter_value:
             Any type that can be summed and calculated the mean of.
         @return:
             0 : whether the stimulus parameter should be updated up or down (1 or -1), or kept as is (0)
@@ -103,7 +103,7 @@ class UpDownDetector:
 
         If log is empty, None is returned
 
-        @arg parameter:
+        @param parameter:
             parameter to return from log
         @raise ValueError:
             if parameter is not in log keys
@@ -116,7 +116,7 @@ class UpDownDetector:
 
     def get_mean_parameter_value(self, n_reversals=1):
         """
-        @arg n_reversals:
+        @param n_reversals:
             number of reversals to include
         @return:
             the mean parameter value from the last n_reversals

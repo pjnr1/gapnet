@@ -13,7 +13,7 @@ def as_torch_type(type_string: str) -> torch.dtype:
     """
     Get torch datatype from string
 
-    @arg type_string: string version of a datatype, e.g. 'int32'
+    @param type_string: string version of a datatype, e.g. 'int32'
     @return: torch.dtype
     """
     type_map = {
@@ -42,9 +42,9 @@ def get_tensor_from_h5py_numpy(x, dtype) -> torch.Tensor:
     """
     Get torch.Tensor from h5py data array
 
-    @arg x:
+    @param x:
         input data
-    @arg dtype:
+    @param dtype:
         target datatype
     @return:
     """
@@ -54,7 +54,7 @@ def get_tensor_from_h5py_numpy(x, dtype) -> torch.Tensor:
 def get_sampling_frequency(mat) -> int:
     """
 
-    @arg mat: AN-simulation structure (read from h5py)
+    @param mat: AN-simulation structure (read from h5py)
     @return:
     """
     return mat['params']['fs_model'][0]
@@ -63,7 +63,7 @@ def get_sampling_frequency(mat) -> int:
 def get_freq_vect(mat):
     """
 
-    @arg mat: AN-simulation structure (read from h5py)
+    @param mat: AN-simulation structure (read from h5py)
     @return:
     """
     return mat['params']['freq_vect']
@@ -75,9 +75,9 @@ def historize(data: torch.Tensor, bin_width: int = 1) -> torch.Tensor:
     If the tensor is 2D, the dimensions should be [frequency, time]
     If the tensor is 3D, the dimensions should be [channels, frequency, time]
 
-    @arg data:
+    @param data:
         input data
-    @arg bin_width:
+    @param bin_width:
         bin width in samples
 
     @return:

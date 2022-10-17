@@ -46,12 +46,12 @@ def generate_stimulus(t,
                       signal_length: float = 400e-3) -> np.ndarray:
     """
 
-    @arg t:
-    @arg sinusoid_frequency:
-    @arg sinusoid_level:
-    @arg gap_length:
-    @arg signal_start:
-    @arg signal_length:
+    @param t:
+    @param sinusoid_frequency:
+    @param sinusoid_level:
+    @param gap_length:
+    @param signal_start:
+    @param signal_length:
     @return:
     """
     fs = get_sampling_frequency(None, t)

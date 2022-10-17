@@ -17,11 +17,11 @@ def linear_ramp_func(t: np.ndarray,
 
     Note that this ramp function ignores gamma_t and width
 
-    @arg t:
+    @param t:
         time vector
-    @arg gamma_t:
+    @param gamma_t:
         _unused_
-    @arg width:
+    @param width:
         _unused_
 
     @return:
@@ -37,11 +37,11 @@ def cosine_squared_ramp_func(t: np.ndarray,
 
     M{ramp = (cos(S{pi} * (t - (gamma_t - width / 2) + width) / (2 * width))^2}
 
-    @arg t:
+    @param t:
         time vector
-    @arg gamma_t:
+    @param gamma_t:
         center of ramp
-    @arg width:
+    @param width:
         width of ramp
 
     @return:
@@ -61,13 +61,13 @@ def _cosine_sum(t: np.ndarray,
 
       - a0 - (1 - a0)cos(S{pi} * x / width)
 
-    @arg t:
+    @param t:
         time vector
-    @arg gamma_t:
+    @param gamma_t:
         center of ramp
-    @arg width:
+    @param width:
         width of ramp
-    @arg a0:
+    @param a0:
         Offset parameter, see function description for details
     @return:
     """
@@ -81,11 +81,11 @@ def hann_ramp_func(t: np.ndarray,
     """
     Ramp based on the Hann window function
 
-    @arg t:
+    @param t:
         time vector
-    @arg gamma_t:
+    @param gamma_t:
         center of ramp
-    @arg width:
+    @param width:
         width of ramp
     @return:
     """
@@ -98,11 +98,11 @@ def hamming_ramp_func(t: np.ndarray,
     """
     Ramp based on the Hamming window function
 
-    @arg t:
+    @param t:
         time vector
-    @arg gamma_t:
+    @param gamma_t:
         center of ramp
-    @arg width:
+    @param width:
         width of ramp
     @return:
     """
@@ -116,11 +116,11 @@ def gaussian_ramp_func(t: np.ndarray,
     Ramp function based on the gaussian gate used by
     U{Schneider and Hamstra, 1999 <https://asa.scitation.org/doi/10.1121/1.427062>}
 
-    @arg t:
+    @param t:
         time vector
-    @arg gamma_t:
+    @param gamma_t:
         center of ramp
-    @arg width:
+    @param width:
         width of ramp
     @return:
     """

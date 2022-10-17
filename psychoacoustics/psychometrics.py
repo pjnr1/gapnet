@@ -14,15 +14,15 @@ def psychometric_func(x, a, b, scale=1., loc=0):
     Computes the value of the psychometric function at x with parameters a (position) and b (width) with scaling factor
     and location/offset
 
-    @arg x:
+    @param x:
         position to compute
-    @arg a:
+    @param a:
         position-parameter of the psychometric function
-    @arg b:
+    @param b:
         width-parameter of the psychometric function
-    @arg scale:
+    @param scale:
         scale (default is 1)
-    @arg loc:
+    @param loc:
         location (default is 0)
     @return:
         the value of the psychometric function at x
@@ -37,15 +37,15 @@ def get_psychometric_point(p: float, a: float, b: float, x0: float = None, metho
 
     Scale and location are not used in this calculation
 
-    @arg p:
+    @param p:
         point to retrieve
-    @arg a:
+    @param a:
         position-parameter of the psychometric function
-    @arg b:
+    @param b:
         width-parameter of the psychometric function
-    @arg x0:
+    @param x0:
         if using fsolve, x0 is used as starting point
-    @arg method:
+    @param method:
         method used for retrieving x
     @return:
         the position for which the psychometric function equals p
@@ -72,19 +72,19 @@ def fit_psychometric_func(xdata,
     """
     Find the optimal fit of the psychometric function to the given data scipy.optimize.curve_fit
 
-    @arg xdata:
-    @arg ydata:
-    @arg with_scale:
+    @param xdata:
+    @param ydata:
+    @param with_scale:
         enable fitting with a scaling parameter
-    @arg with_loc:
+    @param with_loc:
         enable fitting with an offset parameter
-    @arg scale_bounds:
+    @param scale_bounds:
         boundary conditions for the scaling parameter
-    @arg loc_bounds:
+    @param loc_bounds:
         boundary conditions for the location parameter
-    @arg scale_p0:
+    @param scale_p0:
         initial point for the scaling parameter
-    @arg loc_p0:
+    @param loc_p0:
         initial point for the location parameter
 
     @return:

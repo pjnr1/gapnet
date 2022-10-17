@@ -38,8 +38,8 @@ def get_hearinglevel():
 def get_hearinglevel_interp(f, hl_ref=None):
     """
 
-    @arg f: Frequencies to return for
-    @arg hl_ref: Hearing level reference
+    @param f: Frequencies to return for
+    @param hl_ref: Hearing level reference
     @return: Hearing level at frequencies f
     """
     if hl_ref is None:

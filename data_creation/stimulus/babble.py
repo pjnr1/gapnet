@@ -36,9 +36,9 @@ def combine_audio_files(audio_files: List[str], fs: int) -> (int, np.ndarray):
     Combines the audio-files and resamples to a desired sampling frequency. If fs is None, then the sampling frequency
     will be of the first loaded audio-file.
 
-    @arg audio_files:
+    @param audio_files:
         list of audio-files to combine
-    @arg fs:
+    @param fs:
         sampling frequency, if None, sampling frequency will be the same as the first audio-file in audio_files
     @return:
         the sampling frequency and the combined sound in a numpy array normalised by the max-value of the array

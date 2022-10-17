@@ -25,19 +25,19 @@ class SaveStatedictCallback(TrackerCallback):
         Output path is::
             os.path.join(path, fname + '.statedict')
 
-        @arg path:
+        @param path:
             Folder to save the statedict in
-        @arg monitor:
+        @param monitor:
             What parameter to monitor
-        @arg comp:
+        @param comp:
             See U{fastai.callback.tracker.TrackerCallback <https://docs.fast.ai/callback.tracker.html#trackercallback>}
             for details
-        @arg min_delta:
+        @param min_delta:
             See U{fastai.callback.tracker.TrackerCallback <https://docs.fast.ai/callback.tracker.html#trackercallback>}
             for details
-        @arg fname:
+        @param fname:
             Filename to use
-        @arg reset_on_fit:
+        @param reset_on_fit:
             See U{fastai.callback.tracker.TrackerCallback <https://docs.fast.ai/callback.tracker.html#trackercallback>}
             for details
         """
@@ -78,11 +78,11 @@ class SaveStatedictEveryNEpochCallback(Callback):
         Output path is::
             os.path.join(path, f'{fname}-{epoch}.statedict')
 
-        @arg n_to_save:
+        @param n_to_save:
             When to save
-        @arg path:
+        @param path:
             Folder to save the statedict in
-        @arg fname:
+        @param fname:
             Filename to use
         """
         super().__init__()

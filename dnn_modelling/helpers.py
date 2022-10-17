@@ -27,9 +27,9 @@ def weight_initialisation(m, func=nn.init.xavier_normal_) -> None:
     """
     Helper function to apply for initialising weights of the networks
 
-    @arg m:
+    @param m:
         Model
-    @arg func:
+    @param func:
         Function use for initialisation, takes Tensor, returns Tensor of same size
     @return:
     """
@@ -65,8 +65,8 @@ def GrandparentRegexpSplitter(train_regexp='train', valid_regexp='valid'):
     """
     Split `items` from the grandparent folder names matching the regexp's (`train_regexp` and `valid_regexp`).
 
-    @arg train_regexp:
-    @arg valid_regexp:
+    @param train_regexp:
+    @param valid_regexp:
     @return:
         Function for splitting items into train and validation
     """
@@ -95,9 +95,9 @@ def extract_from_meta(fp, keys):
     """
     Loads info from meta file with path _fp_ with the keys and transformers in _keys_
 
-    @arg fp:
+    @param fp:
         path to the meta file
-    @arg keys:
+    @param keys:
         a dict(), key is the line-identifier, value is functions to convert rest of the line to the desired value
         if value is a list, the list will be applied to the line
 

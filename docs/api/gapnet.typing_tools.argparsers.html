@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>gapnet.typing_tools.argparsers</title>
+    <meta name="generator" content="pydoctor 22.9.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="gapnet.typing_tools.argparsers.html" class="internal-link" title="This module">argparsers</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ranged_type" class="internal-link" title="gapnet.typing_tools.argparsers.ranged_type">ranged<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#string_from_valid_list_type" class="internal-link" title="gapnet.typing_tools.argparsers.string_from_valid_list_type">string<wbr></wbr>_from<wbr></wbr>_valid<wbr></wbr>_list<wbr></wbr>_type</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#T" class="internal-link" title="gapnet.typing_tools.argparsers.T">T</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="gapnet.typing_tools.html" class="internal-link" title="The parent of this module">typing<wbr></wbr>_tools</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.typing_tools.annotations.html" class="internal-link" title="gapnet.typing_tools.annotations">annotations</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.typing_tools.argparsers.html" class="internal-link" title="gapnet.typing_tools.argparsers">argparsers</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.typing_tools.html" class="internal-link" title="gapnet.typing_tools">typing_tools</a></code><wbr></wbr>.<code><a href="gapnet.typing_tools.argparsers.html" class="internal-link" title="gapnet.typing_tools.argparsers">argparsers</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <a href="https://github.com/pjnr1/gapnet/tree/main/typing_tools/argparsers.py" class="sourceLink">(source)</a>
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id89">
+  
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#ranged_type" class="internal-link" title="gapnet.typing_tools.argparsers.ranged_type">ranged<wbr></wbr>_type</a></code></td>
+    <td>Return function handle of an argument type function for ArgumentParser checking a range:</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#string_from_valid_list_type" class="internal-link" title="gapnet.typing_tools.argparsers.string_from_valid_list_type">string<wbr></wbr>_from<wbr></wbr>_valid<wbr></wbr>_list<wbr></wbr>_type</a></code></td>
+    <td>Return function handle that checks whether input argument matches any of the <tt class="rst-docutils literal">valid_values</tt></td>
+  </tr><tr class="typevariable">
+    
+    <td>Type Variable</td>
+    <td><code><a href="#T" class="internal-link" title="gapnet.typing_tools.argparsers.T">T</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="gapnet.typing_tools.argparsers.ranged_type">
+    
+  </a>
+  <a name="ranged_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">ranged_type</span>(value_type, min_value=None, max_value=None, min_inclusive=True, max_inclusive=True):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/typing_tools/argparsers.py#L10">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#ranged_type" title="gapnet.typing_tools.argparsers.ranged_type">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Return function handle of an argument type function for ArgumentParser checking a range:</p>
+<pre class="rst-literal-block">
+    min_value &lt;= arg &lt;= max_value
+</pre>
+<p>Example:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>ranged_type(<span class="py-builtin">float</span>, 0.0, 1.0) <span class="py-comment"># Checks the range ]0, 1[</span>
+<span class="py-prompt">&gt;&gt;&gt; </span>ranged_type(<span class="py-builtin">float</span>, 0.0, 1.0, <span class="py-builtin">False</span>, <span class="py-builtin">False</span>) <span class="py-comment"># Checks the range [0, 1]</span></pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">value<wbr></wbr>_type:</span><code>type</code></td><td class="fieldArgDesc">value-type to convert arg to</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">min<wbr></wbr>_value:</span><code><a href="#T" class="internal-link" title="gapnet.typing_tools.argparsers.T">T</a>|None</code></td><td class="fieldArgDesc">minimum acceptable argument value, can be None</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">max<wbr></wbr>_value:</span><code><a href="#T" class="internal-link" title="gapnet.typing_tools.argparsers.T">T</a>|None</code></td><td class="fieldArgDesc">maximum acceptable argument value, can be none</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">min<wbr></wbr>_inclusive:</span><code>bool</code></td><td class="fieldArgDesc">boolean flag for including min_value as valid value</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">max<wbr></wbr>_inclusive:</span><code>bool</code></td><td class="fieldArgDesc">boolean flag for including max_value as valid value</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Callable[<wbr></wbr>[<wbr></wbr>str], <wbr></wbr><a href="#T" class="internal-link" title="gapnet.typing_tools.argparsers.T">T</a>]</code></td><td class="fieldArgDesc">function handle of an argument type function for ArgumentParser</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>if both min_value and max_value is None. In this case, simply use value_type directly instead of range_type(...)</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.typing_tools.argparsers.string_from_valid_list_type">
+    
+  </a>
+  <a name="string_from_valid_list_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">string_from_valid_list_type</span>(valid_values):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/typing_tools/argparsers.py#L59">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#string_from_valid_list_type" title="gapnet.typing_tools.argparsers.string_from_valid_list_type">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Return function handle that checks whether input argument matches any of the <tt class="rst-docutils literal">valid_values</tt></p>
+<p>Example:</p>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>string_from_valid_list_type([<span class="py-string">'some_string'</span>, <span class="py-string">'another'</span>])</pre><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">valid<wbr></wbr>_values:</span><code>List[<wbr></wbr>str]</code></td><td class="fieldArgDesc">List of accepted string values</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Callable[<wbr></wbr>[<wbr></wbr>str], <wbr></wbr>str]</code></td><td class="fieldArgDesc">function handle of an argument type function for ArgumentParser</td></tr></table></div>
+  </div>
+</div><div class="basetypevariable">
+  
+  
+  <a name="gapnet.typing_tools.argparsers.T">
+    
+  </a>
+  <a name="T">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">T</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/typing_tools/argparsers.py#L7">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#T" title="gapnet.typing_tools.argparsers.T">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>TypeVar(<wbr></wbr><span class="rst-variable-quote">'</span><span class="rst-variable-string">T</span><span class="rst-variable-quote">'</span>)</code></pre></td></tr></table>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    22.9.1 at 2022-10-17 13:18:33.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

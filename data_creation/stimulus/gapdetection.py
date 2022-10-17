@@ -38,11 +38,11 @@ def get_gap_lengths(n, r=None, generator: GapLengthGenerator = linear_gap_length
     Generate n gap lengths between r[0] and r[1] using a GapLengthGenerator
     default generator is linear_gap_length_generator
 
-    @arg n:
+    @param n:
         number of gap lengths
-    @arg r:
+    @param r:
         range of the gap lengths
-    @arg generator:
+    @param generator:
         generator function
     @return:
         list of gap lengths

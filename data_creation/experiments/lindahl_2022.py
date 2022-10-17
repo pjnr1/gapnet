@@ -35,24 +35,24 @@ def generate_stimulus(t,
                       ramp_function: RampFunction = hann_ramp_func) -> (int, np.ndarray, np.ndarray):
     """
 
-    @arg t:
+    @param t:
         time vector
-    @arg babble_path:
+    @param babble_path:
         path to either a pre-made babble-noise file or folder containing single-speaker recordings
-    @arg n_talkers:
+    @param n_talkers:
         number of talkers, i.e. number of files to include from the folder containing single-speaker recordings
-    @arg gap_position:
+    @param gap_position:
         center position of the gap
-    @arg gap_duration:
+    @param gap_duration:
         length of the gap
-    @arg noise_start:
+    @param noise_start:
         onset of the babble noise
-    @arg noise_duration:
+    @param noise_duration:
         length of the babble noise
-    @arg ramp_width:
+    @param ramp_width:
         width of both onset/offset and gap ramps if type=float, if type=List[float], first and second index are used for
         onset/offset and gap ramps respectively
-    @arg ramp_function:
+    @param ramp_function:
         ramp function for generating the ramps (see L{data_creation.ramp})
     @return:
         start index of the babble cut, babble without gap, babble with gap

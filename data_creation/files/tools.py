@@ -7,11 +7,11 @@ def download(url: str, fname: str, chunk_size=1024):
     """
     Copied from U{yangd0 <https://gist.github.com/yanqd0/c13ed29e29432e3cf3e7c38467f42f51>}
 
-    @arg url:
+    @param url:
         remote path to download
-    @arg fname:
+    @param fname:
         local path to save to
-    @arg chunk_size:
+    @param chunk_size:
         size of chunks to get
     """
     resp = requests.get(url, stream=True)

@@ -327,7 +327,7 @@
   <div class="docstring functionBody">
     
     <div><p>Generates a 2D spikeogram from the .mat-file.</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data:</span><code>h5py.File</code></td><td class="fieldArgDesc">the open .mat-file object</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_field:</span><code>str</code></td><td class="fieldArgDesc">the datafield to use, e.g. 'an_out_sum'</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width:</span><code>float</code></td><td class="fieldArgDesc">binwidth for downsampling, 1e-3 (1 ms)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype</span></td><td class="fieldArgDesc">datatype, default is 'float32'</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>torch.Tensor</code></td><td class="fieldArgDesc">tensor with 2 dimensions, i.e. [frequency, time]</td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data:</span><code>h5py.File</code></td><td class="fieldArgDesc">the open .mat-file object</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_field:</span><code>str</code></td><td class="fieldArgDesc">the datafield to use, e.g. 'an_out_sum'</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width:</span><code>float</code></td><td class="fieldArgDesc">binwidth for downsampling, 1e-3 (1 ms)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype</span></td><td class="fieldArgDesc">datatype, default is 'float32'</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>torch.Tensor</code></td><td class="fieldArgDesc">tensor with 2 dimensions, i.e. [frequency, time]</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>when &lt;h5py.File&gt;.Get() fails and return None</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -341,7 +341,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">spikeogram_3D</span>(data, data_fields=None, bin_width=0.001, dtype=<span class="rst-variable-quote">'</span><span class="rst-variable-string">float32</span><span class="rst-variable-quote">'</span>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/spikeogram/generators.py#L41">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/spikeogram/generators.py#L43">
       
       (source)
     </a>
@@ -354,7 +354,7 @@
   <div class="docstring functionBody">
     
     <div><p>Generates a 3D spikeogram from the .mat-file.</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data:</span><code>h5py.File</code></td><td class="fieldArgDesc">the open .mat-file object</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_fields:</span><code>List[<wbr></wbr>str]</code></td><td class="fieldArgDesc">the datafields to use, e.g. ['an_out_hs', 'an_out_ms', 'an_out_ls']</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width:</span><code>float</code></td><td class="fieldArgDesc">binwidth for downsampling, 1e-3 (1 ms)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype</span></td><td class="fieldArgDesc">datatype, default is 'float32'</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>torch.Tensor</code></td><td class="fieldArgDesc">tensor with 3 dimensions, i.e. [channels, frequency, time]</td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data:</span><code>h5py.File</code></td><td class="fieldArgDesc">the open .mat-file object</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">data<wbr></wbr>_fields:</span><code>List[<wbr></wbr>str]</code></td><td class="fieldArgDesc">the datafields to use. Default is ['an_out_hs', 'an_out_ms', 'an_out_ls']</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">bin<wbr></wbr>_width:</span><code>float</code></td><td class="fieldArgDesc">binwidth for downsampling. Default is 1e-3 (1 ms)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">dtype</span></td><td class="fieldArgDesc">datatype. Default is 'float32'</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>torch.Tensor</code></td><td class="fieldArgDesc">tensor with 3 dimensions, i.e. [channels, frequency, time]</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>when &lt;h5py.File&gt;.Get() fails and return None</td></tr></table></div>
   </div>
 </div>
         </div>
@@ -368,7 +368,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-15 00:05:20.
+    22.9.1 at 2022-10-17 13:18:33.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

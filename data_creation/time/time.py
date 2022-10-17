@@ -6,11 +6,11 @@ def generate_time_vector(start: float, end: float, fs: int) -> np.ndarray:
     """
     Generates an array with time points at sampling rate fs with start- and end-time
 
-    @arg start:
+    @param start:
         start time in seconds
-    @arg end:
+    @param end:
         end time in seconds (non-inclusive)
-    @arg fs:
+    @param fs:
         sampling rate
     @return:
         numpy array with time points
@@ -22,8 +22,8 @@ def start_and_duration_to_gamma_t(start: float, duration: float) -> Annotated[Li
     """
     Small helper to get start- and end-time from start and duration
 
-    @arg start:
-    @arg duration:
+    @param start:
+    @param duration:
     @return:
         list with two indices; start and end
     """
@@ -34,8 +34,8 @@ def position_and_length_to_gamma_t(position: float, length: float) -> Annotated[
     """
     Small helper to get start- and end-time from start and duration
 
-    @arg position:
-    @arg length:
+    @param position:
+    @param length:
     @return:
         list with two indices; start and end
     """
@@ -46,9 +46,9 @@ def get_sampling_frequency(fs: Union[int, None], t: Union[np.ndarray, List[float
     """
     Compute sampling frequency from t when fs is None, else simply returns fs
 
-    @arg fs:
+    @param fs:
         sampling frequency
-    @arg t:
+    @param t:
         time vector
     @return:
 

@@ -13,9 +13,9 @@ def embed_gap_in_filename(filename: str, gap_position: float, gap_duration: floa
     """
     Embed gap information in filename (position and duration
 
-    @arg filename:
-    @arg gap_duration:
-    @arg gap_position:
+    @param filename:
+    @param gap_duration:
+    @param gap_position:
     @return:
     """
     return embed_in_filename(filename,
@@ -27,7 +27,7 @@ def embed_nogap_in_filename(filename: str) -> str:
     """
     embed 'nogap' in filename
 
-    @arg filename:
+    @param filename:
     @return:
     """
     return embed_in_filename(filename, 'nogap')
@@ -37,9 +37,9 @@ def embed_in_filename(filename: str, embeddings: Union[List[str], str]) -> str:
     """
     General function for embedding strings in the filename
 
-    @arg filename:
+    @param filename:
         original filename
-    @arg embeddings:
+    @param embeddings:
         string or list of strings to embed in the filename
     @return:
     """
@@ -56,7 +56,7 @@ def get_next_non_existent(filepath: str) -> str:
     When 'test.txt' exists, the function will check 'test-{n=1}.txt' and increment `n`
     until the filename doesn't exist.
 
-    @arg filepath:
+    @param filepath:
     @return:
     """
     fn_new = filepath

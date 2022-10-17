@@ -60,9 +60,9 @@ def get_model(model_string, **kwargs) -> (Any, bool):
             same as above for 1?, where 2? sets the size of the hidden fully connected layer
 
 
-    @arg model_string:
+    @param model_string:
         model identifier string
-    @arg kwargs:
+    @param kwargs:
 
 
     @return:

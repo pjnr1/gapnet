@@ -4,8 +4,8 @@ import numpy as np
 def beta_gamma_t(gamma_t: float, sigma: float = 0.0005) -> float:
     """
     
-    @arg gamma_t: 
-    @arg sigma: 
+    @param gamma_t: 
+    @param sigma: 
     @return: 
     """
     return np.sqrt(1 / (1 + np.exp(-np.power(gamma_t, 2) / (4 * np.power(sigma, 2)))))
@@ -14,10 +14,10 @@ def beta_gamma_t(gamma_t: float, sigma: float = 0.0005) -> float:
 def generate_gaussian_gate(t, sigma=0.0005, gamma_t=0.0):
     """
     
-    @arg t: 
+    @param t: 
         time vector
-    @arg sigma: 
-    @arg gamma_t: 
+    @param sigma: 
+    @param gamma_t: 
     @return: 
     """
     return np.exp(-((t - gamma_t) ** 2) / (2 * np.power(sigma, 2)))
@@ -26,11 +26,11 @@ def generate_gaussian_gate(t, sigma=0.0005, gamma_t=0.0):
 def generate_gaussian_gate_length(t, sigma=0.0005, gamma_t=0.0, length=0.001):
     """
     
-    @arg t: 
+    @param t: 
         time vector
-    @arg sigma: 
-    @arg gamma_t: 
-    @arg length: 
+    @param sigma: 
+    @param gamma_t: 
+    @param length: 
     @return: 
     """
     x = np.zeros(t.shape)
@@ -42,9 +42,9 @@ def generate_gaussian_gate_length(t, sigma=0.0005, gamma_t=0.0, length=0.001):
 def puretone_randomphase(t, frequency) -> np.ndarray:
     """
     
-    @arg t: 
+    @param t: 
         time vector
-    @arg frequency:
+    @param frequency:
         frequency of the puretone
     @return:
         the puretone signal

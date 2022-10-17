@@ -15,9 +15,9 @@ def get_spectrum(t: np.ndarray,
     """
     Compute spectrum and show positive frequency space in SPL
 
-    @arg t:
+    @param t:
         time vector
-    @arg x:
+    @param x:
         signal
     @return:
         Tuple(frequency vector, spectrum)
@@ -31,11 +31,11 @@ def get_spectrum_n(n: Union[float, int],
     """
     Compute spectrum and show positive frequency space in SPL
 
-    @arg n:
+    @param n:
         length in samples
-    @arg x:
+    @param x:
         signal
-    @arg fs:
+    @param fs:
         sampling frequency (only used for frequency vector)
     @return:
         Tuple(frequency vector, spectrum)
@@ -55,11 +55,11 @@ def spectrum_level(f: np.ndarray,
     """
     Computes the spectrum level within a given frequency range
 
-    @arg f:
+    @param f:
         frequency vector
-    @arg X:
+    @param X:
         spectrum vector
-    @arg fr:
+    @param fr:
         frequency range to compute, if None, the full spectrum is used
     @return:
     """
@@ -76,13 +76,13 @@ def normalise_by_spectrum_level(t: np.ndarray,
     """
     Normalises a given signal by its spectrum level within a defined frequency range. If
 
-    @arg t:
+    @param t:
         time vector
-    @arg x:
+    @param x:
         signal
-    @arg target_level:
+    @param target_level:
         target spectrum level in dB SPL
-    @arg frequency_range:
+    @param frequency_range:
         frequency range for spectrum level calculation
     @return:
         normalised signal
