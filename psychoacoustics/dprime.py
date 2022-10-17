@@ -112,7 +112,7 @@ def dprime_empirical_jones(h, f, threshold=0.5, eps=0.5):
 
         @param x:
         @param n:
-        :return:
+        @return:
         """
         if x == 0: return x + eps
         if x == n: return x - eps

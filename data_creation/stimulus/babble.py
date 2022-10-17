@@ -11,9 +11,9 @@ from scipy.signal import resample_poly
 def get_n_sound_files(data_folder: str, n_talkers: int) -> List[str]:
     """
 
-    :param data_folder:
-    :param n_talkers:
-    :return:
+    @param data_folder:
+    @param n_talkers:
+    @return:
     @raises ValueError:
         When n_talkers is larger than the count of files in data_folder
     """

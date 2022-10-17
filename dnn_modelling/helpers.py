@@ -16,8 +16,8 @@ def get_2d_zeropadding(x):
 
     Goes through x (e.g. kernel-sizes) backwards
 
-    :param x:
-    :return:
+    @param x:
+    @return:
     """
     return functools.reduce(operator.__add__,
                             [[k // 2 + (k - 2 * (k // 2)) - 1, k // 2] for k in x[::-1]])
