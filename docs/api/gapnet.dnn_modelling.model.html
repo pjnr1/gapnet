@@ -6,7 +6,7 @@
 
   <head>
     
-    <title>gapnet.dnn_modelling.helpers</title>
+    <title>gapnet.dnn_modelling.model</title>
     <meta name="generator" content="pydoctor 22.9.1"> 
         
     </meta>
@@ -142,7 +142,7 @@
 
       <div class="thingTitle">
         <span>Module</span>
-        <code class="thisobject"><a href="gapnet.dnn_modelling.helpers.html" class="internal-link" title="This module">helpers</a></code> 
+        <code class="thisobject"><a href="gapnet.dnn_modelling.model.html" class="internal-link" title="This module">model</a></code> 
       </div>
       
       <div>
@@ -163,7 +163,7 @@
         
 
         
-            <div class="itemName"><code><a href="#extract_from_meta" class="internal-link" title="gapnet.dnn_modelling.helpers.extract_from_meta">extract<wbr></wbr>_from<wbr></wbr>_meta</a></code>
+            <div class="itemName"><code><a href="#get_model" class="internal-link" title="gapnet.dnn_modelling.model.get_model">get<wbr></wbr>_model</a></code>
             </div>
         
 
@@ -173,7 +173,7 @@
         
 
         
-            <div class="itemName"><code><a href="#extract_from_path" class="internal-link" title="gapnet.dnn_modelling.helpers.extract_from_path">extract<wbr></wbr>_from<wbr></wbr>_path</a></code>
+            <div class="itemName"><code><a href="#get_summary" class="internal-link" title="gapnet.dnn_modelling.model.get_summary">get<wbr></wbr>_summary</a></code>
             </div>
         
 
@@ -183,7 +183,7 @@
         
 
         
-            <div class="itemName"><code><a href="#get_2d_zeropadding" class="internal-link" title="gapnet.dnn_modelling.helpers.get_2d_zeropadding">get<wbr></wbr>_2d<wbr></wbr>_zeropadding</a></code>
+            <div class="itemName"><code><a href="#load_model" class="internal-link" title="gapnet.dnn_modelling.model.load_model">load<wbr></wbr>_model</a></code>
             </div>
         
 
@@ -193,7 +193,7 @@
         
 
         
-            <div class="itemName"><code><a href="#get_datapath" class="internal-link" title="gapnet.dnn_modelling.helpers.get_datapath">get<wbr></wbr>_datapath</a></code>
+            <div class="itemName"><code><a href="#load_model_from_metafile" class="internal-link" title="gapnet.dnn_modelling.model.load_model_from_metafile">load<wbr></wbr>_model<wbr></wbr>_from<wbr></wbr>_metafile</a></code>
             </div>
         
 
@@ -203,37 +203,7 @@
         
 
         
-            <div class="itemName"><code><a href="#GrandparentRegexpSplitter" class="internal-link" title="gapnet.dnn_modelling.helpers.GrandparentRegexpSplitter"><wbr></wbr>Grandparent<wbr></wbr>Regexp<wbr></wbr>Splitter</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="#load_history" class="internal-link" title="gapnet.dnn_modelling.helpers.load_history">load<wbr></wbr>_history</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="#print_sizes" class="internal-link" title="gapnet.dnn_modelling.helpers.print_sizes">print<wbr></wbr>_sizes</a></code>
-            </div>
-        
-
-    </li><li class="">
-        
-        
-        
-
-        
-            <div class="itemName"><code><a href="#weight_initialisation" class="internal-link" title="gapnet.dnn_modelling.helpers.weight_initialisation">weight<wbr></wbr>_initialisation</a></code>
+            <div class="itemName"><code><a href="#load_model_from_state_dict" class="internal-link" title="gapnet.dnn_modelling.model.load_model_from_state_dict">load<wbr></wbr>_model<wbr></wbr>_from<wbr></wbr>_state<wbr></wbr>_dict</a></code>
             </div>
         
 
@@ -243,8 +213,31 @@
         
          
 
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
         
-         
+        
+        
+
+        
+            <div class="itemName"><code><a href="#custom_models_dict" class="internal-link" title="gapnet.dnn_modelling.model.custom_models_dict">custom<wbr></wbr>_models<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#models_with_channel_factor_dict" class="internal-link" title="gapnet.dnn_modelling.model.models_with_channel_factor_dict">models<wbr></wbr>_with<wbr></wbr>_channel<wbr></wbr>_factor<wbr></wbr>_dict</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
 
         
          
@@ -293,7 +286,7 @@
             </div>
         
 
-    </li><li class=" thisobject">
+    </li><li class="">
         
         
         
@@ -303,7 +296,7 @@
             </div>
         
 
-    </li><li class="">
+    </li><li class=" thisobject">
         
         
         
@@ -360,7 +353,7 @@
         
 
         <div class="page-header">
-          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.dnn_modelling.html" class="internal-link" title="gapnet.dnn_modelling">dnn_modelling</a></code><wbr></wbr>.<code><a href="gapnet.dnn_modelling.helpers.html" class="internal-link" title="gapnet.dnn_modelling.helpers">helpers</a></code></code></h1>
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.dnn_modelling.html" class="internal-link" title="gapnet.dnn_modelling">dnn_modelling</a></code><wbr></wbr>.<code><a href="gapnet.dnn_modelling.model.html" class="internal-link" title="gapnet.dnn_modelling.model">model</a></code></code></h1>
           <div id="showPrivate">
             <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
           </div>
@@ -371,7 +364,7 @@
         </div>
 
         <div class="extrasDocstring">
-          <a href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py" class="sourceLink">(source)</a>
+          <a href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/model.py" class="sourceLink">(source)</a>
           <p></p>
         </div>
 
@@ -380,49 +373,44 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id47">
+          <table class="children sortable" id="id48">
   
   
   <tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#extract_from_meta" class="internal-link" title="gapnet.dnn_modelling.helpers.extract_from_meta">extract<wbr></wbr>_from<wbr></wbr>_meta</a></code></td>
-    <td>Loads info from meta file with path _fp_ with the keys and transformers in _keys_</td>
+    <td><code><a href="#get_model" class="internal-link" title="gapnet.dnn_modelling.model.get_model">get<wbr></wbr>_model</a></code></td>
+    <td>Get model class from identifier string:</td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#extract_from_path" class="internal-link" title="gapnet.dnn_modelling.helpers.extract_from_path">extract<wbr></wbr>_from<wbr></wbr>_path</a></code></td>
+    <td><code><a href="#get_summary" class="internal-link" title="gapnet.dnn_modelling.model.get_summary">get<wbr></wbr>_summary</a></code></td>
+    <td>Print summary of model with identifier <tt class="rst-docutils literal">model_string</tt>. Input-shape and batch-size are needed to compute the estimated memory-footprint for forward- and backward-passes.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#load_model" class="internal-link" title="gapnet.dnn_modelling.model.load_model">load<wbr></wbr>_model</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#get_2d_zeropadding" class="internal-link" title="gapnet.dnn_modelling.helpers.get_2d_zeropadding">get<wbr></wbr>_2d<wbr></wbr>_zeropadding</a></code></td>
-    <td>Helper function to determine the amount of padding for obtaining same-size pooling and conv (see modules.py for help)</td>
-  </tr><tr class="function">
-    
-    <td>Function</td>
-    <td><code><a href="#get_datapath" class="internal-link" title="gapnet.dnn_modelling.helpers.get_datapath">get<wbr></wbr>_datapath</a></code></td>
+    <td><code><a href="#load_model_from_metafile" class="internal-link" title="gapnet.dnn_modelling.model.load_model_from_metafile">load<wbr></wbr>_model<wbr></wbr>_from<wbr></wbr>_metafile</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
   </tr><tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#GrandparentRegexpSplitter" class="internal-link" title="gapnet.dnn_modelling.helpers.GrandparentRegexpSplitter"><wbr></wbr>Grandparent<wbr></wbr>Regexp<wbr></wbr>Splitter</a></code></td>
-    <td>Split `items` from the grandparent folder names matching the regexp's (`train_regexp` and `valid_regexp`).</td>
-  </tr><tr class="function">
-    
-    <td>Function</td>
-    <td><code><a href="#load_history" class="internal-link" title="gapnet.dnn_modelling.helpers.load_history">load<wbr></wbr>_history</a></code></td>
+    <td><code><a href="#load_model_from_state_dict" class="internal-link" title="gapnet.dnn_modelling.model.load_model_from_state_dict">load<wbr></wbr>_model<wbr></wbr>_from<wbr></wbr>_state<wbr></wbr>_dict</a></code></td>
     <td><span class="undocumented">Undocumented</span></td>
-  </tr><tr class="function">
+  </tr><tr class="variable">
     
-    <td>Function</td>
-    <td><code><a href="#print_sizes" class="internal-link" title="gapnet.dnn_modelling.helpers.print_sizes">print<wbr></wbr>_sizes</a></code></td>
-    <td>Print shape of layer for each layer in Sequential model</td>
-  </tr><tr class="function">
+    <td>Variable</td>
+    <td><code><a href="#custom_models_dict" class="internal-link" title="gapnet.dnn_modelling.model.custom_models_dict">custom<wbr></wbr>_models<wbr></wbr>_dict</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
     
-    <td>Function</td>
-    <td><code><a href="#weight_initialisation" class="internal-link" title="gapnet.dnn_modelling.helpers.weight_initialisation">weight<wbr></wbr>_initialisation</a></code></td>
-    <td>Helper function to apply for initialising weights of the networks</td>
+    <td>Variable</td>
+    <td><code><a href="#models_with_channel_factor_dict" class="internal-link" title="gapnet.dnn_modelling.model.models_with_channel_factor_dict">models<wbr></wbr>_with<wbr></wbr>_channel<wbr></wbr>_factor<wbr></wbr>_dict</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
   </tr>
 </table>
           
@@ -434,20 +422,20 @@
           <div class="basefunction">
   
   
-  <a name="gapnet.dnn_modelling.helpers.extract_from_meta">
+  <a name="gapnet.dnn_modelling.model.get_model">
     
   </a>
-  <a name="extract_from_meta">
+  <a name="get_model">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">extract_from_meta</span>(fp, keys):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py#L94">
+    <span class="py-keyword">def</span> <span class="py-defname">get_model</span>(model_string, **kwargs):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/model.py#L45">
       
       (source)
     </a>
-    <a class="headerLink" href="#extract_from_meta" title="gapnet.dnn_modelling.helpers.extract_from_meta">
+    <a class="headerLink" href="#get_model" title="gapnet.dnn_modelling.model.get_model">
       
       
       ¶
@@ -455,26 +443,66 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Loads info from meta file with path _fp_ with the keys and transformers in _keys_</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fp</span></td><td class="fieldArgDesc">path to the meta file</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">keys</span></td><td class="fieldArgDesc">a dict(), key is the line-identifier, value is functions to convert rest of the line to the desired value if value is a list, the list will be applied to the line</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+    <div><p>Get model class from identifier string:</p>
+<pre class="rst-literal-block">
+    Saddler et al 2020 dnn_modelling:
+        model_string = "saddler-???" where ??? should match one of the following:
+            TODO
+
+    Kell et al 2018 dnn_modelling:
+        model_string = "kell"
+            returns a model with the same architecture but with no input split and number of output classes
+        model_string = "kell-???"
+            returns same as above but with the number of channels reduced as $n // ??$, ??=1 makes no changes
+        model_string = "kell-1?-2?"
+            same as above for 1?, where 2? sets the size of the hidden fully connected layer
+</pre>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">model<wbr></wbr>_string</span></td><td class="fieldArgDesc">model identifier string</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">**kwargs</span></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>(<wbr></wbr>Any, <wbr></wbr>bool)</code></td><td class="fieldArgDesc">[0] the actual model as a class [1] boolean flag, indicating whether the model is based on PyTorch</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
   
-  <a name="gapnet.dnn_modelling.helpers.extract_from_path">
+  <a name="gapnet.dnn_modelling.model.get_summary">
     
   </a>
-  <a name="extract_from_path">
+  <a name="get_summary">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">extract_from_path</span>(path, key, default=None, split_char=<span class="rst-variable-quote">'</span><span class="rst-variable-string">_</span><span class="rst-variable-quote">'</span>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py#L87">
+    <span class="py-keyword">def</span> <span class="py-defname">get_summary</span>(model_string, input_shape, batch_size, **kwargs):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/model.py#L99">
       
       (source)
     </a>
-    <a class="headerLink" href="#extract_from_path" title="gapnet.dnn_modelling.helpers.extract_from_path">
+    <a class="headerLink" href="#get_summary" title="gapnet.dnn_modelling.model.get_summary">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Print summary of model with identifier <tt class="rst-docutils literal">model_string</tt>. Input-shape and batch-size are needed to compute the estimated memory-footprint for forward- and backward-passes.</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">model<wbr></wbr>_string</span></td><td class="fieldArgDesc">string identifier for the model to get summary of</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">input<wbr></wbr>_shape</span></td><td class="fieldArgDesc">shape of expected input matrix</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">batch<wbr></wbr>_size</span></td><td class="fieldArgDesc">batch size to use when training model</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">**kwargs</span></td><td class="fieldArgDesc">other kwargs passed on to <code><a href="#get_model" class="internal-link" title="gapnet.dnn_modelling.model.get_model">get_model</a></code></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">the model that was summarised</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.model.load_model">
+    
+  </a>
+  <a name="load_model">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">load_model</span>(saved_model_string, device=None, **kwargs):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/model.py#L135">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#load_model" title="gapnet.dnn_modelling.model.load_model">
       
       
       ¶
@@ -487,49 +515,20 @@
 </div><div class="basefunction">
   
   
-  <a name="gapnet.dnn_modelling.helpers.get_2d_zeropadding">
+  <a name="gapnet.dnn_modelling.model.load_model_from_metafile">
     
   </a>
-  <a name="get_2d_zeropadding">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-keyword">def</span> <span class="py-defname">get_2d_zeropadding</span>(x):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py#L12">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#get_2d_zeropadding" title="gapnet.dnn_modelling.helpers.get_2d_zeropadding">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="docstring functionBody">
-    
-    <div><p>Helper function to determine the amount of padding for obtaining same-size pooling and conv (see modules.py for help)</p>
-<p>Goes through x (e.g. kernel-sizes) backwards</p>
-<p>:param x: :return:</p>
-</div>
-  </div>
-</div><div class="basefunction">
-  
-  
-  <a name="gapnet.dnn_modelling.helpers.get_datapath">
-    
-  </a>
-  <a name="get_datapath">
+  <a name="load_model_from_metafile">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">get_datapath</span>(folder, mode, bw):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py#L131">
+    <span class="py-keyword">def</span> <span class="py-defname">load_model_from_metafile</span>(metafile, state_dict_name, device=None, **kwargs):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/model.py#L161">
       
       (source)
     </a>
-    <a class="headerLink" href="#get_datapath" title="gapnet.dnn_modelling.helpers.get_datapath">
+    <a class="headerLink" href="#load_model_from_metafile" title="gapnet.dnn_modelling.model.load_model_from_metafile">
       
       
       ¶
@@ -542,47 +541,20 @@
 </div><div class="basefunction">
   
   
-  <a name="gapnet.dnn_modelling.helpers.GrandparentRegexpSplitter">
+  <a name="gapnet.dnn_modelling.model.load_model_from_state_dict">
     
   </a>
-  <a name="GrandparentRegexpSplitter">
-    
-  </a>
-  <div class="functionHeader">
-    
-    <span class="py-keyword">def</span> <span class="py-defname">GrandparentRegexpSplitter</span>(train_regexp=<span class="rst-variable-quote">'</span><span class="rst-variable-string">train</span><span class="rst-variable-quote">'</span>, valid_regexp=<span class="rst-variable-quote">'</span><span class="rst-variable-string">valid</span><span class="rst-variable-quote">'</span>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py#L64">
-      
-      (source)
-    </a>
-    <a class="headerLink" href="#GrandparentRegexpSplitter" title="gapnet.dnn_modelling.helpers.GrandparentRegexpSplitter">
-      
-      
-      ¶
-    </a>
-  </div>
-  <div class="docstring functionBody">
-    
-    <div><p>Split `items` from the grandparent folder names matching the regexp's (`train_regexp` and `valid_regexp`).</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">train<wbr></wbr>_regexp</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">valid<wbr></wbr>_regexp</span></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">Function for splitting items into train and validation</td></tr></table></div>
-  </div>
-</div><div class="basefunction">
-  
-  
-  <a name="gapnet.dnn_modelling.helpers.load_history">
-    
-  </a>
-  <a name="load_history">
+  <a name="load_model_from_state_dict">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">load_history</span>(model_output_folder):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py#L139">
+    <span class="py-keyword">def</span> <span class="py-defname">load_model_from_state_dict</span>(model_string, state_dict_path=None, device=None, **kwargs):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/model.py#L124">
       
       (source)
     </a>
-    <a class="headerLink" href="#load_history" title="gapnet.dnn_modelling.helpers.load_history">
+    <a class="headerLink" href="#load_model_from_state_dict" title="gapnet.dnn_modelling.model.load_model_from_state_dict">
       
       
       ¶
@@ -592,59 +564,59 @@
     
     <div><p class="undocumented">Undocumented</p></div>
   </div>
-</div><div class="basefunction">
+</div><div class="basevariable">
   
   
-  <a name="gapnet.dnn_modelling.helpers.print_sizes">
+  <a name="gapnet.dnn_modelling.model.custom_models_dict">
     
   </a>
-  <a name="print_sizes">
+  <a name="custom_models_dict">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">print_sizes</span>(model, input_tensor):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py#L46">
+    <span class="py-defname">custom_models_dict</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/model.py#L35">
       
       (source)
     </a>
-    <a class="headerLink" href="#print_sizes" title="gapnet.dnn_modelling.helpers.print_sizes">
+    <a class="headerLink" href="#custom_models_dict" title="gapnet.dnn_modelling.model.custom_models_dict">
       
       
       ¶
     </a>
   </div>
-  <div class="docstring functionBody">
+  <div class="functionBody">
     
-    <div><p>Print shape of layer for each layer in Sequential model</p>
-</div>
+    <div><p class="undocumented">Undocumented</p></div>
+    
   </div>
-</div><div class="basefunction">
+</div><div class="basevariable">
   
   
-  <a name="gapnet.dnn_modelling.helpers.weight_initialisation">
+  <a name="gapnet.dnn_modelling.model.models_with_channel_factor_dict">
     
   </a>
-  <a name="weight_initialisation">
+  <a name="models_with_channel_factor_dict">
     
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">weight_initialisation</span>(m, func=nn.init.xavier_normal_):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/helpers.py#L26">
+    <span class="py-defname">models_with_channel_factor_dict</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/model.py#L23">
       
       (source)
     </a>
-    <a class="headerLink" href="#weight_initialisation" title="gapnet.dnn_modelling.helpers.weight_initialisation">
+    <a class="headerLink" href="#models_with_channel_factor_dict" title="gapnet.dnn_modelling.model.models_with_channel_factor_dict">
       
       
       ¶
     </a>
   </div>
-  <div class="docstring functionBody">
+  <div class="functionBody">
     
-    <div><p>Helper function to apply for initialising weights of the networks</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">m</span></td><td class="fieldArgDesc">Model</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">func</span></td><td class="fieldArgDesc">Function use for initialisation, takes Tensor, returns Tensor of same size</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+    <div><p class="undocumented">Undocumented</p></div>
+    
   </div>
 </div>
         </div>

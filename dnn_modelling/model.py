@@ -44,20 +44,18 @@ custom_models_dict = {
 
 def get_model(model_string, **kwargs) -> (Any, bool):
     """
-    Get model class from identifier string:
+    Get model class from identifier string::
+        Saddler et al 2020 dnn_modelling:
+            model_string = "saddler-???" where ??? should match one of the following:
+                TODO
 
-
-    Saddler et al 2020 dnn_modelling:
-        model_string = "saddler-???" where ??? should match one of the following:
-            TODO
-
-    Kell et al 2018 dnn_modelling:
-        model_string = "kell"
-            returns a model with the same architecture but with no input split and number of output classes
-        model_string = "kell-???"
-            returns same as above but with the number of channels reduced as $n // ??$, ??=1 makes no changes
-        model_string = "kell-1?-2?"
-            same as above for 1?, where 2? sets the size of the hidden fully connected layer
+        Kell et al 2018 dnn_modelling:
+            model_string = "kell"
+                returns a model with the same architecture but with no input split and number of output classes
+            model_string = "kell-???"
+                returns same as above but with the number of channels reduced as $n // ??$, ??=1 makes no changes
+            model_string = "kell-1?-2?"
+                same as above for 1?, where 2? sets the size of the hidden fully connected layer
 
 
     @param model_string:
@@ -100,20 +98,19 @@ def get_model(model_string, **kwargs) -> (Any, bool):
 
 def get_summary(model_string, input_shape, batch_size, **kwargs):
     """
-    Print summary of model with identifier `model_string`. Input-shape and batch-size are needed to compute the
+    Print summary of model with identifier C{model_string}. Input-shape and batch-size are needed to compute the
     estimated memory-footprint for forward- and backward-passes.
 
-
-    Parameters
-    ----------
-    model_string
-    input_shape
-    batch_size
-    kwargs
-
-    Returns
-    -------
-
+    @param model_string:
+        string identifier for the model to get summary of
+    @param input_shape:
+        shape of expected input matrix
+    @param batch_size:
+        batch size to use when training model
+    @param kwargs:
+        other kwargs passed on to L{get_model}
+    @return:
+        the model that was summarised
     """
     from torchsummary import summary
 
