@@ -27,6 +27,7 @@ import sys
 sys.path.insert(0, os.getcwd())
 
 # Local
+from typing_tools.argparsers import string_from_valid_list_type
 from dnn_modelling.model import get_model
 from dnn_modelling.callbacks import SaveStatedictCallback, SaveStatedictEveryNEpochCallback
 from dnn_modelling.dataloader.dataloader import get_dataloaders
@@ -60,10 +61,10 @@ label_function_dict = {
     'gap_length': (label_func__gap_length, 1),
 }
 
-"""
-TODO Description here
-"""
-parser = argparse.ArgumentParser(prog='train_model')
+
+parser = argparse.ArgumentParser(prog='train_model',
+                                 description='Description: TODO',
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 parser.add_argument('-i', '--input',
                     dest='input_folder',
@@ -72,19 +73,23 @@ parser.add_argument('-i', '--input',
                     help='list of folders to include in training')
 parser.add_argument('-dw', '--dataworkers',
                     dest='dataloader_workers',
-                    type=int, default=0,
-                    help='')
+                    type=int,
+                    default=0,
+                    help='Number of dataworkers to use')
 parser.add_argument('-n', '--nepochs',
                     dest='n_epochs',
-                    type=int, default=10,
-                    help='')
+                    type=int,
+                    default=10,
+                    help='Number of epochs to train the model')
 parser.add_argument('-m', '--model',
                     dest='model',
-                    type=str, default='kell',
+                    type=str,
+                    default='kell',
                     help='list of folders to include in training')
 parser.add_argument('-w', '--weights',
                     dest='weights',
-                    type=str, default=None,
+                    type=str,
+                    default=None,
                     help='path of pretrained weights to load model with')
 parser.add_argument('-o', '--output',
                     dest='output_folder',
@@ -97,8 +102,10 @@ parser.add_argument('-on', '--output_name',
                     default=None,
                     help='sets the name of the model')
 parser.add_argument('--test',
-                    dest='run_test', action='store_const',
-                    const=True, default=False,
+                    dest='run_test',
+                    action='store_const',
+                    const=True,
+                    default=False,
                     help='flag for running test script after training')
 parser.add_argument('-er', '--externalresults',
                     dest='external_results_folder',
@@ -109,74 +116,96 @@ parser.add_argument('-er', '--externalresults',
 # ** hyper-parameters **
 parser.add_argument('-l', '--loss',
                     dest='loss_func',
-                    type=str, default='BCE',
+                    type=str,
+                    default='BCE',
                     help=f'Set the loss function. Valid inputs are: {loss_func_dict.keys()}')
 parser.add_argument('-op', '--opt',
                     dest='opt_func',
-                    type=str, default='adam',
+                    type=str,
+                    default='adam',
                     help=f'Set the loss function. Valid inputs are: {opt_func_dict.keys()}')
 parser.add_argument('-bs', '--batchsize',
                     dest='batch_size',
-                    type=int, default=16,
+                    type=int,
+                    default=16,
                     help='')
 parser.add_argument('-vp', '--valid',
                     dest='valid_pct',
-                    type=float, default=0.1,
+                    type=float,
+                    default=0.1,
                     help='')
 parser.add_argument('-cp', '--cutpct', '--cutaugment',
                     dest='data_augmentation_pct',
-                    type=float, default=0.0,
+                    type=float,
+                    default=0.0,
                     help='Use data augmentation by cutting a percentage of the time between start of sample and onset '
                          'of noise')
 parser.add_argument('-il', '--inputlength',
                     dest='input_length',
-                    type=int, default=800,
+                    type=int,
+                    default=800,
                     help='Use for data augmentation: sets the desired output length and thus how much of the original '
                          'sample can be truncated')
 parser.add_argument('-es', '--earlystop',
                     dest='early_stopping',
-                    type=int, default=100,
+                    type=int,
+                    default=100,
                     help='')
 parser.add_argument('-nts', '--n_to_save',
                     dest='n_to_save',
-                    type=int, default=20,
+                    type=int,
+                    default=20,
                     help='Every n_to_save epoch, the model is saved to disk')
 parser.add_argument('-esv', '--earlystopvariable',
                     dest='early_stopping_variable',
-                    type=str, default='valid',
+                    type=string_from_valid_list_type(early_stopping_variable_dict.keys()),
+                    default='valid',
                     help=f'Set the variable for early stopping. Valid inputs are: {early_stopping_variable_dict.keys()}')
 parser.add_argument('-lr',
                     dest='learning_rate',
-                    type=float, default=0.001,
+                    type=float,
+                    default=0.001,
                     help='')
 parser.add_argument('-dr',
                     dest='dropout_rate',
-                    type=float, default=0.,
+                    type=float,
+                    default=0.,
                     help='')
 parser.add_argument('-nb', '--nobias',
-                    dest='bias', action='store_const',
-                    const=False, default=True,
+                    dest='bias',
+                    action='store_const',
+                    const=False,
+                    default=True,
                     help='')
 parser.add_argument('-lf',
                     dest='label_function',
-                    type=str, default='binary',
+                    type=string_from_valid_list_type(label_function_dict.keys()),
+                    default='binary',
                     help='')
 parser.add_argument('-wd',
                     dest='weight_decay',
-                    type=float, default=None,
+                    type=float,
+                    default=None,
                     help='')
 parser.add_argument('--gpf_t',
                     dest='grandparent_train_folders',
-                    type=str, default='')
+                    type=str,
+                    default='')
 parser.add_argument('--gpf_v',
                     dest='grandparent_valid_folders',
-                    type=str, default='')
+                    type=str,
+                    default='')
 parser.add_argument('-bw', '--binwidth',
                     dest='spikeogram_binwidth',
-                    type=float, default=1e-3)
+                    type=float,
+                    default=1e-3)
 parser.add_argument('-sm', '--spikemode',
                     dest='spikeogram_mode',
-                    type=str, default='2d')
+                    type=string_from_valid_list_type([
+                        '2d',
+                        '3d'
+                    ]),
+                    default='2d')
 
 args = parser.parse_args()
 

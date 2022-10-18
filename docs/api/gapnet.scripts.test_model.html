@@ -1,0 +1,2418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>gapnet.scripts.test_model</title>
+    <meta name="generator" content="pydoctor 22.9.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="gapnet.scripts.test_model.html" class="internal-link" title="This module">test<wbr></wbr>_model</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#append_dataframe_with_psychometric_fit_threshold" class="internal-link" title="gapnet.scripts.test_model.append_dataframe_with_psychometric_fit_threshold">append<wbr></wbr>_dataframe<wbr></wbr>_with<wbr></wbr>_psychometric<wbr></wbr>_fit<wbr></wbr>_threshold</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#correct_func" class="internal-link" title="gapnet.scripts.test_model.correct_func">correct<wbr></wbr>_func</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#model_output_plot" class="internal-link" title="gapnet.scripts.test_model.model_output_plot">model<wbr></wbr>_output<wbr></wbr>_plot</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#percentage_correct_plot" class="internal-link" title="gapnet.scripts.test_model.percentage_correct_plot">percentage<wbr></wbr>_correct<wbr></wbr>_plot</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#threshold_for_impairment" class="internal-link" title="gapnet.scripts.test_model.threshold_for_impairment">threshold<wbr></wbr>_for<wbr></wbr>_impairment</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#N" class="internal-link" title="gapnet.scripts.test_model.N">N</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#S" class="internal-link" title="gapnet.scripts.test_model.S">S</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#X" class="internal-link" title="gapnet.scripts.test_model.X">X</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#an_model_basepath" class="internal-link" title="gapnet.scripts.test_model.an_model_basepath">an<wbr></wbr>_model<wbr></wbr>_basepath</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#args" class="internal-link" title="gapnet.scripts.test_model.args">args</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#at_lvl" class="internal-link" title="gapnet.scripts.test_model.at_lvl">at<wbr></wbr>_lvl</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#bandwidth" class="internal-link" title="gapnet.scripts.test_model.bandwidth">bandwidth</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#data_folder" class="internal-link" title="gapnet.scripts.test_model.data_folder">data<wbr></wbr>_folder</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#df_at_lvl" class="internal-link" title="gapnet.scripts.test_model.df_at_lvl">df<wbr></wbr>_at<wbr></wbr>_lvl</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#df_dprime" class="internal-link" title="gapnet.scripts.test_model.df_dprime">df<wbr></wbr>_dprime</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#df_impair" class="internal-link" title="gapnet.scripts.test_model.df_impair">df<wbr></wbr>_impair</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#df_mo" class="internal-link" title="gapnet.scripts.test_model.df_mo">df<wbr></wbr>_mo</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#df_pct" class="internal-link" title="gapnet.scripts.test_model.df_pct">df<wbr></wbr>_pct</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#df_pct_ideal" class="internal-link" title="gapnet.scripts.test_model.df_pct_ideal">df<wbr></wbr>_pct<wbr></wbr>_ideal</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#experiment_folders" class="internal-link" title="gapnet.scripts.test_model.experiment_folders">experiment<wbr></wbr>_folders</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#experiment_parameters" class="internal-link" title="gapnet.scripts.test_model.experiment_parameters">experiment<wbr></wbr>_parameters</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#experiment_parent_regexps" class="internal-link" title="gapnet.scripts.test_model.experiment_parent_regexps">experiment<wbr></wbr>_parent<wbr></wbr>_regexps</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#external_results_loaders" class="internal-link" title="gapnet.scripts.test_model.external_results_loaders">external<wbr></wbr>_results<wbr></wbr>_loaders</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#external_results_path" class="internal-link" title="gapnet.scripts.test_model.external_results_path">external<wbr></wbr>_results<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#gap_lengths" class="internal-link" title="gapnet.scripts.test_model.gap_lengths">gap<wbr></wbr>_lengths</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#history_path" class="internal-link" title="gapnet.scripts.test_model.history_path">history<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#impairments" class="internal-link" title="gapnet.scripts.test_model.impairments">impairments</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#in_channels" class="internal-link" title="gapnet.scripts.test_model.in_channels">in<wbr></wbr>_channels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#input_length" class="internal-link" title="gapnet.scripts.test_model.input_length">input<wbr></wbr>_length</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#input_mode_input_lengths" class="internal-link" title="gapnet.scripts.test_model.input_mode_input_lengths">input<wbr></wbr>_mode<wbr></wbr>_input<wbr></wbr>_lengths</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#job_list" class="internal-link" title="gapnet.scripts.test_model.job_list">job<wbr></wbr>_list</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#levels" class="internal-link" title="gapnet.scripts.test_model.levels">levels</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#levels_impairment" class="internal-link" title="gapnet.scripts.test_model.levels_impairment">levels<wbr></wbr>_impairment</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#line" class="internal-link" title="gapnet.scripts.test_model.line">line</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#load_model_path" class="internal-link" title="gapnet.scripts.test_model.load_model_path">load<wbr></wbr>_model<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#local_process_parameter" class="internal-link" title="gapnet.scripts.test_model.local_process_parameter">local<wbr></wbr>_process<wbr></wbr>_parameter</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#mode_str" class="internal-link" title="gapnet.scripts.test_model.mode_str">mode<wbr></wbr>_str</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#model" class="internal-link" title="gapnet.scripts.test_model.model">model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#model_output_path" class="internal-link" title="gapnet.scripts.test_model.model_output_path">model<wbr></wbr>_output<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#output_folder" class="internal-link" title="gapnet.scripts.test_model.output_folder">output<wbr></wbr>_folder</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parallel_argument_list" class="internal-link" title="gapnet.scripts.test_model.parallel_argument_list">parallel<wbr></wbr>_argument<wbr></wbr>_list</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#params" class="internal-link" title="gapnet.scripts.test_model.params">params</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parent_regexp" class="internal-link" title="gapnet.scripts.test_model.parent_regexp">parent<wbr></wbr>_regexp</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parser" class="internal-link" title="gapnet.scripts.test_model.parser">parser</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#regexp_r" class="internal-link" title="gapnet.scripts.test_model.regexp_r">regexp<wbr></wbr>_r</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#thres_df" class="internal-link" title="gapnet.scripts.test_model.thres_df">thres<wbr></wbr>_df</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#thres_df_path" class="internal-link" title="gapnet.scripts.test_model.thres_df_path">thres<wbr></wbr>_df<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#threshold" class="internal-link" title="gapnet.scripts.test_model.threshold">threshold</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#threshold_plot_path" class="internal-link" title="gapnet.scripts.test_model.threshold_plot_path">threshold<wbr></wbr>_plot<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_data_input_path" class="internal-link" title="gapnet.scripts.test_model._data_input_path">_data<wbr></wbr>_input<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="gapnet.scripts.html" class="internal-link" title="The parent of this module">scripts</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.scripts.spikeogramorator.html" class="internal-link" title="gapnet.scripts.spikeogramorator">spikeogramorator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.scripts.test_ensemble.html" class="internal-link" title="gapnet.scripts.test_ensemble">test<wbr></wbr>_ensemble</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.scripts.test_model.html" class="internal-link" title="gapnet.scripts.test_model">test<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.scripts.train_model.html" class="internal-link" title="gapnet.scripts.train_model">train<wbr></wbr>_model</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.scripts.html" class="internal-link" title="gapnet.scripts">scripts</a></code><wbr></wbr>.<code><a href="gapnet.scripts.test_model.html" class="internal-link" title="gapnet.scripts.test_model">test_model</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <a href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py" class="sourceLink">(source)</a>
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id90">
+  
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#append_dataframe_with_psychometric_fit_threshold" class="internal-link" title="gapnet.scripts.test_model.append_dataframe_with_psychometric_fit_threshold">append<wbr></wbr>_dataframe<wbr></wbr>_with<wbr></wbr>_psychometric<wbr></wbr>_fit<wbr></wbr>_threshold</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#correct_func" class="internal-link" title="gapnet.scripts.test_model.correct_func">correct<wbr></wbr>_func</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#model_output_plot" class="internal-link" title="gapnet.scripts.test_model.model_output_plot">model<wbr></wbr>_output<wbr></wbr>_plot</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#percentage_correct_plot" class="internal-link" title="gapnet.scripts.test_model.percentage_correct_plot">percentage<wbr></wbr>_correct<wbr></wbr>_plot</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#threshold_for_impairment" class="internal-link" title="gapnet.scripts.test_model.threshold_for_impairment">threshold<wbr></wbr>_for<wbr></wbr>_impairment</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#N" class="internal-link" title="gapnet.scripts.test_model.N">N</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#S" class="internal-link" title="gapnet.scripts.test_model.S">S</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#X" class="internal-link" title="gapnet.scripts.test_model.X">X</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#an_model_basepath" class="internal-link" title="gapnet.scripts.test_model.an_model_basepath">an<wbr></wbr>_model<wbr></wbr>_basepath</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#args" class="internal-link" title="gapnet.scripts.test_model.args">args</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#at_lvl" class="internal-link" title="gapnet.scripts.test_model.at_lvl">at<wbr></wbr>_lvl</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#bandwidth" class="internal-link" title="gapnet.scripts.test_model.bandwidth">bandwidth</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#data_folder" class="internal-link" title="gapnet.scripts.test_model.data_folder">data<wbr></wbr>_folder</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#df_at_lvl" class="internal-link" title="gapnet.scripts.test_model.df_at_lvl">df<wbr></wbr>_at<wbr></wbr>_lvl</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#df_dprime" class="internal-link" title="gapnet.scripts.test_model.df_dprime">df<wbr></wbr>_dprime</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#df_impair" class="internal-link" title="gapnet.scripts.test_model.df_impair">df<wbr></wbr>_impair</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#df_mo" class="internal-link" title="gapnet.scripts.test_model.df_mo">df<wbr></wbr>_mo</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#df_pct" class="internal-link" title="gapnet.scripts.test_model.df_pct">df<wbr></wbr>_pct</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#df_pct_ideal" class="internal-link" title="gapnet.scripts.test_model.df_pct_ideal">df<wbr></wbr>_pct<wbr></wbr>_ideal</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#experiment_folders" class="internal-link" title="gapnet.scripts.test_model.experiment_folders">experiment<wbr></wbr>_folders</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#experiment_parameters" class="internal-link" title="gapnet.scripts.test_model.experiment_parameters">experiment<wbr></wbr>_parameters</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#experiment_parent_regexps" class="internal-link" title="gapnet.scripts.test_model.experiment_parent_regexps">experiment<wbr></wbr>_parent<wbr></wbr>_regexps</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#external_results_loaders" class="internal-link" title="gapnet.scripts.test_model.external_results_loaders">external<wbr></wbr>_results<wbr></wbr>_loaders</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#external_results_path" class="internal-link" title="gapnet.scripts.test_model.external_results_path">external<wbr></wbr>_results<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#gap_lengths" class="internal-link" title="gapnet.scripts.test_model.gap_lengths">gap<wbr></wbr>_lengths</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#history_path" class="internal-link" title="gapnet.scripts.test_model.history_path">history<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#impairments" class="internal-link" title="gapnet.scripts.test_model.impairments">impairments</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#in_channels" class="internal-link" title="gapnet.scripts.test_model.in_channels">in<wbr></wbr>_channels</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#input_length" class="internal-link" title="gapnet.scripts.test_model.input_length">input<wbr></wbr>_length</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#input_mode_input_lengths" class="internal-link" title="gapnet.scripts.test_model.input_mode_input_lengths">input<wbr></wbr>_mode<wbr></wbr>_input<wbr></wbr>_lengths</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#job_list" class="internal-link" title="gapnet.scripts.test_model.job_list">job<wbr></wbr>_list</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#levels" class="internal-link" title="gapnet.scripts.test_model.levels">levels</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#levels_impairment" class="internal-link" title="gapnet.scripts.test_model.levels_impairment">levels<wbr></wbr>_impairment</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#line" class="internal-link" title="gapnet.scripts.test_model.line">line</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#load_model_path" class="internal-link" title="gapnet.scripts.test_model.load_model_path">load<wbr></wbr>_model<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#local_process_parameter" class="internal-link" title="gapnet.scripts.test_model.local_process_parameter">local<wbr></wbr>_process<wbr></wbr>_parameter</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#mode_str" class="internal-link" title="gapnet.scripts.test_model.mode_str">mode<wbr></wbr>_str</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#model" class="internal-link" title="gapnet.scripts.test_model.model">model</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#model_output_path" class="internal-link" title="gapnet.scripts.test_model.model_output_path">model<wbr></wbr>_output<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#output_folder" class="internal-link" title="gapnet.scripts.test_model.output_folder">output<wbr></wbr>_folder</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#parallel_argument_list" class="internal-link" title="gapnet.scripts.test_model.parallel_argument_list">parallel<wbr></wbr>_argument<wbr></wbr>_list</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#params" class="internal-link" title="gapnet.scripts.test_model.params">params</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#parent_regexp" class="internal-link" title="gapnet.scripts.test_model.parent_regexp">parent<wbr></wbr>_regexp</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#parser" class="internal-link" title="gapnet.scripts.test_model.parser">parser</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#regexp_r" class="internal-link" title="gapnet.scripts.test_model.regexp_r">regexp<wbr></wbr>_r</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#thres_df" class="internal-link" title="gapnet.scripts.test_model.thres_df">thres<wbr></wbr>_df</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#thres_df_path" class="internal-link" title="gapnet.scripts.test_model.thres_df_path">thres<wbr></wbr>_df<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#threshold" class="internal-link" title="gapnet.scripts.test_model.threshold">threshold</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#threshold_plot_path" class="internal-link" title="gapnet.scripts.test_model.threshold_plot_path">threshold<wbr></wbr>_plot<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><code><a href="#_data_input_path" class="internal-link" title="gapnet.scripts.test_model._data_input_path">_data<wbr></wbr>_input<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="gapnet.scripts.test_model.append_dataframe_with_psychometric_fit_threshold">
+    
+  </a>
+  <a name="append_dataframe_with_psychometric_fit_threshold">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">append_dataframe_with_psychometric_fit_threshold</span>(df, psychometric_params, impairment, experiment_parameter, method, pct=0.707):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L387">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#append_dataframe_with_psychometric_fit_threshold" title="gapnet.scripts.test_model.append_dataframe_with_psychometric_fit_threshold">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.scripts.test_model.correct_func">
+    
+  </a>
+  <a name="correct_func">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">correct_func</span>(x, p):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L335">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#correct_func" title="gapnet.scripts.test_model.correct_func">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.scripts.test_model.model_output_plot">
+    
+  </a>
+  <a name="model_output_plot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">model_output_plot</span>(impairment):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L362">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#model_output_plot" title="gapnet.scripts.test_model.model_output_plot">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.scripts.test_model.percentage_correct_plot">
+    
+  </a>
+  <a name="percentage_correct_plot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">percentage_correct_plot</span>(df, threshold, impairment):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L347">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#percentage_correct_plot" title="gapnet.scripts.test_model.percentage_correct_plot">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.scripts.test_model.threshold_for_impairment">
+    
+  </a>
+  <a name="threshold_for_impairment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">threshold_for_impairment</span>(impairment):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L413">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#threshold_for_impairment" title="gapnet.scripts.test_model.threshold_for_impairment">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.scripts.test_model.N">
+    
+  </a>
+  <a name="N">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">N</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L327">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#N" title="gapnet.scripts.test_model.N">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>df_at_lvl[df_at_lvl['gap_length'] == 0]['model_output'].to_numpy()</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.scripts.test_model.S">
+    
+  </a>
+  <a name="S">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">S</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L329">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#S" title="gapnet.scripts.test_model.S">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>df_at_lvl[df_at_lvl['gap_length'] == gap]['model_output'].to_numpy()</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.scripts.test_model.X">
+    
+  </a>
+  <a name="X">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">X</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L300">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#X" title="gapnet.scripts.test_model.X">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>df_at_lvl[df_at_lvl['gap_length'] == gap]['model_output'].to_numpy()</code></pre></td></tr></table>
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.an_model_basepath">
+    
+  </a>
+  <a name="an_model_basepath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">an_model_basepath</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L179">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#an_model_basepath" title="gapnet.scripts.test_model.an_model_basepath">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.args">
+    
+  </a>
+  <a name="args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">args</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L81">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#args" title="gapnet.scripts.test_model.args">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.at_lvl">
+    
+  </a>
+  <a name="at_lvl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">at_lvl</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L281">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#at_lvl" title="gapnet.scripts.test_model.at_lvl">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.bandwidth">
+    
+  </a>
+  <a name="bandwidth">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">bandwidth</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L150">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#bandwidth" title="gapnet.scripts.test_model.bandwidth">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.data_folder">
+    
+  </a>
+  <a name="data_folder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">data_folder</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L178">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#data_folder" title="gapnet.scripts.test_model.data_folder">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.df_at_lvl">
+    
+  </a>
+  <a name="df_at_lvl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">df_at_lvl</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L297">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#df_at_lvl" title="gapnet.scripts.test_model.df_at_lvl">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.df_dprime">
+    
+  </a>
+  <a name="df_dprime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">df_dprime</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L498">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#df_dprime" title="gapnet.scripts.test_model.df_dprime">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.df_impair">
+    
+  </a>
+  <a name="df_impair">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">df_impair</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L295">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#df_impair" title="gapnet.scripts.test_model.df_impair">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.df_mo">
+    
+  </a>
+  <a name="df_mo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">df_mo</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L226">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#df_mo" title="gapnet.scripts.test_model.df_mo">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.df_pct">
+    
+  </a>
+  <a name="df_pct">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">df_pct</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L289">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#df_pct" title="gapnet.scripts.test_model.df_pct">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.df_pct_ideal">
+    
+  </a>
+  <a name="df_pct_ideal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">df_pct_ideal</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L317">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#df_pct_ideal" title="gapnet.scripts.test_model.df_pct_ideal">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.experiment_folders">
+    
+  </a>
+  <a name="experiment_folders">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">experiment_folders</span>: <code>dict[<wbr></wbr>str, <wbr></wbr>str]</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L105">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#experiment_folders" title="gapnet.scripts.test_model.experiment_folders">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.experiment_parameters">
+    
+  </a>
+  <a name="experiment_parameters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">experiment_parameters</span>: <code>dict[<wbr></wbr>str, <wbr></wbr>str]</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L110">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#experiment_parameters" title="gapnet.scripts.test_model.experiment_parameters">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.experiment_parent_regexps">
+    
+  </a>
+  <a name="experiment_parent_regexps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">experiment_parent_regexps</span>: <code>dict[<wbr></wbr>str, <wbr></wbr>str]</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L115">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#experiment_parent_regexps" title="gapnet.scripts.test_model.experiment_parent_regexps">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.external_results_loaders">
+    
+  </a>
+  <a name="external_results_loaders">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">external_results_loaders</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L120">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#external_results_loaders" title="gapnet.scripts.test_model.external_results_loaders">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.external_results_path">
+    
+  </a>
+  <a name="external_results_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">external_results_path</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L125">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#external_results_path" title="gapnet.scripts.test_model.external_results_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.gap_lengths">
+    
+  </a>
+  <a name="gap_lengths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">gap_lengths</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L228">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#gap_lengths" title="gapnet.scripts.test_model.gap_lengths">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.history_path">
+    
+  </a>
+  <a name="history_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">history_path</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L186">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#history_path" title="gapnet.scripts.test_model.history_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.impairments">
+    
+  </a>
+  <a name="impairments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">impairments</span>: <code>list[<wbr></wbr>str]</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L128">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#impairments" title="gapnet.scripts.test_model.impairments">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.in_channels">
+    
+  </a>
+  <a name="in_channels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">in_channels</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L175">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#in_channels" title="gapnet.scripts.test_model.in_channels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.input_length">
+    
+  </a>
+  <a name="input_length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">input_length</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L148">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#input_length" title="gapnet.scripts.test_model.input_length">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.input_mode_input_lengths">
+    
+  </a>
+  <a name="input_mode_input_lengths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">input_mode_input_lengths</span>: <code>dict[<wbr></wbr>str, <wbr></wbr>int]</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L142">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#input_mode_input_lengths" title="gapnet.scripts.test_model.input_mode_input_lengths">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.job_list">
+    
+  </a>
+  <a name="job_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">job_list</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L378">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#job_list" title="gapnet.scripts.test_model.job_list">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.levels">
+    
+  </a>
+  <a name="levels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">levels</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L218">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#levels" title="gapnet.scripts.test_model.levels">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.levels_impairment">
+    
+  </a>
+  <a name="levels_impairment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">levels_impairment</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L494">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#levels_impairment" title="gapnet.scripts.test_model.levels_impairment">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.line">
+    
+  </a>
+  <a name="line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">line</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L154">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#line" title="gapnet.scripts.test_model.line">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.load_model_path">
+    
+  </a>
+  <a name="load_model_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">load_model_path</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L197">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#load_model_path" title="gapnet.scripts.test_model.load_model_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.local_process_parameter">
+    
+  </a>
+  <a name="local_process_parameter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">local_process_parameter</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L210">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#local_process_parameter" title="gapnet.scripts.test_model.local_process_parameter">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.mode_str">
+    
+  </a>
+  <a name="mode_str">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">mode_str</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L149">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#mode_str" title="gapnet.scripts.test_model.mode_str">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.model">
+    
+  </a>
+  <a name="model">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">model</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L200">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#model" title="gapnet.scripts.test_model.model">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.model_output_path">
+    
+  </a>
+  <a name="model_output_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">model_output_path</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L224">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#model_output_path" title="gapnet.scripts.test_model.model_output_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.output_folder">
+    
+  </a>
+  <a name="output_folder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">output_folder</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L94">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#output_folder" title="gapnet.scripts.test_model.output_folder">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.parallel_argument_list">
+    
+  </a>
+  <a name="parallel_argument_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">parallel_argument_list</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L492">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#parallel_argument_list" title="gapnet.scripts.test_model.parallel_argument_list">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.params">
+    
+  </a>
+  <a name="params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">params</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L279">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#params" title="gapnet.scripts.test_model.params">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.parent_regexp">
+    
+  </a>
+  <a name="parent_regexp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">parent_regexp</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L180">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#parent_regexp" title="gapnet.scripts.test_model.parent_regexp">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.parser">
+    
+  </a>
+  <a name="parser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">parser</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L39">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#parser" title="gapnet.scripts.test_model.parser">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.regexp_r">
+    
+  </a>
+  <a name="regexp_r">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">regexp_r</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L217">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#regexp_r" title="gapnet.scripts.test_model.regexp_r">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.thres_df">
+    
+  </a>
+  <a name="thres_df">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">thres_df</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L469">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#thres_df" title="gapnet.scripts.test_model.thres_df">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.thres_df_path">
+    
+  </a>
+  <a name="thres_df_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">thres_df_path</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L473">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#thres_df_path" title="gapnet.scripts.test_model.thres_df_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.threshold">
+    
+  </a>
+  <a name="threshold">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">threshold</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L338">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#threshold" title="gapnet.scripts.test_model.threshold">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.scripts.test_model.threshold_plot_path">
+    
+  </a>
+  <a name="threshold_plot_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">threshold_plot_path</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L485">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#threshold_plot_path" title="gapnet.scripts.test_model.threshold_plot_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable private">
+  
+  
+  <a name="gapnet.scripts.test_model._data_input_path">
+    
+  </a>
+  <a name="_data_input_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_data_input_path</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/scripts/test_model.py#L158">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#_data_input_path" title="gapnet.scripts.test_model._data_input_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    22.9.1 at 2022-10-18 11:58:13.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

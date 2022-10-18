@@ -1,4 +1,5 @@
 import operator
+import os
 from typing import Any, Sized
 
 
@@ -88,3 +89,9 @@ class ValueRange(AnnotatedTypeChecker):
             ma = '[' if self.min_inclusive else ']'
             range_string = f'{mi}{self.min_value}, {self.max_value}{ma}'
             raise ValueError(f'argument was {arg}, but type-hinted in range {range_string}')
+
+
+class PathExists(AnnotatedTypeChecker):
+    def check(self, arg):
+        if not os.path.exists(arg):
+            raise ValueError('argument was type-hinted to exist, but os.path.exists returned False')

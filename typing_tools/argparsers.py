@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import operator
-from typing import Callable, List, TypeVar
+from typing import Callable, Iterable, TypeVar
 
 T = TypeVar('T')
 
@@ -56,7 +56,7 @@ def ranged_type(value_type: type,
     return range_checker
 
 
-def string_from_valid_list_type(valid_values: List[str]) -> Callable[[str], str]:
+def string_from_valid_list_type(valid_values: Iterable[str]) -> Callable[[str], str]:
     """
     Return function handle that checks whether input argument matches any of the C{valid_values}
 

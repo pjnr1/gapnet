@@ -53,13 +53,13 @@ parser.add_argument('-p', '--overlap',
                     dest='overlap',
                     type=ranged_type(float,
                                      min_value=0.0,
-                                     max_value=0.99),
+                                     max_value=1.0,
+                                     max_inclusive=False),
                     default=0.0,
-                    help='set the ratio of overlap for each bin/window')
+                    help='set the ratio of overlap for each bin/window [TODO]')
 parser.add_argument('-m', '--mode',
                     dest='mode',
-                    type=string_from_valid_list_type(['2d',
-                                                      '3d']),
+                    type=string_from_valid_list_type(generator_dict.keys()),
                     default='2d',
                     help='set spikeogram mode (2d or 3d)')
 parser.add_argument('-r', '--recursive',
@@ -110,11 +110,23 @@ print('Destination:', os.path.join(args.output_folder,
 def get_destination_path(mat_file, input_folder):
     """
     Generates output folder for the given mat_file and input_folder::
-        <output_folder> / <*condition_folders> /
+        <output_folder> / <*condition_folders> / <*mat_file sub-folders> / <mat_file-name> .pt
+
+    output_folder is set from the script arguments
+
+    condition_folders are constructed by mode and bin-width
+
+    mat_file sub-folders are the sub-folders that the mat_file resides in beyond the input_folder
+
     @param mat_file:
+        fullpath of the .mat-file
     @param input_folder:
+        fullpath of the input-folder
     @return:
+        full output path for the spikeogram
     """
+    assert(input_folder in mat_file)
+
     return os.path.join(args.output_folder,
                         *condition_folders,
                         *(mat_file.split(input_folder)[-1].split(os.path.sep)[:-1]),
@@ -122,6 +134,13 @@ def get_destination_path(mat_file, input_folder):
 
 
 def process_simulation(mat_file, input_folder):
+    """
+    function to run in each work
+
+    @param mat_file:
+    @param input_folder:
+    @return:
+    """
     filepath = get_destination_path(mat_file, input_folder)
     if os.path.exists(filepath):
         print('File exists, returning')
@@ -144,7 +163,9 @@ def process_simulation(mat_file, input_folder):
 for f in args.input_folders:
     mat_files = list()  # initialise file list
 
-    path_string = f + (os.path.sep + '**' if args.recursive else '') + os.path.sep + args.file_regexp
+    path_string = os.path.join(f,
+                               '**' if args.recursive else '',
+                               args.file_regexp)
     print('Searching for', path_string)
     for file in glob.glob(path_string, recursive=args.recursive):
         mat_files.append(file)

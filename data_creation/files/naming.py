@@ -78,3 +78,29 @@ def get_condition_folders(mode, bin_width):
     @return:
     """
     return ['mode_' + mode, 'bw_' + str(bin_width)]
+
+
+def threshold_pickle(state_dict):
+    """
+    Get name of computed thresholds based on state_dict-name
+
+    @param state_dict:
+        state_dict to retrieve
+    @return:
+        filename to use
+    """
+    return f'thresholds-({state_dict}).pickle'
+
+
+def model_output_pickle(state_dict):
+    """
+    Get name of computed model-output based on state_dict-name
+
+    @param state_dict:
+        state_dict to retrieve
+    @return:
+        filename to use
+    """
+    return f'model_output-({state_dict}).pickle'
+
+
