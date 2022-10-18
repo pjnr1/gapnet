@@ -1,6 +1,8 @@
 import numpy as np
 from typing import Annotated, List, Union
 
+from typing_tools.annotation_checkers import ExactLen
+
 
 def generate_time_vector(start: float, end: float, fs: int) -> np.ndarray:
     """
@@ -18,7 +20,7 @@ def generate_time_vector(start: float, end: float, fs: int) -> np.ndarray:
     return np.arange(fs * start, fs * end) / fs
 
 
-def start_and_duration_to_gamma_t(start: float, duration: float) -> Annotated[List[float], 2]:
+def start_and_duration_to_gamma_t(start: float, duration: float) -> Annotated[List[float], ExactLen(2)]:
     """
     Small helper to get start- and end-time from start and duration
 
@@ -30,7 +32,7 @@ def start_and_duration_to_gamma_t(start: float, duration: float) -> Annotated[Li
     return [start, start + duration]
 
 
-def position_and_length_to_gamma_t(position: float, length: float) -> Annotated[List[float], 2]:
+def position_and_length_to_gamma_t(position: float, length: float) -> Annotated[List[float], ExactLen(2)]:
     """
     Small helper to get start- and end-time from start and duration
 

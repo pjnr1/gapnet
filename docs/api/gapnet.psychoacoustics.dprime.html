@@ -338,7 +338,7 @@
     
     <td>Function</td>
     <td><code><a href="#dprime_analytical" class="internal-link" title="gapnet.psychoacoustics.dprime.dprime_analytical">dprime<wbr></wbr>_analytical</a></code></td>
-    <td>Computes the d-prime of two internal variabel distributions, e.g. from signal present and signal absent.</td>
+    <td>Computes the d-prime of two internal response distributions, e.g. from signal present and signal absent.</td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -384,7 +384,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">dprime_analytical</span>(mu1, mu2, std1, std2):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L136">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L140">
       
       (source)
     </a>
@@ -396,7 +396,7 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Computes the d-prime of two internal variabel distributions, e.g. from signal present and signal absent.</p>
+    <div><p>Computes the d-prime of two internal response distributions, e.g. from signal present and signal absent.</p>
 <p>It assumes the simplest form of internal response, thus no correlation etc. (see <a class="rst-reference external" href="http://dx.doi.org/10.1016/j.jmp.2016.04.006" target="_top">Jones 2016</a> for a thorough tutorial).</p>
 <table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">mu1</span></td><td class="fieldArgDesc">Mean of distribution 1</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">mu2</span></td><td class="fieldArgDesc">Mean of distribution 2</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">std1</span></td><td class="fieldArgDesc">Standard deviation of distribution 1</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">std2</span></td><td class="fieldArgDesc">Standard deviation of distribution 1</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
   </div>
@@ -412,7 +412,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">dprime_empirical</span>(hit_rate, false_alarm_rate):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L45">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L49">
       
       (source)
     </a>
@@ -439,7 +439,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">dprime_empirical_jones</span>(h, f, threshold=0.5, eps=0.5):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L95">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L99">
       
       (source)
     </a>
@@ -466,7 +466,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">ideal_threshold</span>(signal, noise):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L59">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L63">
       
       (source)
     </a>
@@ -494,9 +494,9 @@
     
   </a>
   <div class="functionHeader">
-    
+    @check_annotations<br />
     <span class="py-keyword">def</span> <span class="py-defname">inverse_cumulative_std_normfunc</span>(p):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L31">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L34">
       
       (source)
     </a>
@@ -510,7 +510,7 @@
     
     <div><p>The inverse cumulative standard norm-function. This yields the same result as <tt class="rst-docutils literal">norminv</tt>, i.e. <tt class="rst-docutils literal">norminv(x, mu=0., std=1.) == inverse_cumulative_std_normfunc(x)</tt>.</p>
 <p>Equation originates from <a class="rst-reference external" href="http://dx.doi.org/10.1016/j.jmp.2016.04.006" target="_top">Jones 2016</a></p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">p:</span><code>Annotated[<wbr></wbr>float, <wbr></wbr>ValueRange(<wbr></wbr>0.0, <wbr></wbr>1.0)]</code></td><td class="fieldArgDesc">probability values (must be in the range [0, 1])</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">p:</span><code>Annotated[<wbr></wbr>float, <wbr></wbr>ValueRange(<wbr></wbr>0.0, <wbr></wbr>1.0, <wbr></wbr>False, <wbr></wbr>False)]</code></td><td class="fieldArgDesc">probability values (must be in the range [0, 1])</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -524,7 +524,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">norminv</span>(p, mu=0.0, std=1.0):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L12">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/psychoacoustics/dprime.py#L15">
       
       (source)
     </a>
@@ -551,7 +551,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-17 14:52:44.
+    22.9.1 at 2022-10-18 10:48:55.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

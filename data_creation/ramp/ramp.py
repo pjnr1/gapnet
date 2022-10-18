@@ -7,8 +7,9 @@ import operator
 from typing import Protocol, List, Annotated
 
 from .functions import linear_ramp_func
+from typing_tools.annotation_checkers import ExactLen, MaxLen
 
-GammaTPair = Annotated[List[float], 2]
+GammaTPair = Annotated[List[float], ExactLen(2)]
 """
 Type specification for gamma_t pair, used in functions with onset and offset
 """

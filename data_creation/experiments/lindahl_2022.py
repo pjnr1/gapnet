@@ -22,6 +22,7 @@ from data_creation.stimulus.babble import generate_babble
 from data_creation.time.time import get_sampling_frequency
 from data_creation.time.time import start_and_duration_to_gamma_t
 from data_creation.time.time import position_and_length_to_gamma_t
+from typing_tools.annotation_checkers import MaxLen
 
 
 def generate_stimulus(t,
@@ -31,7 +32,7 @@ def generate_stimulus(t,
                       gap_duration: float,
                       noise_start: float = 0.1,
                       noise_duration: float = 0.5,
-                      ramp_width: Union[float, Annotated[List[float], 2]] = 2.5e-3,
+                      ramp_width: Union[float, Annotated[List[float], MaxLen(2)]] = 2.5e-3,
                       ramp_function: RampFunction = hann_ramp_func) -> (int, np.ndarray, np.ndarray):
     """
 

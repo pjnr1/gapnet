@@ -6,7 +6,10 @@ import pandas as pd
 from scipy.stats import norm
 from scipy.special import erfinv
 
-from typing import Annotated, ValueRange
+from typing import Annotated
+
+from typing_tools.annotation_checkers import ValueRange
+from typing_tools.annotations import check_annotations
 
 
 def norminv(p, mu=0., std=1.0):
@@ -28,7 +31,8 @@ def norminv(p, mu=0., std=1.0):
     return norm.ppf(p, loc=mu, scale=std)
 
 
-def inverse_cumulative_std_normfunc(p: Annotated[float, ValueRange(0., 1.)]):
+@check_annotations
+def inverse_cumulative_std_normfunc(p: Annotated[float, ValueRange(0., 1., False, False)]):
     """
     The inverse cumulative standard norm-function.
     This yields the same result as C{norminv}, i.e. C{norminv(x, mu=0., std=1.) == inverse_cumulative_std_normfunc(x)}.
@@ -135,7 +139,7 @@ def dprime_empirical_jones(h, f, threshold=0.5, eps=0.5):
 
 def dprime_analytical(mu1, mu2, std1, std2):
     """
-    Computes the d-prime of two internal variabel distributions, e.g. from signal present and signal absent.
+    Computes the d-prime of two internal response distributions, e.g. from signal present and signal absent.
     
     It assumes the simplest form of internal response, thus no correlation etc. (see U{Jones 2016 <http://dx.doi.org/10.1016/j.jmp.2016.04.006>} for a thorough 
     tutorial).

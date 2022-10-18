@@ -5,6 +5,7 @@ import numpy as np
 from data_creation.calibration.transform import a2spl
 from data_creation.calibration.spectrum import normalise_by_spectrum_level
 from data_creation.time.time import get_sampling_frequency
+from typing_tools.annotation_checkers import ExactLen
 
 
 class WhiteNoiseFunction(Protocol):
@@ -65,7 +66,7 @@ def broadband_noise_n(fs: Union[float, int] = 1e6,
 
 def broadband_noise(t: np.ndarray,
                     amp: float = 0.1,
-                    freq_range: Annotated[List[float], 2] = None,
+                    freq_range: Annotated[List[float], ExactLen(2)] = None,
                     dtype: type = float) -> np.ndarray:
     """
 

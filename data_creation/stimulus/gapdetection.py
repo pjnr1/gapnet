@@ -1,7 +1,9 @@
 import numpy as np
 from typing import Annotated, List, Protocol
 
-GapLengthRange = Annotated[List[float], 2]
+from typing_tools.annotation_checkers import ExactLen
+
+GapLengthRange = Annotated[List[float], ExactLen(2)]
 
 
 class GapLengthGenerator(Protocol):
