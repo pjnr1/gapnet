@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 pydoctor \
     --project-name=GapNet \
     --project-url=https://github.com/pjnr1/gapnet/ \
