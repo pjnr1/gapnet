@@ -290,7 +290,7 @@
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id37">
+          <table class="children sortable" id="id39">
   
   
   <tr class="function">
@@ -307,7 +307,7 @@
     
     <td>Function</td>
     <td><code><a href="#position_and_length_to_gamma_t" class="internal-link" title="gapnet.data_creation.time.time.position_and_length_to_gamma_t">position<wbr></wbr>_and<wbr></wbr>_length<wbr></wbr>_to<wbr></wbr>_gamma<wbr></wbr>_t</a></code></td>
-    <td>Small helper to get start- and end-time from start and duration</td>
+    <td>Small helper to get start- and end-time from center-position and duration</td>
   </tr><tr class="function">
     
     <td>Function</td>
@@ -333,7 +333,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">generate_time_vector</span>(start, end, fs):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L7">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L9">
       
       (source)
     </a>
@@ -346,7 +346,7 @@
   <div class="docstring functionBody">
     
     <div><p>Generates an array with time points at sampling rate fs with start- and end-time</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">start:</span><code>float</code></td><td class="fieldArgDesc">start time in seconds</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">end:</span><code>float</code></td><td class="fieldArgDesc">end time in seconds (non-inclusive)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>int</code></td><td class="fieldArgDesc">sampling rate</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc">numpy array with time points</td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">start:</span><code>float</code></td><td class="fieldArgDesc">start time in seconds</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">end:</span><code>float</code></td><td class="fieldArgDesc">end time in seconds (non-inclusive)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>int|float</code></td><td class="fieldArgDesc">sampling rate</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc">numpy array with time points</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -360,7 +360,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">get_sampling_frequency</span>(fs, t):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L47">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L51">
       
       (source)
     </a>
@@ -373,7 +373,7 @@
   <div class="docstring functionBody">
     
     <div><p>Compute sampling frequency from t when fs is None, else simply returns fs</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>Union[<wbr></wbr>int, <wbr></wbr>None]</code></td><td class="fieldArgDesc">sampling frequency</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>Union[<wbr></wbr>np.ndarray, <wbr></wbr>List[<wbr></wbr>float]]</code></td><td class="fieldArgDesc">time vector</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>int</code></td><td class="fieldArgDesc"></td></tr></table></div>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">fs:</span><code>(int|float)|None</code></td><td class="fieldArgDesc">sampling frequency</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>Union[<wbr></wbr>np.ndarray, <wbr></wbr>List[<wbr></wbr>float]]</code></td><td class="fieldArgDesc">time vector</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>int</code></td><td class="fieldArgDesc"></td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -386,8 +386,8 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">position_and_length_to_gamma_t</span>(position, length):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L35">
+    <span class="py-keyword">def</span> <span class="py-defname">position_and_length_to_gamma_t</span>(position, duration):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L37">
       
       (source)
     </a>
@@ -399,8 +399,8 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p>Small helper to get start- and end-time from start and duration</p>
-<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">position:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">length:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Annotated[<wbr></wbr>List[<wbr></wbr>float], <wbr></wbr>ExactLen(<wbr></wbr>2)]</code></td><td class="fieldArgDesc">list with two indices; start and end</td></tr></table></div>
+    <div><p>Small helper to get start- and end-time from center-position and duration</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">position:</span><code>float</code></td><td class="fieldArgDesc">center position</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">duration:</span><code>float</code></td><td class="fieldArgDesc">duration</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>Annotated[<wbr></wbr>List[<wbr></wbr>float], <wbr></wbr>ExactLen(<wbr></wbr>2)]</code></td><td class="fieldArgDesc">list with two indices; start and end</td></tr></table></div>
   </div>
 </div><div class="basefunction">
   
@@ -414,7 +414,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">start_and_duration_to_gamma_t</span>(start, duration):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L23">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/time/time.py#L25">
       
       (source)
     </a>
@@ -441,7 +441,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-18 11:58:13.
+    22.9.1 at 2022-10-21 16:09:20.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 
