@@ -1,10 +1,12 @@
+from __future__ import annotations
+
 import numpy as np
 from typing import Annotated, List, Union
 
 from typing_tools.annotation_checkers import ExactLen
 
 
-def generate_time_vector(start: float, end: float, fs: int) -> np.ndarray:
+def generate_time_vector(start: float, end: float, fs: int | float) -> np.ndarray:
     """
     Generates an array with time points at sampling rate fs with start- and end-time
 
@@ -32,19 +34,21 @@ def start_and_duration_to_gamma_t(start: float, duration: float) -> Annotated[Li
     return [start, start + duration]
 
 
-def position_and_length_to_gamma_t(position: float, length: float) -> Annotated[List[float], ExactLen(2)]:
+def position_and_length_to_gamma_t(position: float, duration: float) -> Annotated[List[float], ExactLen(2)]:
     """
-    Small helper to get start- and end-time from start and duration
+    Small helper to get start- and end-time from center-position and duration
 
     @param position:
-    @param length:
+        center position
+    @param duration:
+        duration
     @return:
         list with two indices; start and end
     """
-    return [position - (length / 2), position + (length / 2)]
+    return [position - (duration / 2), position + (duration / 2)]
 
 
-def get_sampling_frequency(fs: Union[int, None], t: Union[np.ndarray, List[float]]) -> int:
+def get_sampling_frequency(fs: int | float | None, t: Union[np.ndarray, List[float]]) -> int:
     """
     Compute sampling frequency from t when fs is None, else simply returns fs
 

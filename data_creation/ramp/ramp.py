@@ -1,6 +1,8 @@
 """
 Ramp interface functions
 """
+from __future__ import annotations
+
 from functools import partial
 import numpy as np
 import operator
@@ -41,6 +43,8 @@ def ramp(t: np.ndarray,
 
      (t < (gamma_t + width / 2)) & (t >= (gamma_t - width / 2))
 
+    Invert is performed by flipping the ramp part within the above-mentioned range.
+    Rest of the signal is inverted by y = (1 - x)
 
     @param t:
         time vector
@@ -109,10 +113,6 @@ def ramp_onoff(t: np.ndarray,
     """
     if gamma_t is None:
         gamma_t = [-0.001, 0.001]
-    i = [False, True]
-
-    if invert:
-        i = [True, False]
 
     # Partially set ramp arguments for readability
     _ramp = partial(ramp,
@@ -122,13 +122,13 @@ def ramp_onoff(t: np.ndarray,
 
     _op = operator.add if invert else operator.mul
 
-    return _op(_ramp(t=t, gamma_t=gamma_t[0], invert=i[0]),
-               _ramp(t=t, gamma_t=gamma_t[1], invert=i[1]))
+    return _op(_ramp(t=t, gamma_t=gamma_t[0], invert=invert),
+               _ramp(t=t, gamma_t=gamma_t[1], invert=not invert))
 
 
 def ramp_onoff_with_gap(t,
-                        stim_gamma_t: GammaTPair = None,
-                        gap_gamma_t: GammaTPair = None,
+                        stim_gamma_t: GammaTPair | None = None,
+                        gap_gamma_t: GammaTPair | None = None,
                         width: float = 2.5e-3,
                         ramp_function: RampFunction = linear_ramp_func,
                         dtype: np.dtype = None):
@@ -137,15 +137,15 @@ def ramp_onoff_with_gap(t,
 
     @param t:
         time vector
-    @param gap_gamma_t   :
+    @param gap_gamma_t:
         center positions of the onset/offset-ramps of the gap (in the same unit as the time vector)
-    @param stim_gamma_t  :
+    @param stim_gamma_t:
         center positions of the onset/offset-ramps of the signal (in the same unit as the time vector)
-    @param width         :
+    @param width:
         width of the ramp (in same unit as the time vector)
-    @param ramp_function :
+    @param ramp_function:
         the function to create the ramp
-    @param dtype         :
+    @param dtype:
         data type of output vector, defaults to the datatype of t
     @return:
     """
@@ -157,9 +157,12 @@ def ramp_onoff_with_gap(t,
                     ramp_function=ramp_function,
                     dtype=dtype)
 
-    # Create stimulus ramps / gate
-    stimulus_gate = _ramp(t=t,
-                          gamma_t=stim_gamma_t)
+    if stim_gamma_t is None:
+        stimulus_gate = np.ones(t.shape)
+    else:
+        # Create stimulus ramps / gate
+        stimulus_gate = _ramp(t=t,
+                              gamma_t=stim_gamma_t)
 
     if gap_gamma_t is None:
         # Return early with just the stimulus, if no gap is specified

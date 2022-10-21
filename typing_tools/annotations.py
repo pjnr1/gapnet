@@ -33,6 +33,8 @@ def check_annotations(func):
                 if not isinstance(arg, AnnotatedTypeChecker):
                     continue
                 if param not in kwargs.keys():
+                    if len(args) <= i:
+                        continue
                     arg.check(args[i])
                 else:
                     arg.check(kwargs[param])

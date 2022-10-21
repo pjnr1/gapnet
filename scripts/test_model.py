@@ -16,16 +16,16 @@ from joblib import Parallel, delayed
 from threading import Thread
 
 from dnn_modelling.helpers import extract_from_path, get_datapath
-from dnn_modelling.models import load_model
-from dnn_modelling.models import get_model, load_model_from_state_dict, load_model_from_metafile
-from evaluation.dprime import dprime_empirical_jones, ideal_threshold
-from psychoacustics.psychometrics import psychometric_func, get_psychometric_point, fit_psychometric_func
+from dnn_modelling.model import load_model
+from dnn_modelling.model import get_model, load_model_from_state_dict, load_model_from_metafile
+from psychoacoustics.dprime import dprime_empirical_jones, ideal_threshold
+from psychoacoustics.psychometrics import psychometric_func, get_psychometric_point, fit_psychometric_func
 
 from testing.general import process_parameter
 from testing.general import process_dprime
 from testing.general_plots import plot_history, scatter_and_psychometric_fit_plot
 from testing.general_plots import plot_thresholds, plot_dprime
-from testing.paths import threshold_pickle, model_output_pickle
+from data_creation.files.naming import threshold_pickle, model_output_pickle
 from testing.print import TimeAndPrintContext
 
 from testing.zeng_et_al_2005 import external_results as external__zeng_et_al_2005

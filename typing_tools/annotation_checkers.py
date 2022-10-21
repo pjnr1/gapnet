@@ -62,14 +62,14 @@ class ExactLen(AnnotatedTypeChecker):
 
 
 class ValueRange(AnnotatedTypeChecker):
-    def __init__(self, min_value, max_value, min_inclusive: bool = True, max_inclusive: bool = True):
+    def __init__(self, min_value=None, max_value=None, min_inclusive: bool = True, max_inclusive: bool = True):
         self.min_value = min_value
         """
-        Minimum allowed value
+        Minimum allowed value. If None, minimum isn't checked
         """
         self.max_value = max_value
         """
-        Maximum allowed value
+        Maximum allowed value. If None, maximum isn't checked
         """
         self.min_inclusive = min_inclusive
         """
@@ -84,7 +84,8 @@ class ValueRange(AnnotatedTypeChecker):
         min_operator = operator.lt if self.min_inclusive else operator.le
         max_operator = operator.gt if self.max_inclusive else operator.ge
 
-        if min_operator(arg, self.min_value) or max_operator(arg, self.max_value):
+        if self.min_value is not None and min_operator(arg, self.min_value) or \
+                self.max_value is not None and max_operator(arg, self.max_value):
             mi = '[' if self.min_inclusive else ']'
             ma = '[' if self.min_inclusive else ']'
             range_string = f'{mi}{self.min_value}, {self.max_value}{ma}'

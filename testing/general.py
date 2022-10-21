@@ -1,20 +1,20 @@
 import os
 import re
+from typing import Annotated
 
-import numpy as np
 import pandas as pd
 import torch
 
 from dnn_modelling.dataloader.datasets import get_spikeogram_files, natural_keys
 from psychoacoustics.dprime import dprime_empirical_jones, ideal_threshold
-from psychoacoustics.psychometrics import psychometric_func, get_psychometric_point, fit_psychometric_func
+from psychoacoustics.psychometrics import psychometric_func, fit_psychometric_func
+from typing_tools.annotations import check_annotations
+from typing_tools.annotation_checkers import PathExists
 
 
-def get_model_output_dataframe():
+def get_model_output_dataframe() -> pd.DataFrame:
     """
     Simple constructor of the model-output dataframe
-    Returns
-    -------
 
     """
     return pd.DataFrame(columns=['experiment_parameter',
@@ -43,7 +43,8 @@ def get_gaplength_from_stimulus_filename(fn: str) -> float:
     return float(re.findall(r'\d+\.\d+ms', fn)[-1][:-2])
 
 
-def apply_model(model, path, input_length):
+@check_annotations
+def apply_model(model: torch.nn.Module, path: Annotated[os.PathLike, PathExists], input_length: int) -> torch.Tensor:
     try:
         X = torch.load(path)
         while len(X.shape) < 4:
