@@ -10,3 +10,8 @@ def linear_bandpass_filter(signal, low, high, fs=44.1e3, filter_order=np.power(2
 def butterworth_lowpass(signal, cutoff, fs, order=4):
     sos = ss.butter(N=order, Wn=cutoff, fs=fs, output='sos')
     return ss.sosfiltfilt(sos, signal)
+
+
+def bessel_lowpass(signal, cutoff, fs, order=4):
+    sos = ss.bessel(N=order, Wn=cutoff, fs=fs, output='sos')
+    return ss.sosfiltfilt(sos, signal)
