@@ -3,7 +3,7 @@ Helpers for checking Annotated type-hints
 """
 from functools import wraps
 from typing import get_type_hints, get_args
-from typing_tools.annotation_checkers import AnnotatedTypeChecker
+from .annotation_checkers import AnnotatedTypeChecker
 
 
 def _check_hint_args(hint):
@@ -16,11 +16,15 @@ def _check_hint_args(hint):
 
 def check_annotations(func):
     """
-    Function decorator
+    Function decorator to check Annotated types in function arguments
+
+    Note: default values are not checked
 
     """
     @wraps(func)
     def wrapped(*args, **kwargs):
+        # Convert *args to **kwargs
+        _kwargs = kwargs
         # perform runtime annotation checking
         # first, get type hints from function
         type_hints = get_type_hints(func, include_extras=True)

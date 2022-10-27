@@ -86,10 +86,13 @@ class ValueRange(AnnotatedTypeChecker):
 
         if self.min_value is not None and min_operator(arg, self.min_value) or \
                 self.max_value is not None and max_operator(arg, self.max_value):
-            mi = '[' if self.min_inclusive else ']'
-            ma = '[' if self.min_inclusive else ']'
-            range_string = f'{mi}{self.min_value}, {self.max_value}{ma}'
-            raise ValueError(f'argument was {arg}, but type-hinted in range {range_string}')
+            raise ValueError(self._range_error_string(arg))
+
+    def _range_error_string(self, arg):
+        mi = '[' if self.min_inclusive else ']'
+        ma = '[' if self.min_inclusive else ']'
+        range_string = f'{mi}{self.min_value}, {self.max_value}{ma}'
+        return f'argument was {arg}, but type-hinted in range {range_string}'
 
 
 class PathExists(AnnotatedTypeChecker):
