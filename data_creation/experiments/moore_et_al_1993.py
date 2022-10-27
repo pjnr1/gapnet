@@ -21,7 +21,6 @@ from data_creation.stimulus.noise import white_noise
 from data_creation.stimulus.puretone import puretone_randomphase
 from data_creation.time.time import get_sampling_frequency
 
-
 SIGNAL_LEVELS = [25, 40, 55, 70, 85]
 """
 Levels of the sinusoid used in the original paper
@@ -37,21 +36,30 @@ SIGNAL_TO_NOISE_RATIO = 40
 Level difference between signal and noise in dB SPL
 """
 
+SIGNAL_DURATION = 400e-3
+"""
+Duration of the target signal
+"""
+
 
 def generate_stimulus(t,
                       sinusoid_frequency: float = SIGNAL_FREQUENCIES[0],
                       sinusoid_level: float = SIGNAL_LEVELS[0],
                       gap_length: float = 0,
-                      signal_start: float = 100e-3,
-                      signal_length: float = 400e-3) -> np.ndarray:
+                      signal_start: float = 200e-3) -> np.ndarray:
     """
+    Function for generating the stimulus
 
     @param t:
+        time-vector
     @param sinusoid_frequency:
+        frequency of the target signal (see L{SIGNAL_FREQUENCIES} for frequencies used in the paper)
     @param sinusoid_level:
+        level of the target signal (see L{SIGNAL_LEVELS} for frequencies used in the paper)
     @param gap_length:
+        length of the gap
     @param signal_start:
-    @param signal_length:
+        time-point for starting the signal
     @return:
     """
     fs = get_sampling_frequency(None, t)
@@ -66,7 +74,7 @@ def generate_stimulus(t,
                              invert=True)
 
     stimulus_ramp = ramp_onoff(t,
-                               gamma_t=[signal_start, signal_start + signal_length],
+                               gamma_t=[signal_start, signal_start + SIGNAL_DURATION],
                                width=50e-3,  # 40 ms ramp
                                ramp_function=cosine_squared_ramp_func)
 

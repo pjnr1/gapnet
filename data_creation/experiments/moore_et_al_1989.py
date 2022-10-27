@@ -1,14 +1,6 @@
 """
-Gap detection experiment by Moore et al., 1993
-U{DOI: 10.1121/1.406815 <https://asa.scitation.org/doi/10.1121/1.406815>}
-
-Stimulus used is puretone with background masker
-
-
-They used the Khron-Hite 3550 filter for lowpassing the noise, which has a B{24 dB/Octave} slope
-U{source <https://www.valuetronics.com/product/3550-krohn-hite-filter-used>}.
-
-Signal was ramped with cosine squared ramp with 50ms rise/fall
+Gap detection experiment by Moore et al., 1989
+U{DOI: 10.1121/1.397457 <https://asa.scitation.org/doi/abs/10.1121/1.397457>}
 
 """
 import os
@@ -25,7 +17,6 @@ from data_creation.calibration.spectrum import get_spectrum_from_path
 from data_creation.calibration.digital import quantise
 from data_creation.stimulus.puretone import puretone_syncedphase
 from data_creation.ramp.ramp import ramp_onoff_with_gap
-
 
 SIGNAL_LEVEL = 80
 """
@@ -53,16 +44,34 @@ NOISE_SPECTRUM_PATH = os.path.join(os.path.dirname(__file__),
 Path to spectrum shape of the masking noise
 """
 
+GAP_LENGTHS = 1e-3 * np.array([0.0,
+                               0.5,
+                               1.0,
+                               1.5,
+                               2.0,
+                               2.5,
+                               3.0,
+                               3.5,
+                               4.0,
+                               4.5,
+                               5.0,
+                               5.5,
+                               6.0])
+"""
+Gap lengths used in the paper (0.0 is the no-gap condition)
+"""
+
 
 def generate_stimulus(t,
                       gap_length: float = 0,
                       signal_start: float = 200e-3) -> np.ndarray:
     """
+    Function for generating the stimulus
 
     @param t:
         time-vector
     @param gap_length:
-        length of the gap,
+        length of the gap (see L{GAP_LENGTHS} for gap lengths used in the paper)
     @param signal_start:
         time-point for starting the signal
 
