@@ -6,7 +6,7 @@
 
   <head>
     
-    <title>gapnet.data_creation.experiments.lindahl_2022</title>
+    <title>gapnet.data_creation.experiments.shailer_and_moore_1983</title>
     <meta name="generator" content="pydoctor 22.9.1"> 
         
     </meta>
@@ -142,7 +142,7 @@
 
       <div class="thingTitle">
         <span>Module</span>
-        <code class="thisobject"><a href="gapnet.data_creation.experiments.lindahl_2022.html" class="internal-link" title="This module">lindahl<wbr></wbr>_2022</a></code> 
+        <code class="thisobject"><a href="gapnet.data_creation.experiments.shailer_and_moore_1983.html" class="internal-link" title="This module">shailer<wbr></wbr>_and<wbr></wbr>_moore<wbr></wbr>_1983</a></code> 
       </div>
       
       <div>
@@ -163,7 +163,7 @@
         
 
         
-            <div class="itemName"><code><a href="#generate_stimulus" class="internal-link" title="gapnet.data_creation.experiments.lindahl_2022.generate_stimulus">generate<wbr></wbr>_stimulus</a></code>
+            <div class="itemName"><code><a href="#generate_stimulus" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.generate_stimulus">generate<wbr></wbr>_stimulus</a></code>
             </div>
         
 
@@ -173,8 +173,51 @@
         
          
 
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
         
-         
+        
+        
+
+        
+            <div class="itemName"><code><a href="#NOISE_LEVEL" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.NOISE_LEVEL">NOISE<wbr></wbr>_LEVEL</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SIGNAL_FREQUENCIES">SIGNAL<wbr></wbr>_FREQUENCIES</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SIGNAL_TO_NOISE_RATIO" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SIGNAL_TO_NOISE_RATIO">SIGNAL<wbr></wbr>_TO<wbr></wbr>_NOISE<wbr></wbr>_RATIO</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SPECTRAL_WIDTH" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SPECTRAL_WIDTH">SPECTRAL<wbr></wbr>_WIDTH</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
 
         
          
@@ -193,7 +236,7 @@
         <div class="childrenKindTitle">Modules</div>
         <ul>
     
-    <li class=" thisobject">
+    <li class="">
         
         
         
@@ -233,7 +276,7 @@
             </div>
         
 
-    </li><li class="">
+    </li><li class=" thisobject">
         
         
         
@@ -290,7 +333,7 @@
         
 
         <div class="page-header">
-          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.html" class="internal-link" title="gapnet.data_creation">data_creation</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.experiments.html" class="internal-link" title="gapnet.data_creation.experiments">experiments</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.experiments.lindahl_2022.html" class="internal-link" title="gapnet.data_creation.experiments.lindahl_2022">lindahl_2022</a></code></code></h1>
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.html" class="internal-link" title="gapnet.data_creation">data_creation</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.experiments.html" class="internal-link" title="gapnet.data_creation.experiments">experiments</a></code><wbr></wbr>.<code><a href="gapnet.data_creation.experiments.shailer_and_moore_1983.html" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983">shailer_and_moore_1983</a></code></code></h1>
           <div id="showPrivate">
             <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
           </div>
@@ -301,26 +344,44 @@
         </div>
 
         <div class="extrasDocstring">
-          <a href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/lindahl_2022.py" class="sourceLink">(source)</a>
+          <a href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/shailer_and_moore_1983.py" class="sourceLink">(source)</a>
           <p></p>
         </div>
 
         <div class="moduleDocstring">
-          <div><p>Gap detection experiment ment for training machines!</p>
-<p>This particular experiment setup mimics the code convention for the other experiments, but is intended for creating the training gap-in-babble training data.</p>
-<p>It's slightly different from the other generators, as it returns both a gap and no-gap condition. This is needed in training for forcing the model to learn features of the gap, rather than random occuring cues from the generation process</p>
+          <div><p>Generate stimuli similar to Experiment I in Shailer And Mooore, 1983 <a class="rst-reference external" href="http://FIXME" target="_top">DOI: ???/???</a></p>
 </div>
         </div>
 
         <div id="splitTables">
-          <table class="children sortable" id="id14">
+          <table class="children sortable" id="id18">
   
   
   <tr class="function">
     
     <td>Function</td>
-    <td><code><a href="#generate_stimulus" class="internal-link" title="gapnet.data_creation.experiments.lindahl_2022.generate_stimulus">generate<wbr></wbr>_stimulus</a></code></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td><code><a href="#generate_stimulus" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.generate_stimulus">generate<wbr></wbr>_stimulus</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#NOISE_LEVEL" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.NOISE_LEVEL">NOISE<wbr></wbr>_LEVEL</a></code></td>
+    <td>Spectrum level in dB RMS of the masker</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SIGNAL_FREQUENCIES">SIGNAL<wbr></wbr>_FREQUENCIES</a></code></td>
+    <td>Center frequencies used in the experiment</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SIGNAL_TO_NOISE_RATIO" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SIGNAL_TO_NOISE_RATIO">SIGNAL<wbr></wbr>_TO<wbr></wbr>_NOISE<wbr></wbr>_RATIO</a></code></td>
+    <td>Level difference between signal and noise, in dB spectrum level</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SPECTRAL_WIDTH" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SPECTRAL_WIDTH">SPECTRAL<wbr></wbr>_WIDTH</a></code></td>
+    <td>Width of the signal is defined as:</td>
   </tr>
 </table>
           
@@ -332,7 +393,7 @@
           <div class="basefunction">
   
   
-  <a name="gapnet.data_creation.experiments.lindahl_2022.generate_stimulus">
+  <a name="gapnet.data_creation.experiments.shailer_and_moore_1983.generate_stimulus">
     
   </a>
   <a name="generate_stimulus">
@@ -340,12 +401,12 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">generate_stimulus</span>(t, babble_path, n_talkers, gap_position, gap_duration, noise_start=0.1, noise_duration=0.5, ramp_width=0.0025, ramp_function=hann_ramp_func):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/lindahl_2022.py#L28">
+    <span class="py-keyword">def</span> <span class="py-defname">generate_stimulus</span>(t):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/shailer_and_moore_1983.py#L38">
       
       (source)
     </a>
-    <a class="headerLink" href="#generate_stimulus" title="gapnet.data_creation.experiments.lindahl_2022.generate_stimulus">
+    <a class="headerLink" href="#generate_stimulus" title="gapnet.data_creation.experiments.shailer_and_moore_1983.generate_stimulus">
       
       
       ¶
@@ -353,7 +414,122 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t</span></td><td class="fieldArgDesc">time vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">babble<wbr></wbr>_path:</span><code>str</code></td><td class="fieldArgDesc">path to either a pre-made babble-noise file or folder containing single-speaker recordings</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">n<wbr></wbr>_talkers:</span><code>int</code></td><td class="fieldArgDesc">number of talkers, i.e. number of files to include from the folder containing single-speaker recordings</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">gap<wbr></wbr>_position:</span><code>float</code></td><td class="fieldArgDesc">center position of the gap</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">gap<wbr></wbr>_duration:</span><code>float</code></td><td class="fieldArgDesc">length of the gap</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">noise<wbr></wbr>_start:</span><code>float</code></td><td class="fieldArgDesc">onset of the babble noise</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">noise<wbr></wbr>_duration:</span><code>float</code></td><td class="fieldArgDesc">length of the babble noise</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ramp<wbr></wbr>_width:</span><code>Union[<wbr></wbr>float, <wbr></wbr>Annotated[<wbr></wbr>List[<wbr></wbr>float], <wbr></wbr>MaxLen(<wbr></wbr>2)]]</code></td><td class="fieldArgDesc">width of both onset/offset and gap ramps if type=float, if type=List[float], first and second index are used for onset/offset and gap ramps respectively</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">ramp<wbr></wbr>_function:</span><code>RampFunction</code></td><td class="fieldArgDesc">ramp function for generating the ramps (see <code><a href="gapnet.data_creation.ramp.html" class="internal-link" title="gapnet.data_creation.ramp">data_creation.ramp</a></code>)</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>(<wbr></wbr>int, <wbr></wbr>np.ndarray, <wbr></wbr>np.ndarray)</code></td><td class="fieldArgDesc">start index of the babble cut, babble without gap, babble with gap</td></tr></table></div>
+    <div><p class="undocumented">Undocumented</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"><span class="undocumented">Undocumented</span></td></tr></table></div>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.shailer_and_moore_1983.NOISE_LEVEL">
+    
+  </a>
+  <a name="NOISE_LEVEL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">NOISE_LEVEL</span>: <code>int</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/shailer_and_moore_1983.py#L33">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#NOISE_LEVEL" title="gapnet.data_creation.experiments.shailer_and_moore_1983.NOISE_LEVEL">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Spectrum level in dB RMS of the masker</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>20</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.shailer_and_moore_1983.SIGNAL_FREQUENCIES">
+    
+  </a>
+  <a name="SIGNAL_FREQUENCIES">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SIGNAL_FREQUENCIES</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/shailer_and_moore_1983.py#L7">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SIGNAL_FREQUENCIES" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SIGNAL_FREQUENCIES">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Center frequencies used in the experiment</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>1000.0*np.array(<wbr></wbr>[<wbr></wbr>0.4, <wbr></wbr>0.8, <wbr></wbr>1.0, <wbr></wbr>2.0, <wbr></wbr>3.0, <wbr></wbr>4.0, <wbr></wbr>5.0, <wbr></wbr>6.5, <wbr></wbr>8.0])</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.shailer_and_moore_1983.SIGNAL_TO_NOISE_RATIO">
+    
+  </a>
+  <a name="SIGNAL_TO_NOISE_RATIO">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SIGNAL_TO_NOISE_RATIO</span>: <code>int</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/shailer_and_moore_1983.py#L28">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SIGNAL_TO_NOISE_RATIO" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SIGNAL_TO_NOISE_RATIO">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Level difference between signal and noise, in dB spectrum level</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>5</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.shailer_and_moore_1983.SPECTRAL_WIDTH">
+    
+  </a>
+  <a name="SPECTRAL_WIDTH">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SPECTRAL_WIDTH</span>: <code>float</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/shailer_and_moore_1983.py#L22">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SPECTRAL_WIDTH" title="gapnet.data_creation.experiments.shailer_and_moore_1983.SPECTRAL_WIDTH">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Width of the signal is defined as:</p>
+<pre class="rst-literal-block">
+    0.5 * center-frequency
+</pre>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>0.5</code></pre></td></tr></table>
   </div>
 </div>
         </div>

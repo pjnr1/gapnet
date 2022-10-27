@@ -182,6 +182,16 @@
         
 
         
+            <div class="itemName"><code><a href="#SIGNAL_DURATION" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_DURATION">SIGNAL<wbr></wbr>_DURATION</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">SIGNAL<wbr></wbr>_FREQUENCIES</a></code>
             </div>
         
@@ -272,6 +282,16 @@
         
 
         
+            <div class="itemName"><code><a href="gapnet.data_creation.experiments.shailer_and_moore_1983.html" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983">shailer<wbr></wbr>_and<wbr></wbr>_moore<wbr></wbr>_1983</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="gapnet.data_creation.experiments.zeng_et_al_2005.html" class="internal-link" title="gapnet.data_creation.experiments.zeng_et_al_2005">zeng<wbr></wbr>_et<wbr></wbr>_al<wbr></wbr>_2005</a></code>
             </div>
         
@@ -344,7 +364,12 @@
     
     <td>Function</td>
     <td><code><a href="#generate_stimulus" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.generate_stimulus">generate<wbr></wbr>_stimulus</a></code></td>
-    <td><span class="undocumented">No summary</span></td>
+    <td>Function for generating the stimulus</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SIGNAL_DURATION" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_DURATION">SIGNAL<wbr></wbr>_DURATION</a></code></td>
+    <td>Duration of the target signal</td>
   </tr><tr class="constant">
     
     <td>Constant</td>
@@ -379,8 +404,8 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">generate_stimulus</span>(t, sinusoid_frequency=<a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">SIGNAL_FREQUENCIES</a>[<wbr></wbr>0], sinusoid_level=<a href="#SIGNAL_LEVELS" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_LEVELS">SIGNAL_LEVELS</a>[<wbr></wbr>0], gap_length=0, signal_start=0.1, signal_length=0.4):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L41">
+    <span class="py-keyword">def</span> <span class="py-defname">generate_stimulus</span>(t, sinusoid_frequency=<a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">SIGNAL_FREQUENCIES</a>[<wbr></wbr>0], sinusoid_level=<a href="#SIGNAL_LEVELS" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_LEVELS">SIGNAL_LEVELS</a>[<wbr></wbr>0], gap_length=0, signal_start=0.2):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L45">
       
       (source)
     </a>
@@ -392,7 +417,36 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t</span></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sinusoid<wbr></wbr>_frequency:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sinusoid<wbr></wbr>_level:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">gap<wbr></wbr>_length:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">signal<wbr></wbr>_start:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">signal<wbr></wbr>_length:</span><code>float</code></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"></td></tr></table></div>
+    <div><p>Function for generating the stimulus</p>
+<table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t</span></td><td class="fieldArgDesc">time-vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sinusoid<wbr></wbr>_frequency:</span><code>float</code></td><td class="fieldArgDesc">frequency of the target signal (see <code><a href="#SIGNAL_FREQUENCIES" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_FREQUENCIES">SIGNAL_FREQUENCIES</a></code> for frequencies used in the paper)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sinusoid<wbr></wbr>_level:</span><code>float</code></td><td class="fieldArgDesc">level of the target signal (see <code><a href="#SIGNAL_LEVELS" class="internal-link" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_LEVELS">SIGNAL_LEVELS</a></code> for frequencies used in the paper)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">gap<wbr></wbr>_length:</span><code>float</code></td><td class="fieldArgDesc">length of the gap</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">signal<wbr></wbr>_start:</span><code>float</code></td><td class="fieldArgDesc">time-point for starting the signal</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>np.ndarray</code></td><td class="fieldArgDesc"></td></tr></table></div>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_DURATION">
+    
+  </a>
+  <a name="SIGNAL_DURATION">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SIGNAL_DURATION</span>: <code>float</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L39">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SIGNAL_DURATION" title="gapnet.data_creation.experiments.moore_et_al_1993.SIGNAL_DURATION">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Duration of the target signal</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>0.4</code></pre></td></tr></table>
   </div>
 </div><div class="baseconstant">
   
@@ -406,7 +460,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">SIGNAL_FREQUENCIES</span>: <code>list[<wbr></wbr>int]</code> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L30">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L29">
       
       (source)
     </a>
@@ -434,7 +488,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">SIGNAL_LEVELS</span>: <code>list[<wbr></wbr>int]</code> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L25">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L24">
       
       (source)
     </a>
@@ -462,7 +516,7 @@
   <div class="functionHeader">
     
     <span class="py-defname">SIGNAL_TO_NOISE_RATIO</span>: <code>int</code> =
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L35">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/moore_et_al_1993.py#L34">
       
       (source)
     </a>
@@ -490,7 +544,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-21 16:09:20.
+    22.9.1 at 2022-10-27 21:35:07.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

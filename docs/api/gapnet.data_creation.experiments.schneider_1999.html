@@ -173,8 +173,41 @@
         
          
 
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
         
-         
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MARKER_DURATIONS" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.MARKER_DURATIONS">MARKER<wbr></wbr>_DURATIONS</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SIGNAL_FREQUENCY" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.SIGNAL_FREQUENCY">SIGNAL<wbr></wbr>_FREQUENCY</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SIGNAL_LEVEL" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.SIGNAL_LEVEL">SIGNAL<wbr></wbr>_LEVEL</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
 
         
          
@@ -230,6 +263,16 @@
 
         
             <div class="itemName"><code><a href="gapnet.data_creation.experiments.schneider_1999.html" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999">schneider<wbr></wbr>_1999</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.data_creation.experiments.shailer_and_moore_1983.html" class="internal-link" title="gapnet.data_creation.experiments.shailer_and_moore_1983">shailer<wbr></wbr>_and<wbr></wbr>_moore<wbr></wbr>_1983</a></code>
             </div>
         
 
@@ -296,7 +339,8 @@
         </div>
 
         <div class="moduleDocstring">
-          <div><p class="undocumented">Undocumented</p></div>
+          <div><p>Gap detection experiment by Schneider, 1999 <a class="rst-reference external" href="https://asa.scitation.org/doi/abs/10.1121/1.427062" target="_top">DOI: 10.1121/1.427062</a></p>
+</div>
         </div>
 
         <div id="splitTables">
@@ -307,7 +351,22 @@
     
     <td>Function</td>
     <td><code><a href="#generate_stimulus" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.generate_stimulus">generate<wbr></wbr>_stimulus</a></code></td>
-    <td><span class="undocumented">Undocumented</span></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MARKER_DURATIONS" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.MARKER_DURATIONS">MARKER<wbr></wbr>_DURATIONS</a></code></td>
+    <td>The durations of the marker (in seconds) used in the paper</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SIGNAL_FREQUENCY" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.SIGNAL_FREQUENCY">SIGNAL<wbr></wbr>_FREQUENCY</a></code></td>
+    <td>Frequency for the sinusoid used in the paper</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SIGNAL_LEVEL" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.SIGNAL_LEVEL">SIGNAL<wbr></wbr>_LEVEL</a></code></td>
+    <td>90 dB SPL</td>
   </tr>
 </table>
           
@@ -327,8 +386,8 @@
   </a>
   <div class="functionHeader">
     
-    <span class="py-keyword">def</span> <span class="py-defname">generate_stimulus</span>(t, f=2000.0, stimulus_start=0.01, marker_duration=0.002, gap_duration=0.001, with_gap=True):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/schneider_1999.py#L6">
+    <span class="py-keyword">def</span> <span class="py-defname">generate_stimulus</span>(t, sinusoid_frequency=<a href="#SIGNAL_FREQUENCY" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.SIGNAL_FREQUENCY">SIGNAL_FREQUENCY</a>, stimulus_start=0.2, marker_duration=0.002, gap_length=0.001, with_gap=True):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/schneider_1999.py#L33">
       
       (source)
     </a>
@@ -340,7 +399,91 @@
   </div>
   <div class="docstring functionBody">
     
-    <div><p class="undocumented">Undocumented</p></div>
+    <div><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">t:</span><code>np.ndarray</code></td><td class="fieldArgDesc">time-vector</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sinusoid<wbr></wbr>_frequency:</span><code>float</code></td><td class="fieldArgDesc">frequency of the target signal (see <code><a href="#SIGNAL_FREQUENCY" class="internal-link" title="gapnet.data_creation.experiments.schneider_1999.SIGNAL_FREQUENCY">SIGNAL_FREQUENCY</a></code> for frequency used in the paper)</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">stimulus<wbr></wbr>_start:</span><code>float</code></td><td class="fieldArgDesc">when to start the experiment</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">marker<wbr></wbr>_duration:</span><code>float</code></td><td class="fieldArgDesc">duration of preceding marker</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">gap<wbr></wbr>_length:</span><code>float</code></td><td class="fieldArgDesc">duration of the gap</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">with<wbr></wbr>_gap:</span><code>bool</code></td><td class="fieldArgDesc">produce the stimulus with or without a gap</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2"></td></tr></table></div>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.schneider_1999.MARKER_DURATIONS">
+    
+  </a>
+  <a name="MARKER_DURATIONS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MARKER_DURATIONS</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/schneider_1999.py#L22">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#MARKER_DURATIONS" title="gapnet.data_creation.experiments.schneider_1999.MARKER_DURATIONS">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>The durations of the marker (in seconds) used in the paper</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>np.array(<wbr></wbr>[<wbr></wbr>0.83, <wbr></wbr>2.5, <wbr></wbr>5.0, <wbr></wbr>40.0, <wbr></wbr>200.0, <wbr></wbr>500.0])*0.001</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.schneider_1999.SIGNAL_FREQUENCY">
+    
+  </a>
+  <a name="SIGNAL_FREQUENCY">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SIGNAL_FREQUENCY</span>: <code>float</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/schneider_1999.py#L12">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SIGNAL_FREQUENCY" title="gapnet.data_creation.experiments.schneider_1999.SIGNAL_FREQUENCY">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>Frequency for the sinusoid used in the paper</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>2000.0</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="gapnet.data_creation.experiments.schneider_1999.SIGNAL_LEVEL">
+    
+  </a>
+  <a name="SIGNAL_LEVEL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SIGNAL_LEVEL</span>: <code>int</code> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/data_creation/experiments/schneider_1999.py#L17">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#SIGNAL_LEVEL" title="gapnet.data_creation.experiments.schneider_1999.SIGNAL_LEVEL">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p>90 dB SPL</p>
+</div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>90</code></pre></td></tr></table>
   </div>
 </div>
         </div>
@@ -354,7 +497,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-10-21 16:09:20.
+    22.9.1 at 2022-10-27 21:35:07.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

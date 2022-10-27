@@ -41,7 +41,7 @@ def generate_stimulus(t: np.ndarray,
     @param t:
         time-vector
     @param sinusoid_frequency:
-        frequency of the target signal (see L{SIGNAL_FREQUENCIES} for frequencies used in the paper)
+        frequency of the target signal (see L{SIGNAL_FREQUENCY} for frequency used in the paper)
     @param stimulus_start:
         when to start the experiment
     @param marker_duration:
