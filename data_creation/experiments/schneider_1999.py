@@ -70,5 +70,6 @@ def generate_stimulus(t: np.ndarray,
                                              length=2 * marker_duration + sigma,
                                              sigma=sigma)
 
+    # TODO masking noise?
 
     return sinusoid * mask, mask
