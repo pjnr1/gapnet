@@ -103,17 +103,21 @@ experiment_folders = {
     'zeng_et_al_2005': 'zeng_et_al_2005__sensitivity_test',
     'shailer_and_moore_1983': '',
     'moore_et_al_1989': 'moore_et_al_1989',
-    'moore_et_al_1993': 'moore_et_al_1993',
+    'moore_et_al_1993_70db': 'moore_et_al_1993',
 }
 
 experiment_parameters = {
     'zeng_et_al_2005': 'level',
-    'shailer_and_moore_1983': 'frequency'
+    'shailer_and_moore_1983': 'frequency',
+    'moore_et_al_1989': '',
+    'moore_et_al_1993_70db': 'frequency',
 }
 
 experiment_parent_regexps = {
     'zeng_et_al_2005': 'lvl_${experiment_parameter}_db_spl',
-    'shailer_and_moore_1983': 'freq_${experiment_parameter}hz'
+    'shailer_and_moore_1983': 'freq_${experiment_parameter}hz',
+    'moore_et_al_1989': '',
+    'moore_et_al_1993_70db': 'freq_${experiment_parameter}hz/level_70dB',
 }
 
 external_results_loaders = {
