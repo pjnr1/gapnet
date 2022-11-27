@@ -180,7 +180,7 @@ def normalise_by_spectrum_level(t: np.ndarray,
         normalised signal
     """
     f, X = get_spectrum(t, x * spl2a(0))
-    sl = spectrum_level(f, X, frequency_range)
+    sl = np.real(spectrum_level(f, X, frequency_range))
     return x * spl2a(target_level - sl)
 
 

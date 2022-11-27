@@ -1,37 +1,30 @@
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
-import matplotlib.pyplot as plt
 import numpy as np
-import scipy.optimize
-import torch
 import argparse
 import os
 from functools import partial
 import re
 import glob
-from datetime import datetime
 
 from joblib import Parallel, delayed
 from threading import Thread
 
 from dnn_modelling.helpers import extract_from_path, get_datapath
 from dnn_modelling.model import load_model
-from dnn_modelling.model import get_model, load_model_from_state_dict, load_model_from_metafile
-from psychoacoustics.dprime import dprime_empirical_jones, ideal_threshold
-from psychoacoustics.psychometrics import psychometric_func, get_psychometric_point, fit_psychometric_func
+from dnn_modelling.model import load_model_from_metafile
+from psychoacoustics.dprime import ideal_threshold
+from psychoacoustics.psychometrics import get_psychometric_point, fit_psychometric_func
 
 from testing.general import process_parameter
 from testing.general import process_dprime
-from testing.general_plots import plot_history, scatter_and_psychometric_fit_plot
-from testing.general_plots import plot_thresholds, plot_dprime
+from testing.plots.model import plot_history
+from testing.plots.general_plots import scatter_and_psychometric_fit_plot
+from testing.plots.general_plots import plot_thresholds, plot_dprime
 from data_creation.files.naming import threshold_pickle, model_output_pickle
 from testing.print import TimeAndPrintContext
 
-from testing.zeng_et_al_2005 import external_results as external__zeng_et_al_2005
-from testing.shailer_and_moore_1983 import external_results as external__shailer_and_moore_1983
-
-
+from testing.experiments.zeng_et_al_2005 import external_results as external__zeng_et_al_2005
+from testing.experiments.shailer_and_moore_1983 import external_results as external__shailer_and_moore_1983
 
 """
 Description here
@@ -302,9 +295,11 @@ with TimeAndPrintContext('compute percentage-correct (0.5)'):
                 if len(X) == 0:
                     continue
 
+
                 # Outputs True/False on whether the model output 'x' surpass the threshold 'p'
                 def correct_func(x, p):
                     return x >= p if gap > 0 else x < p
+
 
                 df_pct = df_pct.append({'impairment': impairment,
                                         'experiment_parameter': lvl,
@@ -331,9 +326,11 @@ with TimeAndPrintContext('compute percentage-correct (ideal)'):
                 if len(S) == 0:
                     continue
 
+
                 # Outputs True/False on whether the model output 'x' surpass the threshold 'p'
                 def correct_func(x, p):
                     return x >= p if gap > 0 else x < p
+
 
                 threshold = ideal_threshold(S, N)
                 df_pct_ideal = df_pct_ideal.append({'impairment': impairment,
