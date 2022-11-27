@@ -132,8 +132,6 @@ def extract_from_meta(fp, keys):
 
 def get_datapath(folder, mode, bw):
     return os.path.join(folder,
-                        'data',
-                        'cnn_data',
                         f'mode_{mode}',
                         f'bw_{bw}')
 
