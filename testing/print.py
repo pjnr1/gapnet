@@ -1,9 +1,10 @@
 import datetime
+import traceback
 
 
 def teardown(exc_type, exc_value, tb):
     if exc_type is not None:
-        tb.print_exception(exc_type, exc_value, tb)
+        traceback.print_exception(exc_type, exc_value, tb)
         return False  # uncomment to pass exception through
 
     return True

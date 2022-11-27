@@ -33,5 +33,5 @@ python3 scripts/spikeogramorator.py -m 2d -r -w 1e-3 -j $(lscpu | grep "^CPU(s)"
 ## `test_model`
 
 ````shell
-python3 scripts/test_model.py -mf /work3/jectli/gapnet/models  -m l3_32_ln512_t1_epoch1000_1 -sd model-at-epoch-40
+python3 scripts/test_model.py -mf /work3/jectli/gapnet/models -m l3_32_ln512_t1_epoch1000_1 -sd model-at-epoch-40 --use_meta
 ````
