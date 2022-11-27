@@ -9,6 +9,10 @@ import glob
 from joblib import Parallel, delayed
 from threading import Thread
 
+# Make imports work, even though script is in sub-folder "scripts"
+import sys
+sys.path.insert(0, os.getcwd())
+
 from dnn_modelling.helpers import extract_from_path, get_datapath
 from dnn_modelling.model import load_model
 from dnn_modelling.model import load_model_from_metafile
@@ -98,6 +102,8 @@ if os.path.sep != args.external_results[0]:
 experiment_folders = {
     'zeng_et_al_2005': 'zeng_et_al_2005__sensitivity_test',
     'shailer_and_moore_1983': '',
+    'moore_er_al_1989': 'moore_er_al_1989',
+    'moore_er_al_1993': 'moore_er_al_1993',
 }
 
 experiment_parameters = {
