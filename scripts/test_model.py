@@ -102,8 +102,8 @@ if os.path.sep != args.external_results[0]:
 experiment_folders = {
     'zeng_et_al_2005': 'zeng_et_al_2005__sensitivity_test',
     'shailer_and_moore_1983': '',
-    'moore_er_al_1989': 'moore_er_al_1989',
-    'moore_er_al_1993': 'moore_er_al_1993',
+    'moore_et_al_1989': 'moore_et_al_1989',
+    'moore_et_al_1993': 'moore_et_al_1993',
 }
 
 experiment_parameters = {
