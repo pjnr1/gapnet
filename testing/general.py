@@ -1,7 +1,9 @@
+from __future__ import annotations
+
 import os
 import re
-from typing import Annotated
-
+from typing import Annotated, List
+import glob
 import pandas as pd
 import torch
 
@@ -10,6 +12,18 @@ from psychoacoustics.dprime import dprime_empirical_jones, ideal_threshold
 from psychoacoustics.psychometrics import psychometric_func, fit_psychometric_func
 from typing_tools.annotations import check_annotations
 from typing_tools.annotation_checkers import PathExists
+
+
+def get_levels_from_path(path: str | os.PathLike[str], regexp: str) -> List[int]:
+    """
+
+    @param path:
+    @param regexp:
+    @return: list of levels derived from folder names
+    """
+    levels = [int(re.findall(regexp, x)[0].split('_')[1]) for x in glob.glob(os.path.join(path, '*'))]
+    levels.sort()
+    return levels
 
 
 def get_model_output_dataframe() -> pd.DataFrame:

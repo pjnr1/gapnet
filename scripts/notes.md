@@ -26,7 +26,7 @@ the parent folder that contains all AN-simulations.
 
 Example; used on the cluster:
 ```shell
-python3 scripts/spikeogramorator.py -m 2d -r -w 1e-3 -j $(lscpu | grep "^CPU(s)" | tr -dc '0-9') -i /work3/jectli/gapnet/simulations/ -o /work3/jectli/gapnet/spikeogram
+python3 scripts/spikeogramorator.py -m 2d -r -w 1e-3 -j $(lscpu | grep "^CPU(s)" | tr -dc '0-9') -i /work3/jectli/gapnet/simulations/ -o /work3/jectli/gapnet/spikeograms
 ```
 
 

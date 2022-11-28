@@ -21,6 +21,7 @@ from psychoacoustics.psychometrics import get_psychometric_point, fit_psychometr
 
 from testing.general import process_parameter
 from testing.general import process_dprime
+from testing.general import get_levels_from_path
 from testing.plots.model import plot_history
 from testing.plots.general_plots import scatter_and_psychometric_fit_plot
 from testing.plots.general_plots import plot_thresholds, plot_dprime
@@ -103,21 +104,21 @@ experiment_folders = {
     'zeng_et_al_2005': 'zeng_et_al_2005__sensitivity_test',
     'shailer_and_moore_1983': '',
     'moore_et_al_1989': 'moore_et_al_1989',
-    'moore_et_al_1993_70db': 'moore_et_al_1993',
+    'moore_et_al_1993_2000hz': 'moore_et_al_1993/freq_2000hz',
 }
 
 experiment_parameters = {
     'zeng_et_al_2005': 'level',
     'shailer_and_moore_1983': 'frequency',
     'moore_et_al_1989': '',
-    'moore_et_al_1993_70db': 'frequency',
+    'moore_et_al_1993_70db': 'level',
 }
 
 experiment_parent_regexps = {
     'zeng_et_al_2005': 'lvl_${experiment_parameter}_db_spl',
     'shailer_and_moore_1983': 'freq_${experiment_parameter}hz',
-    'moore_et_al_1989': '',
-    'moore_et_al_1993_70db': 'freq_${experiment_parameter}hz/level_70dB',
+    'moore_et_al_1989': 'level_${experiment_parameter}dB',
+    'moore_et_al_1993_2000hz': 'level_${experiment_parameter}dB',
 }
 
 external_results_loaders = {
@@ -126,6 +127,7 @@ external_results_loaders = {
 }
 
 external_results_path = os.path.join(args.external_results, args.test_experiment)
+experiment_parameter = experiment_parameters[args.test_experiment]
 
 # Other constants
 impairments = ['none',
@@ -217,12 +219,14 @@ local_process_parameter = partial(process_parameter,
 
 # Get number of workers
 print('Checking levels from data-folder', an_model_basepath)
-regexp_r = r'\d+'.join(parent_regexp.split('${experiment_parameter}'))
-levels = [int(re.findall(regexp_r, x)[0].split('_')[1]) for x in glob.glob(os.path.join(an_model_basepath, '*'))]
-levels.sort()
+if experiment_parameter != '':
+    regexp_r = r'\d+'.join(parent_regexp.split('${experiment_parameter}'))
+    levels = get_levels_from_path(an_model_basepath, regexp_r)
+    if len(levels) == 0:
+        levels = [x for x in range(20, 105, 5)]  # Artificial levels
+else:
+    levels = [0] # Equivalent to one single fixed level
 print('Preparing to test for levels', levels)
-if len(levels) == 0:
-    levels = [x for x in range(20, 105, 5)]  # Artificial levels
 
 model_output_path = os.path.join(args.model_path, model_output_pickle(args.state_dict))
 if args.load_model_output_from_pickle and os.path.exists(model_output_path):
@@ -249,8 +253,9 @@ else:
         else:
             impairment_path = os.path.join(data_folder, impairment,
                                            experiment_folders[args.test_experiment])
-            cs_levels = [int(re.findall(regexp_r, x)[0].split('_')[1]) for x in
-                         glob.glob(os.path.join(impairment_path, '*'))]
+
+            regexp_r = r'\d+'.join(parent_regexp.split('${experiment_parameter}'))
+            cs_levels = get_levels_from_path(impairment_path, regexp_r)
             for lvl in cs_levels:
                 parallel_argument = (
                     lvl,
