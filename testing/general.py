@@ -48,7 +48,7 @@ def get_gaplength_from_stimulus_filename(fn: str) -> float:
     Example::
         /somefolder/gdt__12.5ms.pt              -> 12.5 ms
         /somefolder/51.3/542.2ms/gdt__2.5ms.pt  -> 2.5 ms
-        /somefolder/stimulus_4.5ms_400.0ms.pt -> 4.5 ms  // This specia
+        /somefolder/stimulus_4.5ms_400.0ms.pt -> 4.5 ms
 
     @param fn:
         filepath
@@ -57,11 +57,10 @@ def get_gaplength_from_stimulus_filename(fn: str) -> float:
         gap length as a float
 
     """
-    r1 = r'_(\d+.\d+)ms_(\d+.\d+)ms.pt'
+    r1 = r'_(\d+.\d+)ms_(\d+.\d+)ms'
     m1 = re.findall(r1, fn)
-    if len(m1) == 2:
-        return float(m1[0])
-
+    if len(m1) == 1:
+        return float(m1[0][0])
     return float(re.findall(r'\d+\.\d+ms', fn)[-1][:-2])
 
 
