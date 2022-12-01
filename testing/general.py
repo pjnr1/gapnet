@@ -41,11 +41,14 @@ def get_gaplength_from_stimulus_filename(fn: str) -> float:
     """
     Matches the number in the format $.$ms
 
-    If multiple $.$ms exists, the last one will be used.
+    If multiple $.$ms exists, the last one will be used. Except the special case where gap-length and position is
+    contained in the filename, rather than sub-folder, i.e. the naming matches:
+        something_<gap-length>ms_<gap-position>ms.pt
 
     Example::
-        /somefolder/gdt__12.5ms.pt              -> 12.5
-        /somefolder/51.3/542.2ms/gdt__2.5ms.pt  -> 2.5
+        /somefolder/gdt__12.5ms.pt              -> 12.5 ms
+        /somefolder/51.3/542.2ms/gdt__2.5ms.pt  -> 2.5 ms
+        /somefolder/stimulus_4.5ms_400.0ms.pt -> 4.5 ms  // This specia
 
     @param fn:
         filepath
@@ -54,6 +57,11 @@ def get_gaplength_from_stimulus_filename(fn: str) -> float:
         gap length as a float
 
     """
+    r1 = r'_(\d+.\d+)ms_(\d+.\d+)ms.pt'
+    m1 = re.findall(r1, fn)
+    if len(m1) == 2:
+        return float(m1[0])
+
     return float(re.findall(r'\d+\.\d+ms', fn)[-1][:-2])
 
 
