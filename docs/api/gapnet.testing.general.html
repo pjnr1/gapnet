@@ -183,6 +183,16 @@
         
 
         
+            <div class="itemName"><code><a href="#get_levels_from_path" class="internal-link" title="gapnet.testing.general.get_levels_from_path">get<wbr></wbr>_levels<wbr></wbr>_from<wbr></wbr>_path</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
             <div class="itemName"><code><a href="#get_model_output_dataframe" class="internal-link" title="gapnet.testing.general.get_model_output_dataframe">get<wbr></wbr>_model<wbr></wbr>_output<wbr></wbr>_dataframe</a></code>
             </div>
         
@@ -356,6 +366,11 @@
   </tr><tr class="function">
     
     <td>Function</td>
+    <td><code><a href="#get_levels_from_path" class="internal-link" title="gapnet.testing.general.get_levels_from_path">get<wbr></wbr>_levels<wbr></wbr>_from<wbr></wbr>_path</a></code></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
     <td><code><a href="#get_model_output_dataframe" class="internal-link" title="gapnet.testing.general.get_model_output_dataframe">get<wbr></wbr>_model<wbr></wbr>_output<wbr></wbr>_dataframe</a></code></td>
     <td>Simple constructor of the model-output dataframe</td>
   </tr><tr class="function">
@@ -388,7 +403,7 @@
   <div class="functionHeader">
     @check_annotations<br />
     <span class="py-keyword">def</span> <span class="py-defname">apply_model</span>(model, path, input_length):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L46">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L60">
       
       (source)
     </a>
@@ -414,7 +429,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">get_gaplength_from_stimulus_filename</span>(fn):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L26">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L40">
       
       (source)
     </a>
@@ -438,6 +453,32 @@
 </div><div class="basefunction">
   
   
+  <a name="gapnet.testing.general.get_levels_from_path">
+    
+  </a>
+  <a name="get_levels_from_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_levels_from_path</span>(path, regexp):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L17">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_levels_from_path" title="gapnet.testing.general.get_levels_from_path">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">path:</span><code>str|os.PathLike[<wbr></wbr>str]</code></td><td class="fieldArgDesc"></td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">regexp:</span><code>str</code></td><td class="fieldArgDesc"></td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer"><code>List[<wbr></wbr>int]</code></td><td class="fieldArgDesc">list of levels derived from folder names</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
   <a name="gapnet.testing.general.get_model_output_dataframe">
     
   </a>
@@ -447,7 +488,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">get_model_output_dataframe</span>():
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L15">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L29">
       
       (source)
     </a>
@@ -474,7 +515,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">process_dprime</span>(df, experiment_parameter, gap_lengths, impairment=<span class="rst-variable-quote">'</span><span class="rst-variable-string">none</span><span class="rst-variable-quote">'</span>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L91">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L105">
       
       (source)
     </a>
@@ -500,7 +541,7 @@
   <div class="functionHeader">
     
     <span class="py-keyword">def</span> <span class="py-defname">process_parameter</span>(model, experiment_parameter, basepath, parent_regexp, input_length, experiment=<span class="rst-variable-quote">'</span><span class="rst-variable-string"></span><span class="rst-variable-quote">'</span>, impairment=<span class="rst-variable-quote">'</span><span class="rst-variable-string">none</span><span class="rst-variable-quote">'</span>):
-    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L60">
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/testing/general.py#L74">
       
       (source)
     </a>
@@ -526,7 +567,7 @@
   <div class="container">
     <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
   generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
-    22.9.1 at 2022-11-27 21:43:16.
+    22.9.1 at 2022-11-28 23:57:33.
   </div>
 
   <!-- Search related scripts needs to be loaded at the end of HTML 

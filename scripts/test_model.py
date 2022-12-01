@@ -110,7 +110,7 @@ experiment_folders = {
 experiment_parameters = {
     'zeng_et_al_2005': 'level',
     'shailer_and_moore_1983': 'frequency',
-    'moore_et_al_1989': '',
+    'moore_et_al_1989': 'level',
     'moore_et_al_1993_70db': 'level',
 }
 

@@ -12,7 +12,7 @@ python scripts/spikeogramorator.py ...
 
 This script generates torch-tensors from AN-simulations.
 
-
+j
 Basic usage:
 
 ```shell
@@ -35,3 +35,5 @@ python3 scripts/spikeogramorator.py -m 2d -r -w 1e-3 -j $(lscpu | grep "^CPU(s)"
 ````shell
 python3 scripts/test_model.py -mf /work3/jectli/gapnet/models -m l3_32_ln512_t1_epoch1000_1 -sd model-at-epoch-40 --use_meta -e moore_et_al_1989 -tf /work3/jectli/gapnet/spikeograms
 ````
+
+/work3/jectli/gapnet/spikeograms/mode_2d/bw_0.001/moore_et_al_1989/level_0dB/stimulus_6.00ms_400.00ms.pt
