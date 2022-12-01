@@ -21,7 +21,7 @@ def get_levels_from_path(path: str | os.PathLike[str], regexp: str) -> List[int]
     @param regexp:
     @return: list of levels derived from folder names
     """
-    levels = [int(re.findall(regexp, x)[0].split('_')[1]) for x in glob.glob(os.path.join(path, '*'))]
+    levels = [int(re.findall(regexp, x)[0]) for x in glob.glob(os.path.join(path, '*'))]
     levels.sort()
     return levels
 

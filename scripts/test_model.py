@@ -220,7 +220,7 @@ local_process_parameter = partial(process_parameter,
 # Get number of workers
 print('Checking levels from data-folder', an_model_basepath)
 if experiment_parameter != '':
-    regexp_r = r'\d+'.join(parent_regexp.split('${experiment_parameter}'))
+    regexp_r = r'(\d+)'.join(parent_regexp.split('${experiment_parameter}'))
     levels = get_levels_from_path(an_model_basepath, regexp_r)
     if len(levels) == 0:
         levels = [x for x in range(20, 105, 5)]  # Artificial levels
@@ -254,7 +254,7 @@ else:
             impairment_path = os.path.join(data_folder, impairment,
                                            experiment_folders[args.test_experiment])
 
-            regexp_r = r'\d+'.join(parent_regexp.split('${experiment_parameter}'))
+            regexp_r = r'(\d+)'.join(parent_regexp.split('${experiment_parameter}'))
             cs_levels = get_levels_from_path(impairment_path, regexp_r)
             for lvl in cs_levels:
                 parallel_argument = (
