@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>gapnet.dnn_modelling.dataloader.datablock</title>
+    <meta name="generator" content="pydoctor 22.9.1"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a> <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="gapnet.dnn_modelling.dataloader.datablock.html" class="internal-link" title="This module">datablock</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.dnn_modelling.dataloader.datablock.TensorTemporalSubsamplingTransform.html" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.TensorTemporalSubsamplingTransform"><wbr></wbr>Tensor<wbr></wbr>Temporal<wbr></wbr>Subsampling<wbr></wbr>Transform</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#decode_model_output" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.decode_model_output">decode<wbr></wbr>_model<wbr></wbr>_output</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#GapNoGapCategoryBlock" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.GapNoGapCategoryBlock"><wbr></wbr>Gap<wbr></wbr>No<wbr></wbr>Gap<wbr></wbr>Category<wbr></wbr>Block</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_datablock" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.get_datablock">get<wbr></wbr>_datablock</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_gap_nogap_vocab" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.get_gap_nogap_vocab">get<wbr></wbr>_gap<wbr></wbr>_nogap<wbr></wbr>_vocab</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_subsampling_datablock" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.get_subsampling_datablock">get<wbr></wbr>_subsampling<wbr></wbr>_datablock</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#label_func__gap" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap">label<wbr></wbr>_func<wbr></wbr>_<wbr></wbr>_gap</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#label_func__gap_length" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap_length">label<wbr></wbr>_func<wbr></wbr>_<wbr></wbr>_gap<wbr></wbr>_length</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#label_func__gap_nogap" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap_nogap">label<wbr></wbr>_func<wbr></wbr>_<wbr></wbr>_gap<wbr></wbr>_nogap</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#Tensor3Dload" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.Tensor3Dload"><wbr></wbr>Tensor3<wbr></wbr>Dload</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#TensorBlock" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.TensorBlock"><wbr></wbr>Tensor<wbr></wbr>Block</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#TensorBlock3D" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.TensorBlock3D"><wbr></wbr>Tensor<wbr></wbr>Block3<wbr></wbr>D</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#TensorZeroPadLoad" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.TensorZeroPadLoad"><wbr></wbr>Tensor<wbr></wbr>Zero<wbr></wbr>Pad<wbr></wbr>Load</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_spikeograms" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.get_spikeograms">get<wbr></wbr>_spikeograms</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="gapnet.dnn_modelling.dataloader.html" class="internal-link" title="The parent of this module">dataloader</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.dnn_modelling.dataloader.datablock.html" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock">datablock</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.dnn_modelling.dataloader.dataloader.html" class="internal-link" title="gapnet.dnn_modelling.dataloader.dataloader">dataloader</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="gapnet.dnn_modelling.dataloader.datasets.html" class="internal-link" title="gapnet.dnn_modelling.dataloader.datasets">datasets</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">gapnet</a></code><wbr></wbr>.<code><a href="gapnet.dnn_modelling.html" class="internal-link" title="gapnet.dnn_modelling">dnn_modelling</a></code><wbr></wbr>.<code><a href="gapnet.dnn_modelling.dataloader.html" class="internal-link" title="gapnet.dnn_modelling.dataloader">dataloader</a></code><wbr></wbr>.<code><a href="gapnet.dnn_modelling.dataloader.datablock.html" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock">datablock</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <a href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py" class="sourceLink">(source)</a>
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id47">
+  
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="gapnet.dnn_modelling.dataloader.datablock.TensorTemporalSubsamplingTransform.html" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.TensorTemporalSubsamplingTransform"><wbr></wbr>Tensor<wbr></wbr>Temporal<wbr></wbr>Subsampling<wbr></wbr>Transform</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#decode_model_output" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.decode_model_output">decode<wbr></wbr>_model<wbr></wbr>_output</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#GapNoGapCategoryBlock" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.GapNoGapCategoryBlock"><wbr></wbr>Gap<wbr></wbr>No<wbr></wbr>Gap<wbr></wbr>Category<wbr></wbr>Block</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_datablock" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.get_datablock">get<wbr></wbr>_datablock</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_gap_nogap_vocab" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.get_gap_nogap_vocab">get<wbr></wbr>_gap<wbr></wbr>_nogap<wbr></wbr>_vocab</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#get_subsampling_datablock" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.get_subsampling_datablock">get<wbr></wbr>_subsampling<wbr></wbr>_datablock</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#label_func__gap" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap">label<wbr></wbr>_func<wbr></wbr>_<wbr></wbr>_gap</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#label_func__gap_length" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap_length">label<wbr></wbr>_func<wbr></wbr>_<wbr></wbr>_gap<wbr></wbr>_length</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#label_func__gap_nogap" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap_nogap">label<wbr></wbr>_func<wbr></wbr>_<wbr></wbr>_gap<wbr></wbr>_nogap</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#Tensor3Dload" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.Tensor3Dload"><wbr></wbr>Tensor3<wbr></wbr>Dload</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#TensorBlock" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.TensorBlock"><wbr></wbr>Tensor<wbr></wbr>Block</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#TensorBlock3D" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.TensorBlock3D"><wbr></wbr>Tensor<wbr></wbr>Block3<wbr></wbr>D</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#TensorZeroPadLoad" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.TensorZeroPadLoad"><wbr></wbr>Tensor<wbr></wbr>Zero<wbr></wbr>Pad<wbr></wbr>Load</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#get_spikeograms" class="internal-link" title="gapnet.dnn_modelling.dataloader.datablock.get_spikeograms">get<wbr></wbr>_spikeograms</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.decode_model_output">
+    
+  </a>
+  <a name="decode_model_output">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">decode_model_output</span>(x, vocab):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L51">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#decode_model_output" title="gapnet.dnn_modelling.dataloader.datablock.decode_model_output">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.GapNoGapCategoryBlock">
+    
+  </a>
+  <a name="GapNoGapCategoryBlock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">GapNoGapCategoryBlock</span>(*args, **kwargs):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L101">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#GapNoGapCategoryBlock" title="gapnet.dnn_modelling.dataloader.datablock.GapNoGapCategoryBlock">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.get_datablock">
+    
+  </a>
+  <a name="get_datablock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_datablock</span>(valid_pct=0.1, splitter=None, x_block=None, label_func=None):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L105">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_datablock" title="gapnet.dnn_modelling.dataloader.datablock.get_datablock">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.get_gap_nogap_vocab">
+    
+  </a>
+  <a name="get_gap_nogap_vocab">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_gap_nogap_vocab</span>():
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L20">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_gap_nogap_vocab" title="gapnet.dnn_modelling.dataloader.datablock.get_gap_nogap_vocab">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.get_subsampling_datablock">
+    
+  </a>
+  <a name="get_subsampling_datablock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_subsampling_datablock</span>(valid_pct=0.1, subsample_pct=0.0, desired_length=700, splitter=None, x_block=None, label_func=None):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L122">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_subsampling_datablock" title="gapnet.dnn_modelling.dataloader.datablock.get_subsampling_datablock">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.label_func__gap">
+    
+  </a>
+  <a name="label_func__gap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">label_func__gap</span>():
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L24">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#label_func__gap" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.label_func__gap_length">
+    
+  </a>
+  <a name="label_func__gap_length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">label_func__gap_length</span>():
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L44">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#label_func__gap_length" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap_length">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.label_func__gap_nogap">
+    
+  </a>
+  <a name="label_func__gap_nogap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">label_func__gap_nogap</span>():
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L34">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#label_func__gap_nogap" title="gapnet.dnn_modelling.dataloader.datablock.label_func__gap_nogap">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.Tensor3Dload">
+    
+  </a>
+  <a name="Tensor3Dload">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">Tensor3Dload</span>(*args):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L57">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#Tensor3Dload" title="gapnet.dnn_modelling.dataloader.datablock.Tensor3Dload">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.TensorBlock">
+    
+  </a>
+  <a name="TensorBlock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">TensorBlock</span>(pad=None, item_tfms=None):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L75">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#TensorBlock" title="gapnet.dnn_modelling.dataloader.datablock.TensorBlock">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.TensorBlock3D">
+    
+  </a>
+  <a name="TensorBlock3D">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">TensorBlock3D</span>():
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L61">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#TensorBlock3D" title="gapnet.dnn_modelling.dataloader.datablock.TensorBlock3D">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.TensorZeroPadLoad">
+    
+  </a>
+  <a name="TensorZeroPadLoad">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-keyword">def</span> <span class="py-defname">TensorZeroPadLoad</span>(*args, pad=(<wbr></wbr>0, <wbr></wbr>0), mode=<span class="rst-variable-quote">'</span><span class="rst-variable-string">constant</span><span class="rst-variable-quote">'</span>, value=0.0):
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L65">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#TensorZeroPadLoad" title="gapnet.dnn_modelling.dataloader.datablock.TensorZeroPadLoad">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="gapnet.dnn_modelling.dataloader.datablock.get_spikeograms">
+    
+  </a>
+  <a name="get_spikeograms">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">get_spikeograms</span> =
+    <a class="sourceLink" href="https://github.com/pjnr1/gapnet/tree/main/dnn_modelling/dataloader/datablock.py#L17">
+      
+      (source)
+    </a>
+    <a class="headerLink" href="#get_spikeograms" title="gapnet.dnn_modelling.dataloader.datablock.get_spikeograms">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for <a href="https://github.com/pjnr1/gapnet/" class="projecthome">GapNet</a>,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    22.9.1 at 2022-11-28 23:57:33.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>
