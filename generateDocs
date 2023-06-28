@@ -6,4 +6,4 @@ pydoctor \
     --html-viewsource-base=https://github.com/pjnr1/gapnet/tree/main \
     --make-html \
     --html-output=docs/api \
-    .
+    ./src
